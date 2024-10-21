@@ -18,13 +18,13 @@ const LandingHero = () => {
             We build products that work for users and drive business growth
           </p>
           <div className="mt-12 flex flex-row items-center">
-            <Button className="bg-black text-white button">
+            <Button className="bg-black text-white button dark:bg-white dark:text-black ">
               Book a 15-min call
             </Button>
             <Button
               color="primary"
               variant="bordered"
-              className="ml-4 border-gray-300 text-black button"
+              className="ml-4 border-gray-300 text-black button dark:text-white"
               startContent={
                 <img
                   src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"

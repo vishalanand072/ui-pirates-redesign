@@ -94,7 +94,7 @@ const LandingBehance = () => {
         </p>
         <Button
           color="primary"
-          className=" bg-black button text-lg"
+          className=" bg-black button text-lg dark:bg-white dark:text-black"
           style={{
             paddingRight: "70px",
             paddingLeft: "70px",

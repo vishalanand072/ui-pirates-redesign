@@ -94,7 +94,7 @@ export const Navbar = () => {
             <Button
               isExternal
               as={Link}
-              className="text-sm font-normal text-white bg-black pt-0"
+              className="text-sm font-normal text-white bg-black pt-0 dark:bg-white dark:text-black"
               // startContent={<HeartFilledIcon className="text-danger" />}
               variant="solid"
               style={{ paddingTop: 0 }}
