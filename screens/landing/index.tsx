@@ -3,6 +3,7 @@ import LandingHero from "./hero";
 import LandingMarquee from "./marquee";
 import LandingAppScreen from "./appScreen";
 import LandingBehance from "./behance";
+import LandingBusinessHelp from "./businessHelp";
 
 const Landing = () => {
   return (
@@ -14,6 +15,7 @@ const Landing = () => {
           <LandingAppScreen />
         </div>
         <LandingBehance />
+        <LandingBusinessHelp />
       </div>
     </>
   );
