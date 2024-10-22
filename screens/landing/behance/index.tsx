@@ -20,22 +20,22 @@ const data = [
   {
     heading: "heading 3",
     subtitle: "subtitle 3",
-    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1729515639/simpleo_oxnxxn.svg",
-  },
-  {
-    heading: "heading 2",
-    subtitle: "subtitle 2",
-    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1729515789/olso_wqnbak.svg",
-  },
-  {
-    heading: "heading 3",
-    subtitle: "subtitle 3",
     img: "https://res.cloudinary.com/damm9iwho/image/upload/v1725007626/MacBook_Pro_16__-_23_2x_zxfdux.svg",
   },
   {
     heading: "heading 3",
     subtitle: "subtitle 3",
     img: "https://res.cloudinary.com/damm9iwho/image/upload/v1725008637/MacBook_Pro_16__-_13_hzbgw4.svg",
+  },
+  {
+    heading: "heading 3",
+    subtitle: "subtitle 3",
+    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1729515639/simpleo_oxnxxn.svg",
+  },
+  {
+    heading: "heading 2",
+    subtitle: "subtitle 2",
+    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1729515789/olso_wqnbak.svg",
   },
 ];
 
@@ -50,13 +50,13 @@ const LandingBehance = () => {
 
       // Set horizontal movement based on row
       if (rowIndex === 0) {
-        xMove = index % 2 === 0 ? "-70%" : "70%"; // First row moves 40%
+        xMove = index % 2 === 0 ? "-40%" : "40%"; // First row moves 40%
         yMove = index % 2 === 0 ? "50%" : "50%"; // First row moves 40%
       } else if (rowIndex === 1) {
         xMove = index % 2 === 0 ? "-60%" : "60%"; // Second row moves 30%
         yMove = index % 2 === 0 ? "50%" : "50%"; // First row moves 40%
       } else if (rowIndex === 2) {
-        xMove = index % 2 === 0 ? "-50%" : "50%"; // Third row moves 20%
+        xMove = index % 2 === 0 ? "-30%" : "30%"; // Third row moves 20%
         // yMove = index % 2 === 0 ? "-50%" : "-50%"; // First row moves 40%
       }
 
@@ -121,7 +121,7 @@ const LandingBehance = () => {
               <img
                 src={item.img}
                 alt={item.heading}
-                className="rounded-2xl w-full"
+                className="rounded-2xl w-full h-[400px]"
                 id="img"
               />
             </div>
