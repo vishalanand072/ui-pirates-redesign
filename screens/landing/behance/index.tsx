@@ -121,7 +121,7 @@ const LandingBehance = () => {
               <img
                 src={item.img}
                 alt={item.heading}
-                className="rounded-2xl w-full h-[400px]"
+                className=" w-full h-[400px] max-h-[400px]"
                 id="img"
               />
             </div>

@@ -2,8 +2,14 @@ import PricingCard from "./pricingCard";
 const LandingBusinessHelp = () => {
   return (
     <>
-      <div className=" container mx-auto px-12 max-md:px-4">
+      <div className=" container mx-auto lg:px-12 max-md:px-4">
         <div>
+          <div className="flex flex-row items-center justify-center mb-6">
+            <img
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729596828/Div_framer-3TZmM_hqrbpd.svg"
+              alt=""
+            />
+          </div>
           <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-semibold">
             How We Help Your Business
           </p>

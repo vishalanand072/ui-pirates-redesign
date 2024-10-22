@@ -9,12 +9,12 @@ const MarqueeComp = ({ items, reverse }: any) => {
         {items.map((el: any, index: any) => (
           <div
             key={index}
-            className="grid place-items-center w-[clamp(10rem,1rem+40vmin,30rem)] p-[calc(clamp(10rem,1rem+30vmin,30rem)/10)]"
+            className="grid place-items-center w-[clamp(10rem,1rem+30vmin,10rem)] p-[calc(clamp(10rem,1rem+30vmin,30rem)/10)]"
           >
             <img
               src={el}
               alt={`img-${index}`}
-              className=" w-full h-[40px]  grayscale hover:grayscale-0 "
+              className=" h-[40px]  grayscale hover:grayscale-0 max-h-[40px] w-[100px] max-w-[100px]"
             />
           </div>
         ))}
@@ -25,12 +25,12 @@ const MarqueeComp = ({ items, reverse }: any) => {
         {items.map((el: any, index: any) => (
           <div
             key={index}
-            className="grid place-items-center w-[clamp(10rem,1rem+40vmin,30rem)] p-[calc(clamp(10rem,1rem+30vmin,30rem)/10)]"
+            className="grid place-items-center w-[clamp(10rem,1rem+30vmin,10rem)] p-[calc(clamp(10rem,1rem+30vmin,30rem)/10)]"
           >
             <img
               src={el}
               alt={`img-${index}`}
-              className="w-full h-[40px]  grayscale hover:grayscale-0 "
+              className=" h-[40px]  grayscale hover:grayscale-0  max-h-[40px] w-[100px] max-w-[100px]"
             />
           </div>
         ))}

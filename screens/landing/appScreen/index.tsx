@@ -23,8 +23,8 @@ const LandingAppScreen = () => {
       .to("#center", { paddingTop: 0, duration: 1 }, "<");
 
     // Initial position off-screen
-    gsap.set("#left", { x: "-50vw" });
-    gsap.set("#right", { x: "50vw" });
+    gsap.set("#left", { x: "-25vw" });
+    gsap.set("#right", { x: "25vw" });
   }, []);
 
   return (
@@ -34,7 +34,7 @@ const LandingAppScreen = () => {
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729516037/Div_framer-phxs80_ltdycu.svg"
           alt="app"
           id="left"
-          className="rotate-[-75deg]"
+          className="rotate-[-45deg] max-md:w-[50%]"
         />
         <img
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729516039/Div_framer-o8mlgh_cbc7mx.svg"
@@ -43,10 +43,10 @@ const LandingAppScreen = () => {
           className="pt-40 max-md:hidden"
         />
         <img
-          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729516040/Div_framer-hamezd_juzlor.svg"
+          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729595123/app_cjhwn2.svg"
           alt="app"
           id="right"
-          className="rotate-[75deg]"
+          className="rotate-[45deg] max-md:w-[50%]"
         />
       </div>
     </>

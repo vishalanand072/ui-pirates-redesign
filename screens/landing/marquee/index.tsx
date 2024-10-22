@@ -24,8 +24,10 @@ const LandingMarquee = ({ items, reverse }: any) => {
   ];
   return (
     <>
-      <MarqueeComp items={row1} reverse={undefined} />
-      {/* <MarqueeComp items={row2} reverse /> */}
+      <div className="mt-12">
+        <MarqueeComp items={row1} reverse={undefined} />
+        {/* <MarqueeComp items={row2} reverse /> */}
+      </div>
     </>
   );
 };

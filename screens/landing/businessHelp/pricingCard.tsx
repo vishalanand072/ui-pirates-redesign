@@ -41,15 +41,15 @@ const PricingCard = () => {
         {data.map((item, index) => {
           return (
             <Card className="rounded-[48px] mt-8 bg-[#e9e9e9] dark:bg-[#18181b]">
-              <CardBody className="grid grid-cols-2 gap-4 max-md:grid-cols-1 p-4">
+              <CardBody className="grid grid-cols-2 gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
                 <Card className="rounded-[40px]">
-                  <CardBody className="p-6">
+                  <CardBody className="p-8 max-md:p-4 max-lg:p-6">
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
                       alt="behance Logo"
                       className="w-[40px]"
                     />
-                    <p className="text-3xl max-md:text-xl mt-4 mb-6">
+                    <p className="text-3xl max-md:text-xl mt-4 mb-6 font-semibold">
                       Web/Mobile Apps
                     </p>
                     <p className="text-lg max-md:text-base">
@@ -89,12 +89,12 @@ const PricingCard = () => {
 
         <div>
           <Card className="rounded-[48px] mt-8 bg-[#e9e9e9] dark:bg-[#18181b]">
-            <CardBody className="grid grid-cols-3 gap-4 max-md:grid-cols-1 p-4">
+            <CardBody className="grid grid-cols-3 gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
               {data.map((item, index) => {
                 return (
                   <Card className="rounded-[40px]">
-                    <CardBody className="p-6">
-                      <p className="text-3xl max-md:text-xl mt-0 mb-4">
+                    <CardBody className="p-8 max-md:p-4 max-lg:p-6">
+                      <p className="text-3xl max-md:text-xl mt-0 mb-4 font-semibold">
                         Web/Mobile Apps
                       </p>
                       <p className="text-lg max-md:text-base mb-6">

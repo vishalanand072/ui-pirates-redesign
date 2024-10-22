@@ -4,7 +4,9 @@
 
 .button {
   border-radius: 16px;
-  padding: 0 30px;
+  padding: 16px 32px;
+  height: 56px;
+  font-weight: 500;
 }
 
 @keyframes marquee {

@@ -26,7 +26,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   };
 
   const {
-    Component,
+    Component, // This may be causing the issue
     slots,
     isSelected,
     getBaseProps,
@@ -40,8 +40,10 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     onChange,
   });
 
+  const BaseComponent = Component as FC<any>;
+
   return (
-    <Component
+    <BaseComponent
       {...getBaseProps({
         className: clsx(
           "px-px transition-opacity hover:opacity-80 cursor-pointer",
@@ -78,6 +80,6 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
           <MoonFilledIcon size={22} />
         )}
       </div>
-    </Component>
+    </BaseComponent>
   );
 };

@@ -5,6 +5,9 @@ import LandingAppScreen from "./appScreen";
 import LandingBehance from "./behance";
 import LandingBusinessHelp from "./businessHelp";
 import LandingOurPricing from "./ourPricing";
+import LandingFaqs from "./faqs";
+import LandingAbout from "./about";
+import LandingFooter from "./footer";
 
 const Landing = () => {
   return (
@@ -18,6 +21,9 @@ const Landing = () => {
         <LandingBehance />
         <LandingBusinessHelp />
         <LandingOurPricing />
+        <LandingFaqs />
+        <LandingAbout />
+        <LandingFooter />
       </div>
     </>
   );
