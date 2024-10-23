@@ -40,9 +40,9 @@ const PricingCard = () => {
       <div>
         {data.map((item, index) => {
           return (
-            <Card className="rounded-[48px] mt-8 bg-[#e9e9e9] dark:bg-[#18181b]">
+            <Card className="rounded-[48px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b] ">
               <CardBody className="grid grid-cols-2 gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
-                <Card className="rounded-[40px]">
+                <Card className="rounded-[40px]  border-2">
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6">
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
@@ -62,7 +62,7 @@ const PricingCard = () => {
                         return (
                           <>
                             <Chip
-                              radius="md"
+                              radius="sm"
                               className="m-2 text-lg text-gray-600"
                             >
                               {item}
@@ -73,12 +73,12 @@ const PricingCard = () => {
                     </div>
                   </CardBody>
                 </Card>
-                <Card className=" rounded-[40px] p-0 h-[350px]">
+                <Card className=" rounded-[40px] p-0 h-[400px] max-md:h-[300px]">
                   <CardBody style={{ padding: 0 }}>
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521816/card_zzxglp.svg"
                       alt="behance Logo"
-                      className="object-cover h-[350px]"
+                      className="object-cover h-[400px] max-md:h-[300px]"
                     />
                   </CardBody>
                 </Card>
@@ -88,11 +88,14 @@ const PricingCard = () => {
         })}
 
         <div>
-          <Card className="rounded-[48px] mt-8 bg-[#e9e9e9] dark:bg-[#18181b]">
+          <Card className="rounded-[48px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
             <CardBody className="grid grid-cols-3 gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
               {data.map((item, index) => {
                 return (
-                  <Card className="rounded-[40px]">
+                  <Card
+                    className="rounded-[40px] border-2"
+                    // style={{ boxShadow: " inset 0 2px 4px rgba(0, 0, 0, 0.1)" }}
+                  >
                     <CardBody className="p-8 max-md:p-4 max-lg:p-6">
                       <p className="text-3xl max-md:text-xl mt-0 mb-4 font-semibold">
                         Web/Mobile Apps
@@ -102,11 +105,13 @@ const PricingCard = () => {
                         We create intuitive, engaging applications with modern
                         UI that drive user engagement and business growth.
                       </p>
-                      <img
-                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
-                        alt="behance Logo"
-                        className=""
-                      />
+                      <div className="flex flex-row items-center justify-center">
+                        <img
+                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729658924/Div_framer-sb0m4g_vphvgk.svg"
+                          alt="behance Logo"
+                          className="w-[80%]"
+                        />
+                      </div>
                     </CardBody>
                   </Card>
                 );

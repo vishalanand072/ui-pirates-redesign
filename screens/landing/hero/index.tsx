@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 const LandingHero = () => {
   return (
     <>
-      <div className="flex flex-row items-center justify-center py-32 w-full max-lg:py-28 max-md:py-20">
+      <div className="flex flex-row items-center justify-center py-28 w-full max-lg:py-28 max-md:py-20">
         <div className="flex flex-col items-center w-screen overflow-hidden pt-8">
           <img
             src="https://res.cloudinary.com/damm9iwho/image/upload/v1729510050/heroimg_itvpw6.svg"

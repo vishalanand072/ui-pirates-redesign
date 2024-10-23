@@ -112,7 +112,7 @@ const LandingBehance = () => {
           return (
             <div
               key={index}
-              className="relative"
+              className="relative w-full h-full"
               // style={{
               //   zIndex: data.length - index, // Higher z-index for higher images
               //   transform: `translateY(-${index * 10}%)`, // Stack images with 10% overlap
@@ -121,7 +121,7 @@ const LandingBehance = () => {
               <img
                 src={item.img}
                 alt={item.heading}
-                className=" w-full h-[400px] max-h-[400px]"
+                className=" w-full h-full object-fill rounded-3xl grayscale-[25%]"
                 id="img"
               />
             </div>
