@@ -41,13 +41,13 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <div className="">
-              <Navbar />
-            </div>
-            <main>{children}</main>
-            {/* <footer className="w-full flex items-center justify-center py-3">
+        {/* <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}> */}
+        <div className="relative flex flex-col h-screen">
+          <div className="">
+            <Navbar />
+          </div>
+          <main>{children}</main>
+          {/* <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
@@ -58,8 +58,8 @@ export default function RootLayout({
                 <p className="text-primary">NextUI</p>
               </Link>
             </footer> */}
-          </div>
-        </Providers>
+        </div>
+        {/* </Providers> */}
       </body>
     </html>
   );
