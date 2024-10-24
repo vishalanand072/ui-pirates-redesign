@@ -12,7 +12,7 @@ const LandingFooter = () => {
   return (
     <>
       <div className="h-[100vh] max-md:h-[100vh] bg-black rounded-tr-[100px] rounded-tl-[100px]  max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]  mt-32 pt-32 text-white max-md:px-4">
-        <div className="flex flex-row items-center justify-center h-fu">
+        <div className="flex flex-row items-center justify-center h-full">
           <div>
             <div className="flex flex-row items-center justify-center">
               <p className="text-center text-3xl md:w-1/2">
