@@ -7,6 +7,10 @@
   padding: 16px 32px;
   height: 56px;
   font-weight: 500;
+  /* box-shadow: rgba(0, 0, 0, 0.01) 0px 0.602187px 1.32481px 0px,
+    rgba(0, 0, 0, 0.047) 0px 2.28853px 5.03477px 0px,
+    rgba(0, 0, 0, 0.2) 0px 10px 22px 0px; */
+  margin-bottom: 4px;
 }
 
 @keyframes marquee {
@@ -321,4 +325,14 @@
   100% {
     border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
   }
+}
+
+/* Hide scrollbar for all elements */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }

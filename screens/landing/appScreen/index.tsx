@@ -9,8 +9,8 @@ const LandingAppScreen = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".appTrigger", // element to start the animation
-        start: "top center", // when the top of the trigger hits the center of the viewport
-        end: "bottom 100%", // end when the bottom of the trigger hits the top of the viewport
+        start: "top 50%", // when the top of the trigger hits the center of the viewport
+        end: "bottom 50%", // end when the bottom of the trigger hits the top of the viewport
         scrub: 1, // smooth animation on scroll
       },
     });
@@ -23,8 +23,8 @@ const LandingAppScreen = () => {
       .to("#center", { paddingTop: 0, duration: 1 }, "<");
 
     // Initial position off-screen
-    gsap.set("#left", { x: "-25vw" });
-    gsap.set("#right", { x: "25vw" });
+    gsap.set("#left", { x: "-10vw" });
+    gsap.set("#right", { x: "10vw" });
   }, []);
 
   return (
@@ -34,7 +34,7 @@ const LandingAppScreen = () => {
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729516037/Div_framer-phxs80_ltdycu.svg"
           alt="app"
           id="left"
-          className="rotate-[-45deg] max-md:w-[50%]"
+          className="rotate-[-6deg] max-md:w-[50%]"
         />
         <img
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729516039/Div_framer-o8mlgh_cbc7mx.svg"
@@ -46,7 +46,7 @@ const LandingAppScreen = () => {
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729595123/app_cjhwn2.svg"
           alt="app"
           id="right"
-          className="rotate-[45deg] max-md:w-[50%]"
+          className="rotate-[6deg] max-md:w-[50%]"
         />
       </div>
     </>

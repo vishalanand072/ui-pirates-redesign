@@ -9,22 +9,26 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
   {
     heading: "50+",
-    subtitle: "subtitle 1",
+    subtitle1: "Projects",
+    subtitle2: "Completed",
     hoverBg: "#dd3500e6",
   },
   {
-    heading: "900+",
-    subtitle: "subtitle 2",
+    heading: "20+",
+    subtitle1: "Enterprise",
+    subtitle2: "Clients",
     hoverBg: "#DCE5E5E5",
   },
   {
     heading: "20+",
-    subtitle: "subtitle 3",
+    subtitle1: "Industries",
+    subtitle2: "Served",
     hoverBg: "#b0ddcae6",
   },
   {
-    heading: "20+",
-    subtitle: "subtitle 3",
+    heading: "8+",
+    subtitle1: " Years of",
+    subtitle2: "Experience",
     hoverBg: "#f4e342e6",
   },
 ];
@@ -74,8 +78,8 @@ const AboutCardAnimation = () => {
               key={index}
               className={
                 index % 2 === 0
-                  ? `bg-[#E1EAEA] rounded-3xl py-12 px-12 w-full h-[400px]  max-md:h-[300px]  lg:-mt-52 hover:bg-[${item.hoverBg}]`
-                  : `bg-[#E1EAEA] rounded-3xl  py-12 px-12 w-full h-[400px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}]`
+                  ? `bg-[#E1EAEA] rounded-[40px] py-12 px-12 w-full h-[400px]  max-md:h-[300px]  lg:-mt-52 hover:bg-[${item.hoverBg}]`
+                  : `bg-[#E1EAEA] rounded-[40px]  py-12 px-12 w-full h-[400px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}]`
               }
               //   style={{
               //     transform: index % 2 === 0 ? "rotate(-15deg)" : "rotate(15deg)",
@@ -98,11 +102,13 @@ const AboutCardAnimation = () => {
               }}
             >
               <div>
-                <p className="uppercase text-8xl max-md:text-4xl mb-4">
+                <p className="uppercase text-8xl max-md:text-4xl mb-4 hover:rotate-[360deg]">
                   {item.heading}
                 </p>
-                <p className="text-4xl flex flex-row items-end justify-end pt-32">
-                  {item.subtitle}
+                <p className="text-4xl flex flex-row items-end justify-end pt-32 text-right">
+                  {item.subtitle1}
+                  <br />
+                  {item.subtitle2}
                 </p>
               </div>
             </div>

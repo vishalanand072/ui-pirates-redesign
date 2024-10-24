@@ -22,7 +22,10 @@ const LandingAbout = () => {
           </div>
         </div>
       </div>{" "}
-      <div style={{ overflowX: "hidden" }} className="mx-auto">
+      <div
+        style={{ overflowX: "hidden" }}
+        className="mx-auto px-32 lg:px-20 max-md:px-4 "
+      >
         <AboutCardAnimation />
       </div>
     </>

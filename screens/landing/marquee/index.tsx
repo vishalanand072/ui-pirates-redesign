@@ -12,6 +12,13 @@ const LandingMarquee = ({ items, reverse }: any) => {
     "https://res.cloudinary.com/damm9iwho/image/upload/v1729513138/image_31_sdh5l7.svg",
     "https://res.cloudinary.com/damm9iwho/image/upload/v1729513137/Group_1_lj2z8a.svg",
     "https://res.cloudinary.com/damm9iwho/image/upload/v1729513137/image_1_hxpv8e.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1729682151/image_30_oiwlqz.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1729682151/Frame_131_xaxhxs.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1729682150/Frame_1984078729_meav44.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1729682150/Rings_I_eyrgog.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1729682149/image_28_lq4jj7.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1729682148/Group-2_uduxpp.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1729682148/Frame_3_nfidqo.svg",
   ];
 
   const row2 = [

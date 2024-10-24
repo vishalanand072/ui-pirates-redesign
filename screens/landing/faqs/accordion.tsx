@@ -1,4 +1,9 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const data = [
   {
@@ -29,23 +34,63 @@ export default function FaqsAccordion() {
   const defaultContent =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
+  const cardsRef = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    cardsRef.current.forEach((card, index) => {
+      if (card) {
+        gsap.fromTo(
+          card,
+          {
+            y: 50, // Start from below
+            paddingLeft: "20%",
+            paddingRight: "20%",
+            opacity: 0, // Start fully transparent
+            filter: "blur(5px)", // Initial blur effect
+          },
+          {
+            y: 0, // Move to its original position
+            paddingLeft: "0%",
+            paddingRight: "0%",
+            opacity: 1, // Fade in to fully visible
+            filter: "blur(0px)", // Remove blur
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%", // When the top of the card reaches 80% of the viewport height
+              end: "top 30%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
+    });
+  }, []);
+
   return (
     <>
       {data.map((item, index) => {
         return (
-          <Accordion variant="splitted" className="mb-4">
+          <Accordion
+            variant="splitted"
+            className="mb-4"
+            key={index} // Move key here for proper rendering
+            ref={(el) => {
+              if (el) cardsRef.current[index] = el;
+            }}
+          >
             <AccordionItem
-              key={index}
               aria-label={item.heading}
               title={item.heading}
               indicator={({ isOpen }) =>
                 isOpen ? (
-                  <p className="text-2xl font-semibold">-</p>
+                  <p className="text-3xl text-black rotate-45">+</p>
                 ) : (
-                  <p className="text-2xl font-semibold">+</p>
+                  <p className="text-3xl text-black">+</p>
                 )
               }
-              className=" shadow-none border-1"
+              className="shadow-none border-1"
             >
               {defaultContent}
             </AccordionItem>
