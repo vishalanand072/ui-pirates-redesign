@@ -15,12 +15,12 @@ const LandingFaqs = () => {
             Have questions?! We've got you!
           </p>
           <div>
-            <Card className="py-0 shadow-none border-2 rounded-[40px]">
+            <Card className="py-0 shadow-none border-2 rounded-[32px]">
               <CardBody className="overflow-visible ">
                 <img
                   alt="Card background"
-                  className="object-cover rounded-3xl w-full h-[200px] max-h-[200px]"
-                  src="https://nextui.org/images/hero-card-complete.jpeg"
+                  className="object-cover rounded-3xl w-full h-[250px] max-h-[250px] object-top"
+                  src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761421/vishal_b32poo.svg"
                 />
                 <h4 className="font-bold text-large mt-2">
                   Still have questions? We’re here to help – feel free to ask us
@@ -37,7 +37,20 @@ const LandingFaqs = () => {
                     />
                   }
                 >
-                  <p className=" text-base font-semibold ">Chat on WhatsApp</p>
+                  <p className=" text-base font-semibold ">Chat</p>
+                </Button>
+                <Button
+                  color="primary"
+                  variant="bordered"
+                  className="mt-4 border-gray-300 text-black button dark:text-white font-bold"
+                  startContent={
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729767692/email_bxvlmd.svg"
+                      alt="Dribble Logo"
+                    />
+                  }
+                >
+                  <p className=" text-base font-semibold ">Email Us</p>
                 </Button>
               </CardBody>
             </Card>

@@ -8,6 +8,7 @@ import LandingOurPricing from "./ourPricing";
 import LandingFaqs from "./faqs";
 import LandingAbout from "./about";
 import LandingFooter from "./footer";
+import LandingTestimonials from "./testimonials";
 
 const Landing = () => {
   return (
@@ -18,11 +19,12 @@ const Landing = () => {
         <div className=" overflow-x-hidden py-12">
           <LandingAppScreen />
         </div>
-        <div className=" my-12">
-          <LandingBehance />
-        </div>
+        <div className=" my-12">{/* <LandingBehance /> */}</div>
         <LandingBusinessHelp />
         <LandingAbout />
+        <div className=" overflow-hidden">
+          <LandingTestimonials />
+        </div>
         <LandingOurPricing />
         <LandingFaqs />
         <LandingFooter />

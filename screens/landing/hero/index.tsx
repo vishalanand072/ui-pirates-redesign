@@ -8,36 +8,36 @@ const LandingHero = () => {
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
             <div className="flex flex-row overflow-hidden">
               <img
-                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729683237/Div_framer-ly1pbp_e81se2.svg"
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768369/hero1_p6oklo.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[5deg] max-md:hidden"
               />
               <img
-                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729683238/Div_framer-1nnkmr2_qp6ixs.svg"
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               />
               <img
-                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729683246/Div_framer-1afektp_rzs7cu.svg"
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768377/hero3_shxbjv.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[7deg]"
               />
 
               <img
-                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729683236/Div_framer-10onn91_ma3aqp.svg"
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero4_hrsvsr.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               />
               <img
-                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729683234/Div_framer-9crwzt_yxjjd2.svg"
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768368/hero5_yhwua3.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110 hover:rotate-[-5deg] max-md:hidden"
               />
             </div>
           </div>
 
-          <div className="text-7xl px-40 text-center font-semibold max-lg:text-5xl max-md:text-4xl max-md:px-4 max-lg:px-32 -mt-8 ">
-            World-class design for <br />
+          <div className="text-7xl px-40 text-center font-semibold max-lg:text-5xl max-md:text-4xl max-md:px-4 max-lg:px-32 mt-3 ">
+            Modern, scalable design for <br />
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">
               Saas & Tech
             </span>{" "}
@@ -55,6 +55,13 @@ const LandingHero = () => {
               <Button
                 className="bg-black text-white button dark:bg-white dark:text-black "
                 startContent={
+                  <img
+                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
+                    alt="Dribble Logo"
+                    className="w-[100%]"
+                  />
+                }
+                endContent={
                   <img
                     src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
                     alt="Dribble Logo"

@@ -1,3 +1,6 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -335,4 +338,33 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+
+/* 
+ */
+
+.slider-container {
+  padding: 20px 20px;
+  margin: 20px;
+}
+
+.card-item {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  filter: blur(3px);
+  transform: scale(0.9);
+}
+
+.slick-center .card-item {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.05);
+}
+
+.slick-slide {
+  padding: 0 10px; /* Adjust the spacing between the cards */
+}
+
+.slick-active .card-item {
+  filter: none;
 }

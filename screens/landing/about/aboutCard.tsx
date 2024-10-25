@@ -70,7 +70,7 @@ const AboutCardAnimation = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-32">
+    <div className="container mx-auto px-4 py-32 max-md:py-20">
       <div className="grid grid-cols-2 gap-6 lg:mt-60 max-lg:grid-cols-1">
         {data.map((item, index) => {
           return (
@@ -105,7 +105,7 @@ const AboutCardAnimation = () => {
                 <p className="uppercase text-8xl max-md:text-4xl mb-4 hover:rotate-[360deg]">
                   {item.heading}
                 </p>
-                <p className="text-4xl flex flex-row items-end justify-end pt-32 text-right">
+                <p className="text-4xl flex flex-row items-end justify-end pt-32 text-right max-md:pt-20">
                   {item.subtitle1}
                   <br />
                   {item.subtitle2}

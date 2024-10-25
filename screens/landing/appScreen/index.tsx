@@ -29,24 +29,24 @@ const LandingAppScreen = () => {
 
   return (
     <>
-      <div className="flex flex-row items-center justify-center gap-8 mt-40 appTrigger container mx-auto">
+      <div className="flex flex-row items-center justify-center gap-8 mt-40 appTrigger container mx-auto max-md:gap-4">
         <img
-          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729516037/Div_framer-phxs80_ltdycu.svg"
+          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768861/Frame_1984078758_tkh9ag.svg"
           alt="app"
           id="left"
-          className="rotate-[-6deg] max-md:w-[50%]"
+          className="rotate-[-6deg] max-md:w-[40%]"
         />
         <img
-          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729516039/Div_framer-o8mlgh_cbc7mx.svg"
+          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768964/Frame_1984078759_uzgqwr.svg"
           alt="app"
           id="center"
           className="pt-40 max-md:hidden"
         />
         <img
-          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729595123/app_cjhwn2.svg"
+          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768962/Frame_1984078760_r8jeqb.svg"
           alt="app"
           id="right"
-          className="rotate-[6deg] max-md:w-[50%]"
+          className="rotate-[6deg] max-md:w-[40%]"
         />
       </div>
     </>

@@ -3,62 +3,84 @@ import { Tabs, Tab, CardHeader } from "@nextui-org/react";
 
 const data = [
   {
-    heading: "Heading 1",
-    chip: [
-      "1-2 months delivery",
-      "$8,000-$12,000",
-      "Documentation",
-      "Scalable Architecture",
-      "Style Guidelines",
-      "Design Tokens",
+    heading: "Web/Mobile Apps",
+    description:
+      "Ideal for building complete app or Saas, including design and development.",
+    price: "1,000",
+    list: [
+      "4-6 week delivery",
+      "30-50 screens",
+      "SaaS design ready",
+      "Predefined scope of work (SOW)",
+      "AI chatbot integration available",
+      "Cross-platform development",
+      "5/7 Communication",
     ],
   },
   {
-    heading: "Heading 1",
-    chip: [
-      "1-2 months delivery",
-      "$8,000-$12,000",
-      "Documentation",
-      "Scalable Architecture",
-      "Style Guidelines",
-      "Design Tokens",
+    heading: "Landing Pages & E-commerce",
+    description:
+      "Build high-conversion landing pages or full e-commerce platforms",
+    price: "499",
+    list: [
+      "10-14 days turnaround time",
+      "1-5 Pages",
+      "High-conversion rate focus",
+      "E-commerce functionality",
+      "Responsive Design",
+      "Predefined scope of work (SOW)",
+      "5/7 Communication",
     ],
   },
   {
-    heading: "Heading 1",
-    chip: [
-      "1-2 months delivery",
-      "$8,000-$12,000",
-      "Documentation",
-      "Scalable Architecture",
-      "Style Guidelines",
-      "Design Tokens",
+    heading: "Design Systems & Component Libraries",
+    description:
+      "Scalable design systems with reusable components for consistent UI and easy integration.",
+    price: "1,999",
+    list: [
+      "2-4 weeks delivery",
+      "Scalable design systems",
+      "Development-ready components",
+      "UI consistency",
+      "5/7 Communication",
+      "Reusable components",
+      "Custom design library",
     ],
   },
 ];
 
 const dataPrice = [
   {
-    heading: "Heading 1",
-    chip: [
-      "1-2 months delivery",
-      "$8,000-$12,000",
-      "Documentation",
-      "Scalable Architecture",
-      "Style Guidelines",
-      "Design Tokens",
+    heading: "3D Animation + Motion Graphics",
+    description:
+      "Create stunning visuals and motion graphics for your digital projects with expert 3D animation and rendering.",
+    price: "99",
+    list: [
+      "4-6 weeks delivery",
+      "Custom motion graphics",
+      "High-end 3D rendering",
+      "Cross-platform visuals",
+      "5/7 Communication",
+      "Interactive animations",
+      "Development-ready assets",
     ],
+    limited: false,
   },
   {
-    heading: "Heading 1",
-    chip: [
-      "1-2 months delivery",
-      "$8,000-$12,000",
-      "Documentation",
-      "Scalable Architecture",
-      "Style Guidelines",
-      "Design Tokens",
+    heading: "Partnership & Consultation ",
+    description:
+      "Perfect for ongoing design and development needs or flexible, undefined scopes. Get continuous support for your evolving projects.",
+    price: "1,499",
+    list: [
+      "Flexible scope of work",
+      "End-to-end project management",
+      "Unlimited Design request & revisions",
+      "Design & dev consultation",
+      "5/7 Communication",
+      "1-3 days updates + 1 sync call/week",
+      "UI Development",
     ],
+    limited: true,
   },
 ];
 const OurPricingCard = (props: any) => {
@@ -92,15 +114,16 @@ const OurPricingCard = (props: any) => {
                         className="w-[40px]"
                       />
                       <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold">
-                        Web/Mobile Apps {props.id}
+                        {item.heading} {props.id}
                       </p>
                       <p className="text-lg max-md:text-base">
-                        Ideal for designing or redesigning website to double
-                        your conversion rates
+                        {item.description}
                       </p>
                       <div className="mt-6 mb-4">
                         <p className="text-[#C5C5C5] text-lg">Starting from</p>
-                        <p className="text-4xl font-semibold mt-2">$ 1,000</p>
+                        <p className="text-4xl font-semibold mt-2">
+                          $ {item.price}
+                        </p>
                       </div>
                       <Button
                         className="bg-black text-white button dark:bg-white dark:text-black w-full"
@@ -118,16 +141,14 @@ const OurPricingCard = (props: any) => {
 
                     <div>
                       <div>
-                        {item.chip.map((items, indexs) => {
+                        {item.list.map((items, indexs) => {
                           return (
                             <div className="flex flex-row items-center mt-2 gap-2">
                               <img
                                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729659619/svg2117386749_2472_qlrpim.svg"
                                 alt=""
                               />
-                              <p className=" text-lg">
-                                10-14 Days turnaround time
-                              </p>
+                              <p className=" text-lg">{items}</p>
                             </div>
                           );
                         })}
@@ -173,26 +194,29 @@ const OurPricingCard = (props: any) => {
                             alt="behance Logo"
                             className="w-[45px]"
                           />
-                          <Chip
-                            radius="md"
-                            className="m-2 text-lg text-gray-600"
-                          >
-                            Limited availability
-                          </Chip>
+                          {item.limited && (
+                            <Chip
+                              radius="md"
+                              className="m-2 text-lg text-gray-600"
+                            >
+                              Limited availability
+                            </Chip>
+                          )}
                         </div>
 
-                        <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold">
-                          3D Animation + Motion Graphics {props.id}
+                        <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-12">
+                          {item.heading} {props.id}
                         </p>
                         <p className="text-lg max-md:text-base">
-                          Ideal for designing or redesigning website to double
-                          your conversion rates
+                          {item.description}
                         </p>
                         <div className="mt-6 mb-4">
                           <p className="text-[#C5C5C5] text-lg">
                             Starting from
                           </p>
-                          <p className="text-4xl font-semibold mt-2">$ 1,000</p>
+                          <p className="text-4xl font-semibold mt-2">
+                            $ {item.price}
+                          </p>
                         </div>
                         <Button
                           className="bg-black text-white button dark:bg-white dark:text-black w-full"
@@ -209,16 +233,14 @@ const OurPricingCard = (props: any) => {
                       </div>
 
                       <div className="">
-                        {item.chip.map((items, indexs) => {
+                        {item.list.map((items, indexs) => {
                           return (
                             <div className="flex flex-row items-start mt-2 gap-2">
                               <img
                                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729659619/svg2117386749_2472_qlrpim.svg"
                                 alt=""
                               />
-                              <p className=" text-lg">
-                                10-14 Days turnaround time
-                              </p>
+                              <p className=" text-lg">{items}</p>
                             </div>
                           );
                         })}
