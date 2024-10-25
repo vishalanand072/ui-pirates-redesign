@@ -6,7 +6,7 @@ const LandingAbout = () => {
         <div>
           <div className="flex flex-row items-center justify-center mb-6">
             <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729597126/plans_bmcmmc.svg"
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729857387/Div_framer-3TZmM_zrisqv.svg"
               alt=""
             />
           </div>

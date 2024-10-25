@@ -7,11 +7,11 @@ const LandingHero = () => {
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden pt-8">
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
             <div className="flex flex-row overflow-hidden">
-              <img
+              {/* <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768369/hero1_p6oklo.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[5deg] max-md:hidden"
-              />
+              /> */}
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
                 alt="Dribble Logo"
@@ -22,21 +22,20 @@ const LandingHero = () => {
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[7deg]"
               />
-
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero4_hrsvsr.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               />
-              <img
+              {/* <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768368/hero5_yhwua3.svg"
                 alt="Dribble Logo"
                 className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110 hover:rotate-[-5deg] max-md:hidden"
-              />
+              /> */}
             </div>
           </div>
 
-          <div className="text-7xl px-48 text-center font-semibold max-lg:text-5xl max-md:text-4xl max-md:px-4 max-lg:px-32 mt-3 ">
+          <div className="text-7xl px-48 text-center font-semibold max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 ">
             Modern, scalable design for{" "}
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">
               Saas & Tech

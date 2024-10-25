@@ -23,13 +23,13 @@ const LandingAppScreen = () => {
       .to("#center", { paddingTop: 0, duration: 1 }, "<");
 
     // Initial position off-screen
-    gsap.set("#left", { x: "-10vw" });
-    gsap.set("#right", { x: "10vw" });
+    gsap.set("#left", { x: "0vw" });
+    gsap.set("#right", { x: "0vw" });
   }, []);
 
   return (
     <>
-      <div className="flex flex-row items-center justify-center gap-8 mt-40 appTrigger container mx-auto max-md:gap-4">
+      <div className="flex flex-row items-center justify-center gap-8 mt-20 appTrigger container mx-auto max-md:gap-4">
         <img
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768861/Frame_1984078758_tkh9ag.svg"
           alt="app"
@@ -40,13 +40,13 @@ const LandingAppScreen = () => {
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768964/Frame_1984078759_uzgqwr.svg"
           alt="app"
           id="center"
-          className="pt-40 max-md:hidden"
+          className="pt-40 max-lg:hidden"
         />
         <img
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768962/Frame_1984078760_r8jeqb.svg"
           alt="app"
           id="right"
-          className="rotate-[6deg] max-md:w-[40%]"
+          className="rotate-[6deg] max-md:w-[40%] "
         />
       </div>
     </>

@@ -12,24 +12,28 @@ const data = [
     subtitle1: "Projects",
     subtitle2: "Completed",
     hoverBg: "#dd3500e6",
+    textHover: "#8EF1F1E5",
   },
   {
     heading: "20+",
     subtitle1: "Enterprise",
     subtitle2: "Clients",
-    hoverBg: "#DCE5E5E5",
+    hoverBg: "#8EF1F1E5",
+    textHover: "#b0ddcae6",
   },
   {
     heading: "20+",
     subtitle1: "Industries",
     subtitle2: "Served",
     hoverBg: "#b0ddcae6",
+    textHover: "#f4e342e6",
   },
   {
     heading: "8+",
     subtitle1: " Years of",
     subtitle2: "Experience",
     hoverBg: "#f4e342e6",
+    textHover: "#dd3500e6",
   },
 ];
 
@@ -40,7 +44,7 @@ const AboutCardAnimation = () => {
   useEffect(() => {
     cardRefs.current.forEach((cardAbout, index) => {
       const isEven = index % 2 === 0;
-      const direction = isEven ? "-25%" : "25%"; // Even images come from left, odd from right
+      const direction = isEven ? "-15%" : "15%"; // Even images come from left, odd from right
 
       gsap.fromTo(
         cardAbout, // Apply animation to the entire card
@@ -70,7 +74,7 @@ const AboutCardAnimation = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-32 max-md:py-20">
+    <div className="container mx-auto px-4 py-20 max-md:py-20">
       <div className="grid grid-cols-2 gap-6 lg:mt-60 max-lg:grid-cols-1">
         {data.map((item, index) => {
           return (
@@ -78,8 +82,8 @@ const AboutCardAnimation = () => {
               key={index}
               className={
                 index % 2 === 0
-                  ? `bg-[#E1EAEA] rounded-[40px] py-12 px-12 w-full h-[400px]  max-md:h-[300px]  lg:-mt-52 hover:bg-[${item.hoverBg}]`
-                  : `bg-[#E1EAEA] rounded-[40px]  py-12 px-12 w-full h-[400px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}]`
+                  ? `bg-[#E1EAEA] rounded-[40px] py-12 px-12 w-full h-[400px]  max-md:h-[300px]  lg:-mt-32 hover:bg-[${item.hoverBg}] hover:text-white hover:ease-in-out`
+                  : `bg-[#E1EAEA] rounded-[40px]  py-12 px-12 w-full h-[400px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}] hover:text-white  hover:ease-in-out`
               }
               //   style={{
               //     transform: index % 2 === 0 ? "rotate(-15deg)" : "rotate(15deg)",
@@ -102,10 +106,10 @@ const AboutCardAnimation = () => {
               }}
             >
               <div>
-                <p className="uppercase text-8xl max-md:text-4xl mb-4 hover:rotate-[360deg]">
+                <p className="uppercase text-9xl max-md:text-7xl mb-4 hover:rotate-[360deg]">
                   {item.heading}
                 </p>
-                <p className="text-4xl flex flex-row items-end justify-end pt-32 text-right max-md:pt-20">
+                <p className="text-3xl font-semibold flex flex-row items-end justify-end pt-28 text-right max-md:pt-20 uppercase">
                   {item.subtitle1}
                   <br />
                   {item.subtitle2}

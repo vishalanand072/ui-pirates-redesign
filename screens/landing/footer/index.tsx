@@ -20,32 +20,49 @@ const images = [
   "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/bxl_upwork_qojqwz.svg",
   "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/uil_behance_ky54am.svg",
   "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/Frame_1000006225_bafxox.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665622/ri_linkedin-fill_nivdt4.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/InstagramLogo_tqqxe8.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/bxl_upwork_qojqwz.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/uil_behance_ky54am.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/Frame_1000006225_bafxox.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665622/ri_linkedin-fill_nivdt4.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/InstagramLogo_tqqxe8.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/bxl_upwork_qojqwz.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/uil_behance_ky54am.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/Frame_1000006225_bafxox.svg",
 ];
 
 const LandingFooter = () => {
   return (
     <>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden h-screen">
         <div
           style={{
             display: "flex",
+            flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
             contain: "content",
             height: "100vh",
           }}
-          className=" absolute top-0 pl-[45vh] max-lg:pl-[10vh]"
+          // className=" absolute top-0 pl-[45vh] max-lg:pl-[10vh]"
+          className=" absolute"
         >
           <CircularImage images={images} />
         </div>
 
-        <div className="h-[100vh] max-md:h-[100vh] bg-black rounded-tr-[100px] rounded-tl-[100px]  max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]  mt-32 text-white max-md:px-4">
+        <div className="h-[100vh] max-md:h-[100vh] bg-black rounded-tr-[100px] rounded-tl-[100px]  max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]  mt-32 text-white max-md:px-12">
           <div className="flex flex-row items-center justify-center h-full">
             <div className=" pt-32 absolute bottom-8">
               <div className="flex flex-row items-center justify-center">
-                <p className="text-center text-3xl md:w-1/2">
-                  Ready to turn your vision into reality? Schedule a call or
-                  drop us an email, and let’s get started!
+                <p className="text-center text-4xl md:w-1/2 px-16 max-md:px-4 max-lg:px-12 mb-3">
+                  Ready to bring your vision to life?
+                </p>
+              </div>
+              <div className="flex flex-row items-center justify-center">
+                <p className="text-center text-lg md:w-1/2">
+                  Ready to bring your vision to life? Schedule a call or send us
+                  a WhatsApp message, and let’s get started!
                 </p>
               </div>
               <div className="mt-12 flex flex-row items-center justify-center max-md:flex-col w-full">
@@ -90,8 +107,7 @@ const LandingFooter = () => {
                 </div>
               </div>
               <p className="text-center mt-4">
-                Copyright© 2023 UI Pirates. All Rights Reserved. | User Terms &
-                Conditions | Privacy Policy
+                Copyright© 2023 UI Pirates. All Rights Reserved.
               </p>
             </div>
           </div>

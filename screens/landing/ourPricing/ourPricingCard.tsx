@@ -1,12 +1,14 @@
 import { Button, Card, CardBody, chip, Chip } from "@nextui-org/react";
 import { Tabs, Tab, CardHeader } from "@nextui-org/react";
+import { useState } from "react";
 
 const data = [
   {
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729841109/widget-svgrepo-com_1_xflrym.svg",
     heading: "Web/Mobile Apps",
     description:
       "Ideal for building complete app or Saas, including design and development.",
-    price: "1,000",
+    price: "999",
     list: [
       "4-6 week delivery",
       "30-50 screens",
@@ -16,8 +18,10 @@ const data = [
       "Cross-platform development",
       "5/7 Communication",
     ],
+    tab: true,
   },
   {
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729841107/Vectore_ididim.svg",
     heading: "Landing Pages & E-commerce",
     description:
       "Build high-conversion landing pages or full e-commerce platforms",
@@ -31,8 +35,10 @@ const data = [
       "Predefined scope of work (SOW)",
       "5/7 Communication",
     ],
+    tab: true,
   },
   {
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729841104/figma-component-svgrepo-com_1_mtgewy.svg",
     heading: "Design Systems & Component Libraries",
     description:
       "Scalable design systems with reusable components for consistent UI and easy integration.",
@@ -46,11 +52,13 @@ const data = [
       "Reusable components",
       "Custom design library",
     ],
+    tab: false,
   },
 ];
 
 const dataPrice = [
   {
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729841103/video-library-svgrepo-com_1_edfhv4.svg",
     heading: "3D Animation + Motion Graphics",
     description:
       "Create stunning visuals and motion graphics for your digital projects with expert 3D animation and rendering.",
@@ -67,6 +75,8 @@ const dataPrice = [
     limited: false,
   },
   {
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729841102/Group_jgfe_zhcljv.svg",
+
     heading: "Partnership & Consultation ",
     description:
       "Perfect for ongoing design and development needs or flexible, undefined scopes. Get continuous support for your evolving projects.",
@@ -84,7 +94,12 @@ const dataPrice = [
   },
 ];
 const OurPricingCard = (props: any) => {
+  const [tabsData, setTabsData]: any = useState();
   let tabs = [
+    {
+      id: "Design + Dev",
+      label: "Design + Dev",
+    },
     {
       id: "Design Only",
       label: "Design Only",
@@ -93,23 +108,24 @@ const OurPricingCard = (props: any) => {
       id: "Dev Only",
       label: "Dev Only",
     },
-    {
-      id: "Design + Dev",
-      label: "Design + Dev",
-    },
   ];
+
+  const handleTabChange = (id: string) => {
+    setTabsData(id);
+    console.log("Current tab:", id);
+  };
   return (
     <>
       <div>
-        <Card className="rounded-[48px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
+        <Card className="rounded-[48px] max-md:rounded-[38px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
           <CardBody className="gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
             {data.map((item, index) => {
               return (
-                <Card className="rounded-[40px]">
+                <Card className="rounded-[40px] max-md:rounded-[30px]">
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12 max-md:grid-cols-1">
                     <div className="w-full">
                       <img
-                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729659876/svg1096732083_2596_tio9cb.svg"
+                        src={item.icon}
                         alt="behance Logo"
                         className="w-[40px]"
                       />
@@ -120,9 +136,13 @@ const OurPricingCard = (props: any) => {
                         {item.description}
                       </p>
                       <div className="mt-6 mb-4">
-                        <p className="text-[#C5C5C5] text-lg">Starting from</p>
+                        <p className="text-[#C5C5C5] text-lg">
+                          {props.id == "Fixed"
+                            ? "Starting from"
+                            : "Hourly Rate"}
+                        </p>
                         <p className="text-4xl font-semibold mt-2">
-                          $ {item.price}
+                          $ {item.price} {tabsData}
                         </p>
                       </div>
                       <Button
@@ -145,7 +165,7 @@ const OurPricingCard = (props: any) => {
                           return (
                             <div className="flex flex-row items-center mt-2 gap-2">
                               <img
-                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729659619/svg2117386749_2472_qlrpim.svg"
+                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
                                 alt=""
                               />
                               <p className=" text-lg">{items}</p>
@@ -153,29 +173,35 @@ const OurPricingCard = (props: any) => {
                           );
                         })}
                       </div>
-                      <div className="flex w-full flex-col items-start justify-end mt-8">
-                        <Tabs
-                          aria-label="Dynamic tabs"
-                          items={tabs}
-                          classNames={{
-                            // tabList:
-                            //   "gap-6 w-full relative rounded-none p-0 border-b border-divider",
-                            cursor: "w-full bg-black text-black",
-                            tab: "px-6 max-lg:px-2 ",
-                            tabContent: "group-data-[selected=true]:text-white",
-                          }}
-                        >
-                          {(item) => (
-                            <Tab
-                              key={item.id}
-                              title={item.label}
-                              className="max-md:text-xs"
-                            >
-                              {/* <OurPricingCard id={item.id} /> */}
-                            </Tab>
-                          )}
-                        </Tabs>
-                      </div>
+                      {item.tab && (
+                        <div className="flex w-full flex-col items-start justify-end mt-8">
+                          <Tabs
+                            aria-label="Dynamic tabs"
+                            items={tabs}
+                            classNames={{
+                              // tabList:
+                              //   "gap-6 w-full relative rounded-none p-0 border-b border-divider",
+                              cursor: "w-full bg-black text-black",
+                              tab: "px-6 max-lg:px-2 ",
+                              tabContent:
+                                "group-data-[selected=true]:text-white",
+                            }}
+                            onSelectionChange={(key) =>
+                              handleTabChange(key as string)
+                            }
+                          >
+                            {(item) => (
+                              <Tab
+                                key={item.id}
+                                title={item.label}
+                                className="max-md:text-xs"
+                                id="id"
+                                // onClick={() => handleTabChange(item.id)}
+                              ></Tab>
+                            )}
+                          </Tabs>
+                        </div>
+                      )}
                     </div>
                   </CardBody>
                 </Card>
@@ -190,14 +216,20 @@ const OurPricingCard = (props: any) => {
                       <div className="w-full">
                         <div className="flex flex-row items-center justify-between">
                           <img
-                            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729661220/campus_exryq3.svg"
+                            src={item.icon}
                             alt="behance Logo"
                             className="w-[45px]"
                           />
                           {item.limited && (
                             <Chip
                               radius="md"
-                              className="m-2 text-lg text-gray-600"
+                              className="m-2 text-lg text-[#7B7B7B] px-2"
+                              startContent={
+                                <img
+                                  src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841595/svg1994013495_1681_qv43ow.svg"
+                                  className="w-[16px]"
+                                />
+                              }
                             >
                               Limited availability
                             </Chip>
@@ -212,7 +244,9 @@ const OurPricingCard = (props: any) => {
                         </p>
                         <div className="mt-6 mb-4">
                           <p className="text-[#C5C5C5] text-lg">
-                            Starting from
+                            {props.id == "Fixed"
+                              ? "Starting from"
+                              : "Hourly Rate"}
                           </p>
                           <p className="text-4xl font-semibold mt-2">
                             $ {item.price}
@@ -237,7 +271,7 @@ const OurPricingCard = (props: any) => {
                           return (
                             <div className="flex flex-row items-start mt-2 gap-2">
                               <img
-                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729659619/svg2117386749_2472_qlrpim.svg"
+                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
                                 alt=""
                               />
                               <p className=" text-lg">{items}</p>

@@ -204,8 +204,8 @@ const PricingCard = () => {
           card,
           {
             y: 50, // Start from below
-            marginLeft: "15%",
-            marginRight: "15%",
+            marginLeft: "10%",
+            marginRight: "10%",
             opacity: 1,
             filter: "blur(0px)", // Initial blur effect
           },
@@ -219,9 +219,10 @@ const PricingCard = () => {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 90%", // When the top of the card reaches 80% of the viewport height
-              end: "top 50%",
-              toggleActions: "play none none reverse",
+              start: "top 80%",
+              end: "bottom 10%",
+              toggleActions: "restart none none reverse",
+              scrub: true,
             },
           }
         );

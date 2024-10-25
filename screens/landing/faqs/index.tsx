@@ -3,11 +3,11 @@ import { Card, CardHeader, CardBody, Image, Button } from "@nextui-org/react";
 const LandingFaqs = () => {
   return (
     <>
-      <div className="grid grid-cols-5 max-lg:grid-cols-4 max-md:grid-cols-1 container mx-auto max-md:px-4 lg:px-20 mt-32">
-        <div className="lg:pr-12 col-span-2 max-md:pr-0 max-md:col-span-1">
+      <div className="grid grid-cols-4 max-lg:grid-cols-4 max-md:grid-cols-1 container mx-auto max-md:px-4 lg:px-20 mt-32">
+        <div className="lg:pr-32 col-span-2 max-md:pr-0 max-md:col-span-1">
           <div className="flex flex-row items-start mb-6">
             <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729597126/plans_bmcmmc.svg"
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729861628/Div_framer-3TZmM_kfhwe_oihrjx.svg"
               alt=""
             />
           </div>
@@ -56,7 +56,7 @@ const LandingFaqs = () => {
             </Card>
           </div>
         </div>
-        <div className="max-md:mt-6 col-span-3 max-lg:col-span-2 max-md:col-span-1">
+        <div className="max-md:mt-6 col-span-2 max-lg:col-span-2 max-md:col-span-1">
           <FaqsAccordion />
         </div>
       </div>

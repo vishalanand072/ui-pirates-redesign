@@ -43,13 +43,17 @@ export default function FaqsAccordion() {
           card,
           {
             y: 50, // Start from below
-            paddingLeft: "20%",
-            paddingRight: "20%",
+            paddingTop: "5%",
+            paddingBottom: "5%",
+            paddingLeft: "2%",
+            paddingRight: "2%",
             opacity: 0, // Start fully transparent
             filter: "blur(5px)", // Initial blur effect
           },
           {
             y: 0, // Move to its original position
+            paddingTop: "0%",
+            paddingBottom: "0%",
             paddingLeft: "0%",
             paddingRight: "0%",
             opacity: 1, // Fade in to fully visible
@@ -60,7 +64,7 @@ export default function FaqsAccordion() {
               trigger: card,
               start: "top 80%", // When the top of the card reaches 80% of the viewport height
               end: "top 30%",
-              toggleActions: "play none none reverse",
+              toggleActions: "restart none none reverse",
             },
           }
         );
@@ -70,33 +74,35 @@ export default function FaqsAccordion() {
 
   return (
     <>
-      {data.map((item, index) => {
-        return (
-          <Accordion
-            variant="splitted"
-            className="mb-4"
-            key={index} // Move key here for proper rendering
-            ref={(el) => {
-              if (el) cardsRef.current[index] = el;
-            }}
-          >
-            <AccordionItem
-              aria-label={item.heading}
-              title={item.heading}
-              indicator={({ isOpen }) =>
-                isOpen ? (
-                  <p className="text-3xl text-black rotate-45">+</p>
-                ) : (
-                  <p className="text-3xl text-black">+</p>
-                )
-              }
-              className="shadow-none border-1"
+      <div className="mb-12">
+        {data.map((item, index) => {
+          return (
+            <Accordion
+              variant="splitted"
+              className="mb-4"
+              key={index} // Move key here for proper rendering
+              ref={(el) => {
+                if (el) cardsRef.current[index] = el;
+              }}
             >
-              {defaultContent}
-            </AccordionItem>
-          </Accordion>
-        );
-      })}
+              <AccordionItem
+                aria-label={item.heading}
+                title={item.heading}
+                indicator={({ isOpen }) =>
+                  isOpen ? (
+                    <p className="text-3xl text-black rotate-45">+</p>
+                  ) : (
+                    <p className="text-3xl text-black">+</p>
+                  )
+                }
+                className="shadow-none border-1"
+              >
+                {defaultContent}
+              </AccordionItem>
+            </Accordion>
+          );
+        })}
+      </div>
     </>
   );
 }

@@ -12,8 +12,8 @@ const CircularImage: React.FC<CircularImageProps> = ({ images }) => {
     const imagesElements = containerRef.current?.children as
       | HTMLCollectionOf<HTMLImageElement>
       | undefined;
-    const radius = 400; // Radius of the circle
-    const center = 400; // Center position (half of container size)
+    const radius = 800; // Radius of the circle
+    const center = 800; // Center position (half of container size)
 
     const setPositions = (angleOffset = 0) => {
       if (imagesElements) {
@@ -29,7 +29,7 @@ const CircularImage: React.FC<CircularImageProps> = ({ images }) => {
     let angleOffset = 0;
 
     const animate: any = () => {
-      angleOffset += 0.01; // Adjust speed of rotation
+      angleOffset += 0.0019; // Adjust speed of rotation
       setPositions(angleOffset);
       requestAnimationFrame(animate);
     };
@@ -48,9 +48,12 @@ const CircularImage: React.FC<CircularImageProps> = ({ images }) => {
         width: "100vw",
         height: "100vh",
         overflow: "hidden",
-        margin: "0 auto",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        // margin: "0 auto",
       }}
-      className="content-center justify-center max-md:hidden"
+      className="content-center justify-center max-md:hidden flex flex-col items-center -ml-[40%]"
     >
       {images.map((src, index) => (
         <img

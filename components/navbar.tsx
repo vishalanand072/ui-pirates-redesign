@@ -54,14 +54,19 @@ export const Navbar = () => {
       position="sticky"
       className="bg-none top-0 absolute"
     >
-      <div className="border-2 container  flex flex-row items-center rounded-2xl px-2 py-1 mx-56 max-lg:mx-12 max-md:mx-0 mt-4 sticky top-10">
+      <div className="border-2 container  flex flex-row items-center rounded-2xl px-2 py-0 mx-56 max-lg:mx-12 max-md:mx-0 mt-4 sticky top-10">
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3 max-w-fit">
             <NextLink
               className="flex justify-start items-center gap-1"
               href="/"
             >
-              <Logo />
+              {/* <Logo /> */}
+              <img
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg"
+                alt=""
+                className="mt-2"
+              />
               <p className="font-bold text-inherit">UI Pirates</p>
             </NextLink>
           </NavbarBrand>

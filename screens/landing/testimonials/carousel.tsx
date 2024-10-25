@@ -77,13 +77,37 @@ function ResponsiveCarousel() {
     initialSlide: 0,
     autoplay: true,
     infinite: true,
+    appendDots: (dots: any) => (
+      <div className="flex flex-row items-center justify-center py-4 button">
+        <ul
+          style={{
+            margin: "0px",
+            color: "red",
+          }}
+        >
+          {" "}
+          {dots}{" "}
+        </ul>
+      </div>
+    ),
+
+    customPaging: () => (
+      <div
+        style={{
+          width: "12px",
+          height: "12px",
+          borderRadius: "50%",
+          background: "gray",
+        }}
+      ></div>
+    ),
 
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -106,10 +130,10 @@ function ResponsiveCarousel() {
     ],
   };
   return (
-    <div className="">
+    <div className="py-12">
       <Slider {...settings}>
         {data.map((item, index) => (
-          <div className=" mt-8 mb-12">
+          <div className=" mt-8 mb-12 py-12">
             <Card
               key={index}
               className={`rounded-[40px] max-md:w-[100%] bg-[#e9e9e9] card-item`}
@@ -148,11 +172,15 @@ function ResponsiveCarousel() {
                   <div className="grid grid-cols-2 gap-3 mt-6">
                     <div className=" bg-[#EDEDED] p-3 rounded-xl">
                       <p className="text-2xl font-semibold mb-1">10/10</p>
-                      <p className="text-[#C5C5C5]">Sactisfaction Score</p>
+                      <p className="text-[#C5C5C5] text-sm">
+                        Sactisfaction Score
+                      </p>
                     </div>
                     <div className=" bg-[#EDEDED] p-3 rounded-xl">
                       <p className="text-2xl font-semibold mb-1">Xperiti</p>
-                      <p className="text-[#C5C5C5]">Projects Worked on</p>
+                      <p className="text-[#C5C5C5] text-sm">
+                        Projects Worked on
+                      </p>
                     </div>
                   </div>
                 </div>

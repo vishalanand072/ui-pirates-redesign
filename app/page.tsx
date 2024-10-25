@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false); // Hide the loader after 2 seconds
-    }, 3000);
+    });
 
     // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
