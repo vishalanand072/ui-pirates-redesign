@@ -36,8 +36,8 @@ const LandingHero = () => {
             </div>
           </div>
 
-          <div className="text-7xl px-40 text-center font-semibold max-lg:text-5xl max-md:text-4xl max-md:px-4 max-lg:px-32 mt-3 ">
-            Modern, scalable design for <br />
+          <div className="text-7xl px-48 text-center font-semibold max-lg:text-5xl max-md:text-4xl max-md:px-4 max-lg:px-32 mt-3 ">
+            Modern, scalable design for{" "}
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">
               Saas & Tech
             </span>{" "}
