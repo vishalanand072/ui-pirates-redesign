@@ -136,10 +136,10 @@ function ResponsiveCarousel() {
           <div className=" mt-8 mb-12 py-12">
             <Card
               key={index}
-              className={`rounded-[40px] max-md:w-[100%] bg-[#e9e9e9] card-item`}
+              className={`rounded-[40px] max-md:w-[100%] bg-[#e9e9e9] card-item max-md:rounded-[30px]`}
             >
-              <CardBody className="p-4 max-md:p-4 max-lg:p-4">
-                <div className="w-full p-6 bg-white rounded-[24px]">
+              <CardBody className="p-4 max-md:p-2 max-lg:p-4">
+                <div className="w-full p-6 bg-white rounded-[24px] max-md:p-4">
                   <div className="flex flex-row justify-between gap-4">
                     <div className="flex flex-row gap-3">
                       <img
@@ -163,7 +163,7 @@ function ResponsiveCarousel() {
                     />
                   </div>
 
-                  <p className="max-md:text-base mt-4">
+                  <p className="max-md:text-base mt-4 line-clamp-4">
                     Wonderful to work with, very experienced with UI/UX design.
                     Was very open to work in the flow we requested that required
                     actual Angular coding from his team as well, and stood up to
@@ -171,13 +171,17 @@ function ResponsiveCarousel() {
                   </p>
                   <div className="grid grid-cols-2 gap-3 mt-6">
                     <div className=" bg-[#EDEDED] p-3 rounded-xl">
-                      <p className="text-2xl font-semibold mb-1">10/10</p>
+                      <p className="text-2xl font-semibold mb-1 max-md:text-lg max-lg:text-xl">
+                        10/10
+                      </p>
                       <p className="text-[#C5C5C5] text-sm">
                         Sactisfaction Score
                       </p>
                     </div>
                     <div className=" bg-[#EDEDED] p-3 rounded-xl">
-                      <p className="text-2xl font-semibold mb-1">Xperiti</p>
+                      <p className="text-2xl font-semibold mb-1  max-md:text-lg max-lg:text-xl">
+                        Xperiti
+                      </p>
                       <p className="text-[#C5C5C5] text-sm">
                         Projects Worked on
                       </p>

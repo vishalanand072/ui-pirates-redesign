@@ -45,8 +45,6 @@ export default function FaqsAccordion() {
             y: 50, // Start from below
             paddingTop: "5%",
             paddingBottom: "5%",
-            paddingLeft: "2%",
-            paddingRight: "2%",
             opacity: 0, // Start fully transparent
             filter: "blur(5px)", // Initial blur effect
           },
@@ -54,8 +52,6 @@ export default function FaqsAccordion() {
             y: 0, // Move to its original position
             paddingTop: "0%",
             paddingBottom: "0%",
-            paddingLeft: "0%",
-            paddingRight: "0%",
             opacity: 1, // Fade in to fully visible
             filter: "blur(0px)", // Remove blur
             duration: 1,
@@ -74,16 +70,18 @@ export default function FaqsAccordion() {
 
   return (
     <>
-      <div className="mb-12">
+      <div
+        className="mb-12"
+        ref={(el) => {
+          if (el) cardsRef.current[0] = el;
+        }}
+      >
         {data.map((item, index) => {
           return (
             <Accordion
               variant="splitted"
               className="mb-4"
               key={index} // Move key here for proper rendering
-              ref={(el) => {
-                if (el) cardsRef.current[index] = el;
-              }}
             >
               <AccordionItem
                 aria-label={item.heading}

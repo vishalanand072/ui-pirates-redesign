@@ -46,7 +46,7 @@ const LandingFooter = () => {
             height: "100vh",
           }}
           // className=" absolute top-0 pl-[45vh] max-lg:pl-[10vh]"
-          className=" absolute"
+          className=" absolute max-md:hidden"
         >
           <CircularImage images={images} />
         </div>
@@ -60,7 +60,7 @@ const LandingFooter = () => {
                 </p>
               </div>
               <div className="flex flex-row items-center justify-center">
-                <p className="text-center text-lg md:w-1/2">
+                <p className="text-center text-lg md:w-1/2 max-md:px-4">
                   Ready to bring your vision to life? Schedule a call or send us
                   a WhatsApp message, and let’s get started!
                 </p>
@@ -100,7 +100,7 @@ const LandingFooter = () => {
                       <img
                         src={item}
                         alt="Dribble Logo"
-                        className="w-[80px] h-[80px]"
+                        className="w-[80px] h-[80px] max-md:w-[40px] max-md:h-[40px]"
                       />
                     );
                   })}

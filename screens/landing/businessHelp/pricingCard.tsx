@@ -238,7 +238,7 @@ const PricingCard = () => {
             if (el) cardsRef.current[index] = el;
           }}
           key={index}
-          className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b]"
+          className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4"
         >
           <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
             <Card className="rounded-[40px] border-2">
@@ -283,7 +283,7 @@ const PricingCard = () => {
           if (el) cardsRef.current[4] = el;
         }}
       >
-        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12">
+        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:mt-4">
           <CardBody className="grid grid-cols-3 gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
             {data1.map((item, index) => {
               return (

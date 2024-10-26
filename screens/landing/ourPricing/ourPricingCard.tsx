@@ -122,7 +122,7 @@ const OurPricingCard = (props: any) => {
             {data.map((item, index) => {
               return (
                 <Card className="rounded-[40px] max-md:rounded-[30px]">
-                  <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12 max-md:grid-cols-1">
+                  <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12 max-md:grid-cols-1 max-md:gap-4">
                     <div className="w-full">
                       <img
                         src={item.icon}
@@ -141,7 +141,7 @@ const OurPricingCard = (props: any) => {
                             ? "Starting from"
                             : "Hourly Rate"}
                         </p>
-                        <p className="text-4xl font-semibold mt-2">
+                        <p className="text-4xl font-semibold mt-2 max-md:text-2xl">
                           $ {item.price} {tabsData}
                         </p>
                       </div>
@@ -174,7 +174,7 @@ const OurPricingCard = (props: any) => {
                         })}
                       </div>
                       {item.tab && (
-                        <div className="flex w-full flex-col items-start justify-end mt-8">
+                        <div className="flex w-full flex-col items-start justify-end mt-8 max-sm:mt-6">
                           <Tabs
                             aria-label="Dynamic tabs"
                             items={tabs}
