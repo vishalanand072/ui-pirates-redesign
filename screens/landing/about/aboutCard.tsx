@@ -12,28 +12,28 @@ const data = [
     subtitle1: "Projects",
     subtitle2: "Completed",
     hoverBg: "#dd3500e6",
-    textHover: "#8EF1F1E5",
+    textHover: "#fff",
   },
   {
     heading: "20+",
     subtitle1: "Enterprise",
     subtitle2: "Clients",
     hoverBg: "#8EF1F1E5",
-    textHover: "#b0ddcae6",
+    textHover: "#000",
   },
   {
     heading: "20+",
     subtitle1: "Industries",
     subtitle2: "Served",
     hoverBg: "#b0ddcae6",
-    textHover: "#f4e342e6",
+    textHover: "#000",
   },
   {
     heading: "8+",
     subtitle1: " Years of",
     subtitle2: "Experience",
     hoverBg: "#f4e342e6",
-    textHover: "#dd3500e6",
+    textHover: "#000",
   },
 ];
 
@@ -83,7 +83,7 @@ const AboutCardAnimation = () => {
               className={
                 index % 2 === 0
                   ? `bg-[#E1EAEA] rounded-[40px] py-12 px-12 w-full h-[400px]  max-md:h-[300px]  lg:-mt-32 hover:bg-[${item.hoverBg}] hover:text-white hover:ease-in-out`
-                  : `bg-[#E1EAEA] rounded-[40px]  py-12 px-12 w-full h-[400px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}] hover:text-white  hover:ease-in-out`
+                  : `bg-[#E1EAEA] rounded-[40px]  py-12 px-12 w-full h-[400px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}] hover:ease-in-out`
               }
               //   style={{
               //     transform: index % 2 === 0 ? "rotate(-15deg)" : "rotate(15deg)",
@@ -94,6 +94,7 @@ const AboutCardAnimation = () => {
                 backgroundColor:
                   hoveredIndex === index ? item.hoverBg : "#E1EAEA",
                 transition: "background-color 0.6s ease", // Smooth transition for background color
+                color: hoveredIndex === index ? item.textHover : "#000",
               }}
               onMouseEnter={() => setHoveredIndex(index)} // Set hovered index on mouse enter
               onMouseLeave={() => setHoveredIndex(null)}

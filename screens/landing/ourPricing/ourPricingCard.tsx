@@ -159,22 +159,75 @@ const OurPricingCard = (props: any) => {
                           {props.id == "Fixed" ? (
                             selectedTab == "Design + Dev" ? (
                               <p>
-                                $ {item.design} {item.dev && `+ $ ${item.dev}`}
+                                <span className="text-2xl mr-[4px] ">$</span>
+                                {item.design}
+                                <span className="text-[#C5C5C5] text-lg font-light">
+                                  {item.tab && "Design"}
+                                </span>{" "}
+                                {item.dev && (
+                                  <>
+                                    <span className="text-[#C5C5C5] ">+</span>{" "}
+                                    <span className="text-2xl mr-[4px] ">
+                                      $
+                                    </span>
+                                    {item.dev}
+                                    <span className="text-[#C5C5C5] text-lg font-light">
+                                      Dev
+                                    </span>
+                                  </>
+                                )}
                               </p>
                             ) : selectedTab == "Design Only" ? (
-                              ` $ ${item.design}`
+                              <p className=" align-middle">
+                                <span className="text-2xl mr-[4px] ">$</span>
+                                {item.design}
+                              </p>
                             ) : (
-                              ` $ ${item.dev}`
+                              <p className=" align-middle">
+                                <span className="text-2xl mr-[4px] ">$</span>
+                                {item.dev}
+                              </p>
                             )
                           ) : selectedTab == "Design + Dev" ? (
+                            // <p>
+                            //   <span className="text-2xl mr-[4px] ">$</span>
+                            //   {item.designhr}{" "}
+                            //   {item.devhr && (
+                            //     <>
+                            //       <span className="text-[#C5C5C5] ">+</span>{" "}
+                            //       <span className="text-2xl mr-[4px] ">$</span>
+                            //       {item.devhr}
+                            //     </>
+                            //   )}
+                            // </p>
+
                             <p>
-                              $ {item.designhr}{" "}
-                              {item.devhr && `+ $ ${item.devhr}`}
+                              <span className="text-2xl mr-[4px] ">$</span>
+                              {item.designhr}
+                              <span className="text-[#C5C5C5] text-lg font-light">
+                                {item.tab && "Design"}
+                              </span>{" "}
+                              {item.devhr && (
+                                <>
+                                  <span className="text-[#C5C5C5] ">+</span>{" "}
+                                  <span className="text-2xl mr-[4px] ">$</span>
+                                  {item.devhr}
+                                  <span className="text-[#C5C5C5] text-lg font-light">
+                                    Dev
+                                  </span>
+                                </>
+                              )}
                             </p>
                           ) : selectedTab == "Design Only" ? (
-                            ` $ ${item.designhr}`
+                            <p>
+                              <span className="text-2xl mr-[4px] ">$</span>
+                              {item.designhr}
+                            </p>
                           ) : (
-                            ` $ ${item.devhr}`
+                            <p>
+                              <span className="text-2xl mr-[4px] ">$</span>
+                              {`${item.devhr}`}
+                            </p>
                           )}
                         </p>
                         {item.tab && (
@@ -286,7 +339,8 @@ const OurPricingCard = (props: any) => {
                             : "Hourly Rate"}
                         </p>
                         <p className="text-4xl font-semibold mt-2">
-                          $ {props.id == "Fixed" ? item.price : item.pricehr}
+                          <span className="text-2xl mr-[4px] ">$</span>
+                          {props.id == "Fixed" ? item.price : item.pricehr}
                         </p>
                       </div>
                       <Button

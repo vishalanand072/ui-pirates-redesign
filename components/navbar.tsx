@@ -52,9 +52,9 @@ export const Navbar = () => {
     <NextUINavbar
       maxWidth="xl"
       position="sticky"
-      className="bg-none top-0 absolute"
+      className="bg-none blur-none top-0 absolute py-2"
     >
-      <div className="border-2 container  flex flex-row items-center rounded-2xl px-2 py-0 mx-56 max-lg:mx-12 max-md:mx-0 mt-4 sticky top-10">
+      <div className="border-2 container  flex flex-row items-center rounded-2xl px-2 py-0 mx-56 max-lg:mx-12 max-md:mx-0 mt-0 sticky top-0">
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3 max-w-fit">
             <NextLink

@@ -42,8 +42,8 @@ export default function RootLayout({
         )}
       >
         {/* <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}> */}
-        <div className="relative flex flex-col h-screen">
-          <div className="">
+        <div className="relative flex flex-col">
+          <div className="sticky top-0 " style={{ zIndex: 999999999999999999 }}>
             <Navbar />
           </div>
           <main>{children}</main>
