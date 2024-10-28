@@ -181,13 +181,13 @@ const OurPricingCard = (props: any) => {
                           <img
                             src={
                               selectedTab == "Design + Dev"
-                                ? "https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                                ? "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/designdev_f0onqh.svg"
                                 : selectedTab == "Design Only"
-                                  ? "https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                                  : "https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                                  ? "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/design_oly_f4hn7l.svg"
+                                  : "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/dev_grzer7.svg"
                             }
                             alt="design dev icon"
-                            className="w-[40px] h-[40px]"
+                            className="w-[36px] h-[32px]"
                           />
                         )}
                       </div>
