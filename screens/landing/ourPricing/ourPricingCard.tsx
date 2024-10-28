@@ -1,5 +1,5 @@
-import { Button, Card, CardBody, chip, Chip } from "@nextui-org/react";
-import { Tabs, Tab, CardHeader } from "@nextui-org/react";
+import { Button, Card, CardBody, Chip } from "@nextui-org/react";
+import { Tabs, Tab } from "@nextui-org/react";
 import { useState } from "react";
 
 const data = [
@@ -8,7 +8,10 @@ const data = [
     heading: "Web/Mobile Apps",
     description:
       "Ideal for building complete app or Saas, including design and development.",
-    price: "999",
+    dev: "999",
+    design: "999",
+    devhr: "15",
+    designhr: "20",
     list: [
       "4-6 week delivery",
       "30-50 screens",
@@ -25,7 +28,10 @@ const data = [
     heading: "Landing Pages & E-commerce",
     description:
       "Build high-conversion landing pages or full e-commerce platforms",
-    price: "499",
+    dev: "499",
+    design: "499",
+    devhr: "15",
+    designhr: "20",
     list: [
       "10-14 days turnaround time",
       "1-5 Pages",
@@ -42,7 +48,8 @@ const data = [
     heading: "Design Systems & Component Libraries",
     description:
       "Scalable design systems with reusable components for consistent UI and easy integration.",
-    price: "1,999",
+    design: "1,999",
+    designhr: "20",
     list: [
       "2-4 weeks delivery",
       "Scalable design systems",
@@ -63,6 +70,7 @@ const dataPrice = [
     description:
       "Create stunning visuals and motion graphics for your digital projects with expert 3D animation and rendering.",
     price: "99",
+    pricehr: "30",
     list: [
       "4-6 weeks delivery",
       "Custom motion graphics",
@@ -81,6 +89,7 @@ const dataPrice = [
     description:
       "Perfect for ongoing design and development needs or flexible, undefined scopes. Get continuous support for your evolving projects.",
     price: "1,499",
+    pricehr: "20",
     list: [
       "Flexible scope of work",
       "End-to-end project management",
@@ -93,9 +102,9 @@ const dataPrice = [
     limited: true,
   },
 ];
+
 const OurPricingCard = (props: any) => {
-  const [tabsData, setTabsData]: any = useState();
-  let tabs = [
+  const tabs = [
     {
       id: "Design + Dev",
       label: "Design + Dev",
@@ -110,26 +119,161 @@ const OurPricingCard = (props: any) => {
     },
   ];
 
-  const handleTabChange = (id: string) => {
-    setTabsData(id);
-    console.log("Current tab:", id);
-  };
   return (
-    <>
-      <div>
-        <Card className="rounded-[48px] max-md:rounded-[38px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
-          <CardBody className="gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
-            {data.map((item, index) => {
+    <div>
+      <Card className="rounded-[48px] max-md:rounded-[38px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
+        <CardBody className="gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
+          {data.map((item, index) => {
+            const [selectedTab, setSelectedTab] = useState("Design + Dev");
+
+            const handleTabChange = (id: any) => {
+              setSelectedTab(id);
+              console.log(`Tab for card ${index} selected:`, id);
+            };
+
+            return (
+              <Card
+                key={index}
+                className="rounded-[40px] max-md:rounded-[30px]"
+              >
+                <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12 max-md:grid-cols-1 max-md:gap-4">
+                  <div className="w-full">
+                    <img
+                      src={item.icon}
+                      alt="service logo"
+                      className="w-[40px]"
+                    />
+                    <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold">
+                      {item.heading} {props.id}
+                    </p>
+                    <p className="text-lg max-md:text-base">
+                      {item.description}
+                    </p>
+                    <div className="mt-6 mb-4">
+                      <p className="text-[#C5C5C5] text-lg">
+                        {props.id === "Fixed" ? "Starting from" : "Hourly Rate"}
+                      </p>
+                      <div className="flex flex-row items-center justify-between">
+                        <p className="text-4xl font-semibold mt-2 max-md:text-2xl">
+                          {/* $ {item.price} */}
+                          {props.id == "Fixed" ? (
+                            selectedTab == "Design + Dev" ? (
+                              <p>
+                                $ {item.design} {item.dev && `+ $ ${item.dev}`}
+                              </p>
+                            ) : selectedTab == "Design Only" ? (
+                              ` $ ${item.design}`
+                            ) : (
+                              ` $ ${item.dev}`
+                            )
+                          ) : selectedTab == "Design + Dev" ? (
+                            <p>
+                              $ {item.designhr}{" "}
+                              {item.devhr && `+ $ ${item.devhr}`}
+                            </p>
+                          ) : selectedTab == "Design Only" ? (
+                            ` $ ${item.designhr}`
+                          ) : (
+                            ` $ ${item.devhr}`
+                          )}
+                        </p>
+                        {item.tab && (
+                          <img
+                            src={
+                              selectedTab == "Design + Dev"
+                                ? "https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                                : selectedTab == "Design Only"
+                                  ? "https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                                  : "https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                            }
+                            alt="design dev icon"
+                            className="w-[40px] h-[40px]"
+                          />
+                        )}
+                      </div>
+                    </div>
+                    <Button
+                      className="bg-black text-white button dark:bg-white dark:text-black w-full"
+                      startContent={
+                        <img
+                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                          alt="Dribble Logo"
+                        />
+                      }
+                    >
+                      Book a 15-min call
+                    </Button>
+                  </div>
+
+                  <div>
+                    {item.list.map((listItem, listIndex) => (
+                      <div
+                        key={listIndex}
+                        className="flex flex-row items-center mt-2 gap-2"
+                      >
+                        <img
+                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
+                          alt=""
+                        />
+                        <p className=" text-lg">{listItem}</p>
+                      </div>
+                    ))}
+                    {item.tab && (
+                      <div className="flex w-full flex-col items-start justify-end mt-8 max-sm:mt-6">
+                        <Tabs
+                          aria-label="Dynamic tabs"
+                          items={tabs}
+                          classNames={{
+                            cursor: "w-full bg-black text-black",
+                            tab: "px-6 max-lg:px-2",
+                            tabContent: "group-data-[selected=true]:text-white",
+                          }}
+                          onSelectionChange={(key) => handleTabChange(key)}
+                        >
+                          {tabs.map((tabItem) => (
+                            <Tab
+                              key={tabItem.id}
+                              title={tabItem.label}
+                              className="max-md:text-xs"
+                            />
+                          ))}
+                        </Tabs>
+                      </div>
+                    )}
+                  </div>
+                </CardBody>
+              </Card>
+            );
+          })}
+          <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+            {dataPrice.map((item, index) => {
               return (
-                <Card className="rounded-[40px] max-md:rounded-[30px]">
-                  <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12 max-md:grid-cols-1 max-md:gap-4">
+                <Card className="rounded-[40px]">
+                  <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-1 gap-4 max-md:grid-cols-1">
                     <div className="w-full">
-                      <img
-                        src={item.icon}
-                        alt="behance Logo"
-                        className="w-[40px]"
-                      />
-                      <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold">
+                      <div className="flex flex-row items-center justify-between">
+                        <img
+                          src={item.icon}
+                          alt="behance Logo"
+                          className="w-[45px]"
+                        />
+                        {item.limited && (
+                          <Chip
+                            radius="md"
+                            className="m-2 text-lg text-[#7B7B7B] px-2"
+                            startContent={
+                              <img
+                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841595/svg1994013495_1681_qv43ow.svg"
+                                className="w-[16px]"
+                              />
+                            }
+                          >
+                            Limited availability
+                          </Chip>
+                        )}
+                      </div>
+
+                      <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-12">
                         {item.heading} {props.id}
                       </p>
                       <p className="text-lg max-md:text-base">
@@ -141,8 +285,8 @@ const OurPricingCard = (props: any) => {
                             ? "Starting from"
                             : "Hourly Rate"}
                         </p>
-                        <p className="text-4xl font-semibold mt-2 max-md:text-2xl">
-                          $ {item.price} {tabsData}
+                        <p className="text-4xl font-semibold mt-2">
+                          $ {props.id == "Fixed" ? item.price : item.pricehr}
                         </p>
                       </div>
                       <Button
@@ -159,135 +303,27 @@ const OurPricingCard = (props: any) => {
                       </Button>
                     </div>
 
-                    <div>
-                      <div>
-                        {item.list.map((items, indexs) => {
-                          return (
-                            <div className="flex flex-row items-center mt-2 gap-2">
-                              <img
-                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
-                                alt=""
-                              />
-                              <p className=" text-lg">{items}</p>
-                            </div>
-                          );
-                        })}
-                      </div>
-                      {item.tab && (
-                        <div className="flex w-full flex-col items-start justify-end mt-8 max-sm:mt-6">
-                          <Tabs
-                            aria-label="Dynamic tabs"
-                            items={tabs}
-                            classNames={{
-                              // tabList:
-                              //   "gap-6 w-full relative rounded-none p-0 border-b border-divider",
-                              cursor: "w-full bg-black text-black",
-                              tab: "px-6 max-lg:px-2 ",
-                              tabContent:
-                                "group-data-[selected=true]:text-white",
-                            }}
-                            onSelectionChange={(key) =>
-                              handleTabChange(key as string)
-                            }
-                          >
-                            {(item) => (
-                              <Tab
-                                key={item.id}
-                                title={item.label}
-                                className="max-md:text-xs"
-                                id="id"
-                                // onClick={() => handleTabChange(item.id)}
-                              ></Tab>
-                            )}
-                          </Tabs>
-                        </div>
-                      )}
+                    <div className="">
+                      {item.list.map((items, indexs) => {
+                        return (
+                          <div className="flex flex-row items-start mt-2 gap-2">
+                            <img
+                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
+                              alt=""
+                            />
+                            <p className=" text-lg">{items}</p>
+                          </div>
+                        );
+                      })}
                     </div>
                   </CardBody>
                 </Card>
               );
             })}
-
-            <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
-              {dataPrice.map((item, index) => {
-                return (
-                  <Card className="rounded-[40px]">
-                    <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-1 gap-4 max-md:grid-cols-1">
-                      <div className="w-full">
-                        <div className="flex flex-row items-center justify-between">
-                          <img
-                            src={item.icon}
-                            alt="behance Logo"
-                            className="w-[45px]"
-                          />
-                          {item.limited && (
-                            <Chip
-                              radius="md"
-                              className="m-2 text-lg text-[#7B7B7B] px-2"
-                              startContent={
-                                <img
-                                  src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841595/svg1994013495_1681_qv43ow.svg"
-                                  className="w-[16px]"
-                                />
-                              }
-                            >
-                              Limited availability
-                            </Chip>
-                          )}
-                        </div>
-
-                        <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-12">
-                          {item.heading} {props.id}
-                        </p>
-                        <p className="text-lg max-md:text-base">
-                          {item.description}
-                        </p>
-                        <div className="mt-6 mb-4">
-                          <p className="text-[#C5C5C5] text-lg">
-                            {props.id == "Fixed"
-                              ? "Starting from"
-                              : "Hourly Rate"}
-                          </p>
-                          <p className="text-4xl font-semibold mt-2">
-                            $ {item.price}
-                          </p>
-                        </div>
-                        <Button
-                          className="bg-black text-white button dark:bg-white dark:text-black w-full"
-                          startContent={
-                            <img
-                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                              alt="Dribble Logo"
-                              className=""
-                            />
-                          }
-                        >
-                          Book a 15-min call
-                        </Button>
-                      </div>
-
-                      <div className="">
-                        {item.list.map((items, indexs) => {
-                          return (
-                            <div className="flex flex-row items-start mt-2 gap-2">
-                              <img
-                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
-                                alt=""
-                              />
-                              <p className=" text-lg">{items}</p>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </CardBody>
-                  </Card>
-                );
-              })}
-            </div>
-          </CardBody>
-        </Card>
-      </div>
-    </>
+          </div>
+        </CardBody>
+      </Card>
+    </div>
   );
 };
 

@@ -35,7 +35,7 @@ const images = [
 const LandingFooter = () => {
   return (
     <>
-      <div className="relative overflow-hidden h-screen">
+      <div className="relative overflow-hidden h-screen mt-12">
         <div
           style={{
             display: "flex",
@@ -51,7 +51,7 @@ const LandingFooter = () => {
           <CircularImage images={images} />
         </div>
 
-        <div className="h-[100vh] max-md:h-[100vh] bg-black rounded-tr-[100px] rounded-tl-[100px]  max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]  mt-32 text-white max-md:px-12">
+        <div className="h-[100vh] max-md:h-[100vh] bg-black rounded-tr-[100px] rounded-tl-[100px]  max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]  text-white max-md:px-12">
           <div className="flex flex-row items-center justify-center h-full">
             <div className=" pt-32 absolute bottom-8">
               <div className="flex flex-row items-center justify-center">

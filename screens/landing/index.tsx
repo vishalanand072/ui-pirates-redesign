@@ -9,7 +9,7 @@ import LandingFaqs from "./faqs";
 import LandingAbout from "./about";
 import LandingFooter from "./footer";
 import LandingTestimonials from "./testimonials";
-
+import LandingBehanceDan from "./behance/text";
 const Landing = () => {
   return (
     <>
@@ -19,7 +19,10 @@ const Landing = () => {
         <div className=" overflow-x-hidden py-12">
           <LandingAppScreen />
         </div>
-        <div className=" my-12">{/* <LandingBehance /> */}</div>
+        <div className="">
+          <LandingBehanceDan />
+          {/* <LandingBehance /> */}
+        </div>
         <LandingBusinessHelp />
         <LandingAbout />
         <div className=" overflow-hidden">
