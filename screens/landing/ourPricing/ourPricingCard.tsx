@@ -144,7 +144,7 @@ const OurPricingCard = (props: any) => {
                       className="w-[40px]"
                     />
                     <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold">
-                      {item.heading} {props.id}
+                      {item.heading}
                     </p>
                     <p className="text-lg max-md:text-base">
                       {item.description}
