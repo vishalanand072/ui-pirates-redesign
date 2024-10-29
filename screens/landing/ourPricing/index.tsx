@@ -24,7 +24,7 @@ const LandingOurPricing = () => {
           <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-semibold">
             Our Pricing
           </p>
-          <div className="flex flex-row items-center justify-center mb-8 mt-5 px-60 max-lg:px-32 max-md:px-8">
+          <div className="flex flex-row items-center justify-center mb-8 mt-5 px-60 max-lg:px-32 max-md:px-8 max-xl:px-52">
             <p className="md:w-1/2 text-center content-center">
               Choose between fixed pricing or hourly rates to suit your project
               scope.

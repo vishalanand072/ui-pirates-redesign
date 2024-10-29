@@ -58,7 +58,7 @@ export default function FaqsAccordion() {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 80%", // When the top of the card reaches 80% of the viewport height
+              start: "top 90%", // When the top of the card reaches 80% of the viewport height
               end: "top 30%",
               toggleActions: "restart none none reverse",
             },
@@ -93,7 +93,7 @@ export default function FaqsAccordion() {
                     <p className="text-3xl text-black">+</p>
                   )
                 }
-                className="shadow-none border-1"
+                className="shadow-none border-1 rounded-2xl"
               >
                 {defaultContent}
               </AccordionItem>

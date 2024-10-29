@@ -22,14 +22,14 @@ const LandingFaqs = () => {
                   className="object-cover rounded-3xl w-full h-[250px] max-h-[250px] object-top"
                   src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761421/vishal_b32poo.svg"
                 />
-                <h4 className="font-semibold text-large mt-2">
+                <h4 className="font-semibold text-base mt-2">
                   Still have questions? We’re here to help – feel free to ask us
                   anything below 👇🏻
                 </h4>
                 <Button
                   color="primary"
                   variant="bordered"
-                  className="mt-4 border-gray-300 text-black button dark:text-white font-bold"
+                  className="mt-3 border-gray-300 text-black button dark:text-white font-bold"
                   startContent={
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
@@ -42,7 +42,7 @@ const LandingFaqs = () => {
                 <Button
                   color="primary"
                   variant="bordered"
-                  className="mt-4 border-gray-300 text-black button dark:text-white font-bold"
+                  className="mt-3 border-gray-300 text-black button dark:text-white font-bold"
                   startContent={
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729767692/email_bxvlmd.svg"

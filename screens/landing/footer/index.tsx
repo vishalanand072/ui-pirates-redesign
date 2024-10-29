@@ -55,29 +55,34 @@ const LandingFooter = () => {
           <div className="flex flex-row items-center justify-center h-full">
             <div className=" pt-32 absolute bottom-8">
               <div className="flex flex-row items-center justify-center">
-                <p className="text-center text-4xl md:w-1/2 px-16 max-md:px-4 max-lg:px-12 mb-3">
+                <p className="text-center text-5xl md:w-3/4 mb-3 font-bold">
                   Ready to bring your vision to life?
                 </p>
               </div>
               <div className="flex flex-row items-center justify-center">
                 <p className="text-center text-lg md:w-1/2 max-md:px-4">
-                  Ready to bring your vision to life? Schedule a call or send us
-                  a WhatsApp message, and let’s get started!
+                  Schedule a call or send us a WhatsApp message, and let’s get
+                  started!
                 </p>
               </div>
               <div className="mt-12 flex flex-row items-center justify-center max-md:flex-col w-full">
-                <Button
-                  className=" button bg-white text-black "
-                  startContent={
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                      alt="Dribble Logo"
-                      className="w-[100%]"
-                    />
-                  }
+                <a
+                  href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                  target="blank"
                 >
-                  Book a 15-min call
-                </Button>
+                  <Button
+                    className=" button bg-white text-black "
+                    startContent={
+                      <img
+                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                        alt="Dribble Logo"
+                        className="w-[100%]"
+                      />
+                    }
+                  >
+                    Book a 15-min call
+                  </Button>
+                </a>
                 <Button
                   color="primary"
                   variant="bordered"
@@ -93,14 +98,14 @@ const LandingFooter = () => {
                   Chat on WhatsApp
                 </Button>
               </div>
-              <div className="flex flex-row items-center justify-center mt-6">
+              <div className="flex flex-row items-center justify-center mt-4">
                 <div className="flex flex-row ">
                   {footerIcon.map((item, index) => {
                     return (
                       <img
                         src={item}
                         alt="Dribble Logo"
-                        className="w-[80px] h-[80px] max-md:w-[40px] max-md:h-[40px]"
+                        className="w-[70px] h-[70px] max-md:w-[40px] max-md:h-[40px]"
                       />
                     );
                   })}

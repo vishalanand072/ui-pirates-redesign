@@ -109,7 +109,7 @@ const LandingBehanceDan = () => {
           alt="behance Logo"
           className="max-md:w-[60%]"
         />
-        <p className="text-center text-2xl px-12 max-md:px-4 max-lg:px-12 mb-12 mt-6 w-1/2 max-md:text-xl">
+        <p className="text-center text-lg px-24 max-md:px-4 max-lg:px-12 mb-12 mt-6 w-1/2 max-md:text-lg">
           Explore our diverse portfolio of projects that highlight our
           creativity and craftsmanship.
         </p>
@@ -123,7 +123,7 @@ const LandingBehanceDan = () => {
             paddingBottom: "30px",
           }}
         >
-          Bordered
+          View Behance
         </Button>
       </div>
 

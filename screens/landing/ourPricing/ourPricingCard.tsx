@@ -245,17 +245,22 @@ const OurPricingCard = (props: any) => {
                         )}
                       </div>
                     </div>
-                    <Button
-                      className="bg-black text-white button dark:bg-white dark:text-black w-full"
-                      startContent={
-                        <img
-                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                          alt="Dribble Logo"
-                        />
-                      }
+                    <a
+                      href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                      target="blank"
                     >
-                      Book a 15-min call
-                    </Button>
+                      <Button
+                        className="bg-black text-white button dark:bg-white dark:text-black w-full"
+                        startContent={
+                          <img
+                            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                            alt="Dribble Logo"
+                          />
+                        }
+                      >
+                        Book a 15-min call
+                      </Button>
+                    </a>
                   </div>
 
                   <div>
@@ -312,12 +317,12 @@ const OurPricingCard = (props: any) => {
                         />
                         {item.limited && (
                           <Chip
-                            radius="md"
-                            className="m-2 text-lg text-[#7B7B7B] px-2"
+                            radius="sm"
+                            className="m-2 text-sm text-[#7B7B7B] px-2 rounded-lg bg-[#E9E9E9]"
                             startContent={
                               <img
                                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841595/svg1994013495_1681_qv43ow.svg"
-                                className="w-[16px]"
+                                className="w-[14px]"
                               />
                             }
                           >
@@ -327,7 +332,7 @@ const OurPricingCard = (props: any) => {
                       </div>
 
                       <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-12">
-                        {item.heading} {props.id}
+                        {item.heading}
                       </p>
                       <p className="text-lg max-md:text-base">
                         {item.description}
@@ -343,18 +348,23 @@ const OurPricingCard = (props: any) => {
                           {props.id == "Fixed" ? item.price : item.pricehr}
                         </p>
                       </div>
-                      <Button
-                        className="bg-black text-white button dark:bg-white dark:text-black w-full"
-                        startContent={
-                          <img
-                            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                            alt="Dribble Logo"
-                            className=""
-                          />
-                        }
+                      <a
+                        href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                        target="blank"
                       >
-                        Book a 15-min call
-                      </Button>
+                        <Button
+                          className="bg-black text-white button dark:bg-white dark:text-black w-full"
+                          startContent={
+                            <img
+                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                              alt="Dribble Logo"
+                              className=""
+                            />
+                          }
+                        >
+                          Book a 15-min call
+                        </Button>
+                      </a>
                     </div>
 
                     <div className="">

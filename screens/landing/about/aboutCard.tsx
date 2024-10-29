@@ -44,14 +44,14 @@ const AboutCardAnimation = () => {
   useEffect(() => {
     cardRefs.current.forEach((cardAbout, index) => {
       const isEven = index % 2 === 0;
-      const direction = isEven ? "-15%" : "15%"; // Even images come from left, odd from right
+      const direction = isEven ? "-30%" : "30%"; // Even images come from left, odd from right
 
       gsap.fromTo(
         cardAbout, // Apply animation to the entire card
         {
           x: direction, // Even cards move from left, odd cards from right
           rotation: isEven ? -15 : 15, // Initial rotation based on index
-          opacity: 0, // Start with opacity 0
+          opacity: 0.2, // Start with opacity 0
         },
         {
           x: 0, // Move to original position
@@ -59,9 +59,9 @@ const AboutCardAnimation = () => {
           opacity: 1, // Fade in
           scrollTrigger: {
             trigger: cardAbout, // Trigger animation when each card enters the viewport
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: 1, // Smooth animation based on scroll
+            start: "top 99%",
+            end: "bottom 100%",
+            scrub: 1.5, // Smooth animation based on scroll
           },
           ease: "power2.out", // Smooth easing
         }
@@ -82,8 +82,8 @@ const AboutCardAnimation = () => {
               key={index}
               className={
                 index % 2 === 0
-                  ? `bg-[#E1EAEA] rounded-[40px] py-12 px-12 w-full h-[400px]  max-md:h-[300px]  lg:-mt-32 hover:bg-[${item.hoverBg}] hover:text-white hover:ease-in-out`
-                  : `bg-[#E1EAEA] rounded-[40px]  py-12 px-12 w-full h-[400px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}] hover:ease-in-out`
+                  ? `bg-[#E1EAEA] rounded-[40px] pt-4 pb-12 px-12 max-md:px-6 w-full h-[350px]  max-md:h-[300px]  lg:-mt-32 hover:bg-[${item.hoverBg}] hover:text-white hover:ease-in-out`
+                  : `bg-[#E1EAEA] rounded-[40px]  pt-4 pb-12 px-12 max-md:px-6  w-full h-[350px] max-md:h-[300px] lg:mt-0 hover:bg-[${item.hoverBg}] hover:ease-in-out`
               }
               //   style={{
               //     transform: index % 2 === 0 ? "rotate(-15deg)" : "rotate(15deg)",
@@ -107,10 +107,10 @@ const AboutCardAnimation = () => {
               }}
             >
               <div>
-                <p className="uppercase text-9xl max-md:text-7xl mb-4 hover:rotate-[360deg]">
+                <p className="uppercase text-8xl max-md:text-7xl mb-4 lg:pt-4 hover:rotate-[360deg]">
                   {item.heading}
                 </p>
-                <p className="text-3xl font-semibold flex flex-row items-end justify-end pt-28 text-right max-md:pt-20 uppercase">
+                <p className="text-3xl max-md:text-2xl font-semibold flex flex-row items-end justify-end pt-20 text-right max-md:pt-28 uppercase">
                   {item.subtitle1}
                   <br />
                   {item.subtitle2}

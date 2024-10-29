@@ -42,7 +42,7 @@ const LandingHero = () => {
             </span>{" "}
             companies
           </div>
-          <p className="lg:w-1/2 text-center text-lg mt-4 px-32 max-md:px-4 max-lg:12">
+          <p className="lg:w-1/2 text-center text-lg mt-4 px-36 max-md:px-4 max-lg:12">
             We build products that work for users and drive business growth
           </p>
 
