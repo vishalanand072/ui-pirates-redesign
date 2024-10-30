@@ -52,20 +52,33 @@ const LandingHero = () => {
               target="blank"
             >
               <Button
-                className="bg-black text-white button dark:bg-white dark:text-black "
+                className="bg-black text-white button dark:bg-white dark:text-black group"
                 startContent={
-                  <img
-                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
-                    alt="Dribble Logo"
-                    className="w-[100%]"
-                  />
+                  <div className="flex flex-row gap-2">
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
+                      alt="Dribble Logo"
+                      className="w-[100%]"
+                    />
+
+                    <p className="text-[#5B5B5B] text-xl font-bold hidden group-hover:flex transition-opacity duration-300 ease-in-out">
+                      +
+                    </p>
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
+                      alt="Dribble Logo"
+                      className="w-[100%] hidden group-hover:flex transition-opacity duration-300 ease-in-out"
+                    />
+                  </div>
                 }
                 endContent={
-                  <img
-                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                    alt="Dribble Logo"
-                    className="w-[100%]"
-                  />
+                  <div>
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                      alt="Dribble Logo"
+                      className="w-[100%]"
+                    />
+                  </div>
                 }
               >
                 Book a 15-min call
