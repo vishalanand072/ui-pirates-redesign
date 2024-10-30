@@ -318,7 +318,7 @@ const OurPricingCard = (props: any) => {
                         {item.limited && (
                           <Chip
                             radius="sm"
-                            className="m-2 text-sm text-[#7B7B7B] px-2 rounded-lg bg-[#E9E9E9]"
+                            className=" text-sm text-[#7B7B7B] px-2 rounded-lg bg-[#E9E9E9]"
                             startContent={
                               <img
                                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841595/svg1994013495_1681_qv43ow.svg"

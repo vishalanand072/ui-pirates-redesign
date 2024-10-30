@@ -14,7 +14,7 @@ const LandingAbout = () => {
             Who We Are
           </p>
           <div className="flex flex-row items-center justify-center mb-8 mt-5 max-md:px-8">
-            <p className="md:w-1/2 text-center content-center px-16  max-lg:px-8 max-md:px-0">
+            <p className="md:w-1/2 text-center content-center px-8  max-lg:px-4 max-md:px-0">
               Combining creativity and technology to deliver standout websites
               and app experiences.
             </p>

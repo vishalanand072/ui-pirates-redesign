@@ -9,14 +9,42 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
+// export const metadata: Metadata = {
+//   title: {
+//     default: siteConfig.name,
+//     template: `%s - ${siteConfig.name}`,
+//   },
+//   description: siteConfig.description,
+//   icons: {
+//     icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg",
+//   },
+// };
+
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+  title: "UI Pirate",
+  description: "Default Description",
+  openGraph: {
+    title: "Default Title",
+    description: "Default Description",
+    url: "https://example.com",
+    siteName: "Example Site",
+    images: [
+      {
+        url: "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg",
+        width: 800,
+        height: 600,
+        alt: "Default Image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
-  description: siteConfig.description,
   icons: {
-    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg",
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg", // Path for the favicon.ico file
+    apple:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg", // For Apple devices, if available
+    shortcut:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg", // For older browsers
   },
 };
 
