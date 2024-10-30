@@ -126,7 +126,7 @@
 
 // export default PricingCard;
 
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { Card, CardBody, Chip } from "@nextui-org/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -197,31 +197,32 @@ const data1 = [
 const PricingCard = () => {
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Clear any existing animations
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
     cardsRef.current.forEach((card, index) => {
       if (card) {
         gsap.fromTo(
           card,
           {
             y: 50, // Start from below
-            marginLeft: "10%",
-            marginRight: "10%",
+            transform: "scale(0.80)",
             opacity: 1,
             filter: "blur(0px)", // Initial blur effect
           },
           {
             y: 0, // Move to its original position
-            marginLeft: "0%",
-            marginRight: "0%",
+            transform: "scale(1)",
             opacity: 1,
             filter: "blur(0px)", // Remove blur
-            duration: 1,
+            duration: 1.5,
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 80%",
-              end: "bottom 10%",
-              toggleActions: "restart none none reverse",
+              start: "top 99%",
+              end: "bottom 0%",
+              toggleActions: "play none none reverse",
               scrub: true,
             },
           }
@@ -233,54 +234,55 @@ const PricingCard = () => {
   return (
     <div className="min-h-screen">
       {data.map((item, index) => (
-        <Card
+        <div
           ref={(el) => {
             if (el) cardsRef.current[index] = el;
           }}
           key={index}
-          className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4"
         >
-          <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
-            <Card className="rounded-[40px] border-2">
-              <CardBody className="p-8 max-md:p-4 max-lg:p-6">
-                <img
-                  src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
-                  alt="behance Logo"
-                  className="w-[40px]"
-                />
-                <p className="text-3xl max-md:text-xl mt-4 mb-6 font-semibold">
-                  {item.heading}
-                </p>
-                <p className="text-lg max-md:text-base">{item.description}</p>
-                <div className="mt-8 grid-rows-3 w-full gap-4">
-                  {item.chip.map((chipItem, chipIndex) => (
-                    <Chip
-                      key={chipIndex}
-                      radius="sm"
-                      className="m-2 text-lg text-black text-opacity-55 bg-[#51525E14]"
-                    >
-                      {chipItem}
-                    </Chip>
-                  ))}
-                </div>
-              </CardBody>
-            </Card>
-            <Card className="rounded-[40px] p-0 h-[500px] max-md:h-[300px]">
-              <CardBody style={{ padding: 0 }}>
-                <img
-                  src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521816/card_zzxglp.svg"
-                  alt="behance Logo"
-                  className="object-cover h-[500px] min-md:h-[400px] max-h-full"
-                />
-              </CardBody>
-            </Card>
-          </CardBody>
-        </Card>
+          <Card className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4">
+            <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
+              <Card className="rounded-[40px] border-2">
+                <CardBody className="p-8 max-md:p-4 max-lg:p-6">
+                  <img
+                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
+                    alt="behance Logo"
+                    className="w-[40px]"
+                  />
+                  <p className="text-3xl max-md:text-xl mt-4 mb-6 font-semibold">
+                    {item.heading}
+                  </p>
+                  <p className="text-lg max-md:text-base">{item.description}</p>
+                  <div className="mt-8 grid-rows-3 w-full gap-4">
+                    {item.chip.map((chipItem, chipIndex) => (
+                      <Chip
+                        key={chipIndex}
+                        radius="sm"
+                        className="m-2 text-lg text-black text-opacity-55 bg-[#51525E14]"
+                      >
+                        {chipItem}
+                      </Chip>
+                    ))}
+                  </div>
+                </CardBody>
+              </Card>
+              <Card className="rounded-[40px] p-0 h-[500px] max-md:h-[300px]">
+                <CardBody style={{ padding: 0 }}>
+                  <img
+                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521816/card_zzxglp.svg"
+                    alt="behance Logo"
+                    className="object-cover h-[500px] min-md:h-[400px] max-h-full"
+                  />
+                </CardBody>
+              </Card>
+            </CardBody>
+          </Card>
+        </div>
       ))}
 
       <div
         ref={(el) => {
-          if (el) cardsRef.current[4] = el;
+          if (el) cardsRef.current[3] = el;
         }}
       >
         <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:mt-4">
