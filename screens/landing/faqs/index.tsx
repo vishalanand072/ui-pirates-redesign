@@ -39,19 +39,21 @@ const LandingFaqs = () => {
                 >
                   <p className=" text-base font-semibold ">Chat</p>
                 </Button>
-                <Button
-                  color="primary"
-                  variant="bordered"
-                  className="mt-3 border-gray-300 text-black button dark:text-white font-bold"
-                  startContent={
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729767692/email_bxvlmd.svg"
-                      alt="Dribble Logo"
-                    />
-                  }
-                >
-                  <p className=" text-base font-semibold ">Email Us</p>
-                </Button>
+                <a href="mailto:vishalanand072@gmail.com" className="w-full">
+                  <Button
+                    color="primary"
+                    variant="bordered"
+                    className="mt-3 border-gray-300 text-black button dark:text-white font-bold w-full"
+                    startContent={
+                      <img
+                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729767692/email_bxvlmd.svg"
+                        alt="Dribble Logo"
+                      />
+                    }
+                  >
+                    <p className=" text-base font-semibold ">Email Us</p>
+                  </Button>
+                </a>
               </CardBody>
             </Card>
           </div>
