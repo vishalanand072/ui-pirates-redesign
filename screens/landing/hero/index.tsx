@@ -58,7 +58,7 @@ const LandingHero = () => {
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
                       alt="Dribble Logo"
-                      className="w-[100%]"
+                      className="w-[100%] h-[30px]"
                     />
 
                     <p className="text-[#5B5B5B] text-xl font-bold hidden group-hover:flex transition-opacity duration-300 ease-in-out">
@@ -67,7 +67,7 @@ const LandingHero = () => {
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
                       alt="Dribble Logo"
-                      className="w-[100%] hidden group-hover:flex transition-opacity duration-300 ease-in-out"
+                      className="w-[100%]  h-[30px] hidden group-hover:flex transition-opacity duration-300 ease-in-out"
                     />
                   </div>
                 }
@@ -76,7 +76,7 @@ const LandingHero = () => {
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
                       alt="Dribble Logo"
-                      className="w-[100%]"
+                      className="w-[100%]  h-[30px]"
                     />
                   </div>
                 }
@@ -92,7 +92,7 @@ const LandingHero = () => {
                 <img
                   src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
                   alt="Dribble Logo"
-                  className="w-[100%]"
+                  className="w-[100%]  h-[30px] font-bold"
                 />
               }
             >
