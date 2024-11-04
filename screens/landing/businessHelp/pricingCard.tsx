@@ -240,9 +240,9 @@ const PricingCard = () => {
           }}
           key={index}
         >
-          <Card className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4">
+          <Card className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4 ">
             <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
-              <Card className="rounded-[40px] border-2">
+              <Card className="rounded-[40px] box-shadow">
                 <CardBody className="p-8 max-md:p-4 max-lg:p-6">
                   <img
                     src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
@@ -290,7 +290,7 @@ const PricingCard = () => {
             {data1.map((item, index) => {
               return (
                 <Card
-                  className="rounded-[40px] border-2"
+                  className="rounded-[40px] box-shadow"
                   // style={{ boxShadow: " inset 0 2px 4px rgba(0, 0, 0, 0.1)" }}
                 >
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6">

@@ -8,31 +8,31 @@ const LandingHero = () => {
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden pt-8">
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
             <div className="flex flex-row overflow-hidden">
-              {/* <img
+              <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768369/hero1_p6oklo.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[5deg] max-md:hidden"
-              /> */}
+                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[5deg]"
+              />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
+                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768377/hero3_shxbjv.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[7deg]"
+                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]  transform transition duration-500 hover:scale-110  hover:rotate-[7deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero4_hrsvsr.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
+                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               />
-              {/* <img
-                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768368/hero5_yhwua3.svg"
+              <img
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1730714974/Div_framer-9crwzt_qjulqg.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px]  transform transition duration-500 hover:scale-110 hover:rotate-[-5deg] max-md:hidden"
-              /> */}
+                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-110 hover:rotate-[-5deg]"
+              />
             </div>
           </div>
 

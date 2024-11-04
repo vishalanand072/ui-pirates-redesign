@@ -139,7 +139,7 @@ function ResponsiveCarousel() {
               className={`rounded-[40px] max-md:w-[100%] bg-[#e9e9e9] card-item max-md:rounded-[30px]`}
             >
               <CardBody className="p-3 max-md:p-2 max-lg:p-4">
-                <div className="w-full p-5 bg-white rounded-[24px] max-md:p-4">
+                <div className="w-full p-5 bg-white rounded-[24px] max-md:p-4 box-shadow">
                   <div className="flex flex-row justify-between gap-4 max-md:gap-2">
                     <div className="flex flex-row gap-3">
                       <img

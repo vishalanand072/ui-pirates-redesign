@@ -134,7 +134,7 @@ const OurPricingCard = (props: any) => {
             return (
               <Card
                 key={index}
-                className="rounded-[40px] max-md:rounded-[30px]"
+                className="rounded-[40px] max-md:rounded-[30px] box-shadow"
               >
                 <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12 max-md:grid-cols-1 max-md:gap-4">
                   <div className="w-full">
@@ -306,7 +306,7 @@ const OurPricingCard = (props: any) => {
           <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
             {dataPrice.map((item, index) => {
               return (
-                <Card className="rounded-[40px]">
+                <Card className="rounded-[40px] box-shadow">
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-1 gap-4 max-md:grid-cols-1">
                     <div className="w-full">
                       <div className="flex flex-row items-center justify-between">

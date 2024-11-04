@@ -71,10 +71,13 @@ export default function RootLayout({
       >
         {/* <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}> */}
         <div className="relative flex flex-col">
-          <div className="sticky top-0 " style={{ zIndex: 999999999999999999 }}>
+          <div
+            className="sticky top-0  "
+            style={{ zIndex: 999999999999999999 }}
+          >
             <Navbar />
           </div>
-          <main>{children}</main>
+          <main className="">{children}</main>
           {/* <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal
