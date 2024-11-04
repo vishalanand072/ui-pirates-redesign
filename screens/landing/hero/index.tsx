@@ -1,5 +1,6 @@
 import { Button } from "@nextui-org/button";
-
+import BookCallButton from "./buttonHover";
+import AnimatedButton from "./buttonHover";
 const LandingHero = () => {
   return (
     <>
@@ -51,23 +52,24 @@ const LandingHero = () => {
               href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
               target="blank"
             >
-              <Button
-                className="bg-black text-white button dark:bg-white dark:text-black group"
+              {/* <Button
+                className="bg-black text-white button dark:bg-white dark:text-black group transform transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-x-10 -pl-32"
                 startContent={
-                  <div className="flex flex-row gap-2">
+                  <div className="flex flex-row gap-2 items-center">
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
                       alt="Dribble Logo"
-                      className="w-[100%] h-[30px]"
+                      className="w-[100%] h-[30px] transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)]"
                     />
 
-                    <p className="text-[#5B5B5B] text-xl font-bold hidden group-hover:flex transition-opacity duration-300 ease-in-out">
+                    <p className="text-[#5B5B5B] text-xl font-bold transition-opacity duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-1">
                       +
                     </p>
+
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
                       alt="Dribble Logo"
-                      className="w-[100%]  h-[30px] hidden group-hover:flex transition-opacity duration-300 ease-in-out"
+                      className="w-[100%] h-[30px] transition-opacity duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-1"
                     />
                   </div>
                 }
@@ -76,7 +78,40 @@ const LandingHero = () => {
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
                       alt="Dribble Logo"
-                      className="w-[100%]  h-[30px]"
+                      className="w-[100%] h-[30px]"
+                    />
+                  </div>
+                }
+              >
+                Book a 15-min call
+              </Button> */}
+              <Button
+                className="bg-black text-white button dark:bg-white dark:text-black group transform transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-x-110 px-6 py-2 buttonHero"
+                startContent={
+                  <div className="flex flex-row gap-2 items-center">
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
+                      alt="Dribble Logo"
+                      className="w-auto h-[30px] transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)]"
+                    />
+
+                    <p className="text-[#5B5B5B] text-xl font-bold hidden group-hover:inline-block transition-all duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform translate-x-5 group-hover:translate-x-0">
+                      +
+                    </p>
+
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
+                      alt="Dribble Logo"
+                      className="w-auto h-[30px] hidden group-hover:inline-block transition-all duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform translate-x-5 group-hover:translate-x-0"
+                    />
+                  </div>
+                }
+                endContent={
+                  <div>
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                      alt="Dribble Logo"
+                      className="w-auto h-[30px]"
                     />
                   </div>
                 }
@@ -84,20 +119,24 @@ const LandingHero = () => {
                 Book a 15-min call
               </Button>
             </a>
-            <Button
-              color="primary"
-              variant="bordered"
-              className="md:ml-4 max-md:mt-4 border-gray-300 text-black button dark:text-white font-bold"
-              startContent={
-                <img
-                  src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
-                  alt="Dribble Logo"
-                  className="w-[100%]  h-[30px] font-bold"
-                />
-              }
-            >
-              Chat
-            </Button>
+            <div className="max-md:w-[100%]">
+              <Button
+                color="primary"
+                variant="bordered"
+                className="md:ml-4 max-md:mt-4 border-gray-300 text-black button dark:text-white font-bold w-full"
+                startContent={
+                  <img
+                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                    alt="Dribble Logo"
+                    className="w-[30px]  h-[30px] font-bold"
+                  />
+                }
+              >
+                Chat
+              </Button>
+
+              {/* <AnimatedButton /> */}
+            </div>
           </div>
         </div>
       </div>

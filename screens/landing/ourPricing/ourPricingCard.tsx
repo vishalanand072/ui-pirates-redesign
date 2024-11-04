@@ -10,8 +10,8 @@ const data = [
       "Ideal for building complete app or Saas, including design and development.",
     dev: "999",
     design: "999",
-    devhr: "15",
-    designhr: "20",
+    devhr: "20",
+    designhr: "15",
     list: [
       "4-6 week delivery",
       "30-50 screens",
@@ -30,8 +30,8 @@ const data = [
       "Build high-conversion landing pages or full e-commerce platforms",
     dev: "499",
     design: "499",
-    devhr: "15",
-    designhr: "20",
+    devhr: "20",
+    designhr: "15",
     list: [
       "10-14 days turnaround time",
       "1-5 Pages",
@@ -49,7 +49,7 @@ const data = [
     description:
       "Scalable design systems with reusable components for consistent UI and easy integration.",
     design: "1,999",
-    designhr: "20",
+    designhr: "15",
     list: [
       "2-4 weeks delivery",
       "Scalable design systems",
@@ -87,7 +87,7 @@ const dataPrice = [
 
     heading: "Partnership & Consultation ",
     description:
-      "Perfect for ongoing design and development needs or flexible, undefined scopes. Get continuous support for your evolving projects.",
+      "Perfect for ongoing design & development needs or flexible, undefined scopes. Get continuous support for your projects.",
     price: "1,499",
     pricehr: "20",
     list: [
@@ -161,7 +161,7 @@ const OurPricingCard = (props: any) => {
                               <p>
                                 <span className="text-2xl mr-[4px] ">$</span>
                                 {item.design}
-                                <span className="text-[#C5C5C5] text-lg font-light">
+                                <span className="text-[#C5C5C5] text-lg font-light max-md:text-sm">
                                   {item.tab && "Design"}
                                 </span>{" "}
                                 {item.dev && (
@@ -171,7 +171,7 @@ const OurPricingCard = (props: any) => {
                                       $
                                     </span>
                                     {item.dev}
-                                    <span className="text-[#C5C5C5] text-lg font-light">
+                                    <span className="text-[#C5C5C5] text-lg font-light max-md:text-sm">
                                       Dev
                                     </span>
                                   </>
@@ -204,7 +204,7 @@ const OurPricingCard = (props: any) => {
                             <p>
                               <span className="text-2xl mr-[4px] ">$</span>
                               {item.designhr}
-                              <span className="text-[#C5C5C5] text-lg font-light">
+                              <span className="text-[#C5C5C5] text-lg font-light max-md:text-sm">
                                 {item.tab && "Design"}
                               </span>{" "}
                               {item.devhr && (
@@ -212,7 +212,7 @@ const OurPricingCard = (props: any) => {
                                   <span className="text-[#C5C5C5] ">+</span>{" "}
                                   <span className="text-2xl mr-[4px] ">$</span>
                                   {item.devhr}
-                                  <span className="text-[#C5C5C5] text-lg font-light">
+                                  <span className="text-[#C5C5C5] text-lg font-light max-md:text-sm">
                                     Dev
                                   </span>
                                 </>

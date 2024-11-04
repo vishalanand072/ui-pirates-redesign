@@ -7,12 +7,19 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false); // Hide the loader after 2 seconds
-    });
+    const handlePageLoad = () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000); // 2-second delay
+    };
 
-    // Clean up the timer when the component unmounts
-    return () => clearTimeout(timer);
+    // Check if the page has already loaded
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handlePageLoad);
+      return () => window.removeEventListener("load", handlePageLoad);
+    }
   }, []);
   return <>{loading ? <Loader /> : <Landing />}</>;
 }

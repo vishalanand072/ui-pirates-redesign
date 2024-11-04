@@ -10,6 +10,7 @@ import LandingAbout from "./about";
 import LandingFooter from "./footer";
 import LandingTestimonials from "./testimonials";
 import LandingBehanceDan from "./behance/text";
+import LandingBehanceFramor from "./behance/LandingBehance";
 const Landing = () => {
   return (
     <>
@@ -20,7 +21,8 @@ const Landing = () => {
           <LandingAppScreen />
         </div>
         <div className="">
-          <LandingBehanceDan />
+          {/* <LandingBehanceDan /> */}
+          <LandingBehanceFramor />
           {/* <LandingBehance /> */}
         </div>
         <LandingBusinessHelp />

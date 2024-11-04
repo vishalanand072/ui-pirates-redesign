@@ -13,7 +13,7 @@ const LandingOurPricing = () => {
   ];
   return (
     <>
-      <div className=" container mx-auto xl:px-48 max-md:px-4 mt-32 max-xl:px-12">
+      <div className=" container mx-auto xl:px-40 2xl:px-48 max-md:px-4 mt-32 max-xl:px-4 max-2xl:px-0 ">
         <div>
           <div className="flex flex-row items-center justify-center mb-6">
             <img

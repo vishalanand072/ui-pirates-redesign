@@ -363,7 +363,7 @@
 .slick-center .card-item {
   opacity: 1;
   filter: none;
-  transform: scale(1.05);
+  transform: scale(1.2);
   rotate: 0deg;
 }
 
@@ -388,4 +388,9 @@
 .slick-dots li.slick-active button::before {
   color: blue; /* Active dot color */
   opacity: 1;
+}
+
+.buttonHero:hover {
+  box-shadow: none !important;
+  transform: none !important;
 }

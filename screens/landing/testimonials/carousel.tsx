@@ -69,7 +69,7 @@ function ResponsiveCarousel() {
   var settings = {
     className: "center",
     centerMode: true,
-    dots: true,
+    dots: false,
     speed: 2000,
     autoplaySpeed: 2000,
     slidesToShow: 3,
@@ -138,9 +138,9 @@ function ResponsiveCarousel() {
               key={index}
               className={`rounded-[40px] max-md:w-[100%] bg-[#e9e9e9] card-item max-md:rounded-[30px]`}
             >
-              <CardBody className="p-4 max-md:p-2 max-lg:p-4">
-                <div className="w-full p-6 bg-white rounded-[24px] max-md:p-4">
-                  <div className="flex flex-row justify-between gap-4">
+              <CardBody className="p-3 max-md:p-2 max-lg:p-4">
+                <div className="w-full p-5 bg-white rounded-[24px] max-md:p-4">
+                  <div className="flex flex-row justify-between gap-4 max-md:gap-2">
                     <div className="flex flex-row gap-3">
                       <img
                         src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
@@ -148,10 +148,10 @@ function ResponsiveCarousel() {
                         className="w-[40px]"
                       />
                       <div className="">
-                        <p className="text-2xl max-md:text-xl font-semibold">
+                        <p className="text-2xl max-md:text-lg font-semibold">
                           Eden Hazani
                         </p>
-                        <p className="text-[#A2A2A2]">
+                        <p className="text-[#A2A2A2] max-md:text-sm">
                           Xperiti | VP Research and Development
                         </p>
                       </div>
@@ -159,17 +159,17 @@ function ResponsiveCarousel() {
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729837616/in_hnnctn.svg"
                       alt="behance Logo"
-                      className="w-[30px]"
+                      className="w-[30px] max-md:w-[20px] max-md:hidden"
                     />
                   </div>
 
-                  <p className="max-md:text-base mt-4 line-clamp-4">
+                  <p className="mt-4 line-clamp-4 max-md:text-sm">
                     Wonderful to work with, very experienced with UI/UX design.
                     Was very open to work in the flow we requested that required
                     actual Angular coding from his team as well, and stood up to
                     the challenge of working with a remot...
                   </p>
-                  <div className="grid grid-cols-2 gap-3 mt-6">
+                  <div className="grid grid-cols-2 gap-3 mt-6 max-md:grid-cols-1">
                     <div className=" bg-[#EDEDED] p-3 rounded-xl">
                       <p className="text-2xl font-semibold mb-1 max-md:text-lg max-lg:text-xl">
                         10/10
