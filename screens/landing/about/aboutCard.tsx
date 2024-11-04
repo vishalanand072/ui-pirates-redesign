@@ -111,7 +111,7 @@ const AboutCardAnimation = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-20 max-md:py-20">
+    <div className="container mx-auto px-4 pb-20 max-md:pb-20">
       <div className="grid grid-cols-2 gap-6 lg:mt-60 max-lg:grid-cols-1">
         {data.map((item, index) => (
           <div
