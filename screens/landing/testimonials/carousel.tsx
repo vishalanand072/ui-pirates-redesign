@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { Card, CardBody } from "@nextui-org/react";
 
@@ -66,10 +66,11 @@ const data = [
 ];
 
 function ResponsiveCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
   var settings = {
     className: "center",
     centerMode: true,
-    dots: false,
+    dots: true,
     speed: 4000,
     autoplaySpeed: 4000,
     slidesToShow: 3,
@@ -77,12 +78,26 @@ function ResponsiveCarousel() {
     initialSlide: 0,
     autoplay: true,
     infinite: true,
+    beforeChange: (current: any, next: React.SetStateAction<number>) =>
+      setActiveIndex(next),
     appendDots: (dots: any) => (
-      <div className="flex flex-row items-center justify-center py-4 button">
+      <div
+        className="py-4 bg-red-400 w-full"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <ul
           style={{
             margin: "0px",
             color: "red",
+            background: "#EDEDED",
+            width: "150px",
+            paddingTop: "12px",
+            borderRadius: "20px",
           }}
         >
           {" "}
@@ -91,13 +106,14 @@ function ResponsiveCarousel() {
       </div>
     ),
 
-    customPaging: () => (
+    customPaging: (i: number) => (
       <div
         style={{
-          width: "12px",
-          height: "12px",
+          width: "14px",
+          height: "14px",
           borderRadius: "50%",
-          background: "gray",
+          backgroundColor: i === activeIndex ? "#545454" : "#E2E2E2", // Active and inactive colors
+          transition: "background-color 0.3s ease",
         }}
       ></div>
     ),
@@ -130,7 +146,7 @@ function ResponsiveCarousel() {
     ],
   };
   return (
-    <div className="py-12">
+    <div className="pt-2 pb-12">
       <Slider {...settings}>
         {data.map((item, index) => (
           <div className=" mt-8 mb-12 py-12">
