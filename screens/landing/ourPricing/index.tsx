@@ -1,7 +1,11 @@
+import React, { useState } from "react";
 import OurPricingCard from "./ourPricingCard";
-import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
+import { Tabs, Tab } from "@nextui-org/react";
+
 const LandingOurPricing = () => {
-  let tabs = [
+  const [activeTab, setActiveTab] = useState("Hourly"); // Track active tab
+
+  const tabs = [
     {
       id: "Hourly",
       label: "Hourly",
@@ -11,9 +15,10 @@ const LandingOurPricing = () => {
       label: "Fixed",
     },
   ];
+
   return (
     <>
-      <div className=" container mx-auto xl:px-40 2xl:px-48 max-md:px-4 mt-32 max-xl:px-4 max-2xl:px-0 ">
+      <div className="container mx-auto xl:px-40 2xl:px-48 max-md:px-4 mt-32 max-xl:px-4 max-2xl:px-0">
         <div>
           <div className="flex flex-row items-center justify-center mb-6">
             <img
@@ -33,23 +38,27 @@ const LandingOurPricing = () => {
         </div>
 
         <div className="flex w-full flex-col items-center justify-center">
-          <Tabs
-            aria-label="Dynamic tabs"
-            items={tabs}
-            classNames={{
-              // tabList:
-              //   "gap-6 w-full relative rounded-none p-0 border-b border-divider",
-              cursor: "w-full bg-black text-black",
-              tab: "px-12 ",
-              tabContent: "group-data-[selected=true]:text-white",
-            }}
-          >
-            {(item) => (
-              <Tab key={item.id} title={item.label}>
-                <OurPricingCard id={item.id} />
-              </Tab>
-            )}
-          </Tabs>
+          {/* Centered Sticky Tabs */}
+          <div className="sticky top-16 bg-white z-10 w-full flex justify-center">
+            <Tabs
+              aria-label="Dynamic tabs"
+              items={tabs}
+              selectedKey={activeTab} // Control active tab
+              onSelectionChange={(key: any) => setActiveTab(key)} // Update activeTab on selection
+              classNames={{
+                cursor: "bg-black text-black",
+                tab: "px-12",
+                tabContent: "group-data-[selected=true]:text-white",
+              }}
+            >
+              {(item) => <Tab key={item.id} title={item.label} />}
+            </Tabs>
+          </div>
+
+          {/* Conditionally Render Tab Content */}
+          <div className="mt-6 w-full">
+            <OurPricingCard id={activeTab} />
+          </div>
         </div>
       </div>
     </>

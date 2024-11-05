@@ -19,19 +19,14 @@ const LandingMarquee = ({ items, reverse }: any) => {
     "https://res.cloudinary.com/damm9iwho/image/upload/v1729682149/image_28_lq4jj7.svg",
     "https://res.cloudinary.com/damm9iwho/image/upload/v1729682148/Group-2_uduxpp.svg",
     "https://res.cloudinary.com/damm9iwho/image/upload/v1729682148/Frame_3_nfidqo.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1730790130/image_37_ujzsav.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1730790130/image_38_udzxkk.svg",
+    "https://res.cloudinary.com/damm9iwho/image/upload/v1730790130/728_x_90_copy_6x_uft7ai.svg",
   ];
 
-  const row2 = [
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/9dd55e54b5a28658bf4e.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/0384060dcbf73b6a707c.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/35e044b3354aaa0caed5.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/f50ae7cbf6cc805bdadc.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
-  ];
   return (
     <>
-      <div className="mt-12">
+      <div className="mt-12 container mx-auto">
         <MarqueeComp items={row1} reverse={undefined} />
         {/* <MarqueeComp items={row2} reverse /> */}
       </div>

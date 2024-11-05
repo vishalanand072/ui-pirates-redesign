@@ -11,27 +11,27 @@ const LandingHero = () => {
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768369/hero1_p6oklo.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[5deg]"
+                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
+                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768377/hero3_shxbjv.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]  transform transition duration-500 hover:scale-110  hover:rotate-[7deg]"
+                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]  transform transition duration-500 hover:scale-110  hover:rotate-[7deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero4_hrsvsr.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
+                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1730714974/Div_framer-9crwzt_qjulqg.svg"
                 alt="Dribble Logo"
-                className="w-[100px] h-[150px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-110 hover:rotate-[-5deg]"
+                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-110 hover:rotate-[-5deg]"
               />
             </div>
           </div>
@@ -120,21 +120,22 @@ const LandingHero = () => {
               </Button>
             </a>
             <div className="max-md:w-[100%]">
-              <Button
-                color="primary"
-                variant="bordered"
-                className="md:ml-4 max-md:mt-4 border-gray-300 text-black button dark:text-white font-bold w-full"
-                startContent={
-                  <img
-                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
-                    alt="Dribble Logo"
-                    className="w-[30px]  h-[30px] font-bold"
-                  />
-                }
-              >
-                Chat
-              </Button>
-
+              <a href="https://wa.link/i35lma" target="_blank">
+                <Button
+                  color="primary"
+                  variant="bordered"
+                  className="md:ml-4 max-md:mt-4 border-gray-300 text-black button dark:text-white font-bold w-full"
+                  startContent={
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                      alt="Dribble Logo"
+                      className="w-[30px]  h-[30px] font-bold"
+                    />
+                  }
+                >
+                  Chat
+                </Button>
+              </a>
               {/* <AnimatedButton /> */}
             </div>
           </div>

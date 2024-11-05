@@ -3,9 +3,9 @@ import CircularImage from "./circularImage";
 
 const footerIcon = [
   "https://res.cloudinary.com/damm9iwho/image/upload/v1729665622/ri_linkedin-fill_nivdt4.svg",
-  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/InstagramLogo_tqqxe8.svg",
   "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/bxl_upwork_qojqwz.svg",
   "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/uil_behance_ky54am.svg",
+  "https://res.cloudinary.com/damm9iwho/image/upload/v1730786563/uil_behance_mf89uz.svg",
   "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/Frame_1000006225_bafxox.svg",
 ];
 
@@ -83,20 +83,22 @@ const LandingFooter = () => {
                     Book a 15-min call
                   </Button>
                 </a>
-                <Button
-                  color="primary"
-                  variant="bordered"
-                  className="md:ml-4 max-md:mt-4 border-gray-300 text-white button dark:text-white font-bold"
-                  startContent={
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
-                      alt="Dribble Logo"
-                      className="w-[100%]"
-                    />
-                  }
-                >
-                  Chat on WhatsApp
-                </Button>
+                <a href="https://wa.link/i35lma" target="_blank">
+                  <Button
+                    color="primary"
+                    variant="bordered"
+                    className="md:ml-4 max-md:mt-4 border-gray-300 text-white button dark:text-white font-bold"
+                    startContent={
+                      <img
+                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                        alt="Dribble Logo"
+                        className="w-[100%]"
+                      />
+                    }
+                  >
+                    Chat on WhatsApp
+                  </Button>
+                </a>
               </div>
               <div className="flex flex-row items-center justify-center mt-4">
                 <div className="flex flex-row ">

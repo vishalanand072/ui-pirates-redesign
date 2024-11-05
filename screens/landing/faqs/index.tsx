@@ -26,19 +26,25 @@ const LandingFaqs = () => {
                   Still have questions? We’re here to help – feel free to ask us
                   anything below 👇🏻
                 </h4>
-                <Button
-                  color="primary"
-                  variant="bordered"
-                  className="mt-3 border-gray-300 text-black button dark:text-white font-bold"
-                  startContent={
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
-                      alt="Dribble Logo"
-                    />
-                  }
+                <a
+                  href="https://wa.link/i35lma"
+                  target="_blank"
+                  className="w-full"
                 >
-                  <p className=" text-base font-semibold ">Chat</p>
-                </Button>
+                  <Button
+                    color="primary"
+                    variant="bordered"
+                    className="mt-3 border-gray-300 text-black button dark:text-white font-bold w-full"
+                    startContent={
+                      <img
+                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                        alt="Dribble Logo"
+                      />
+                    }
+                  >
+                    <p className=" text-base font-semibold ">Chat</p>
+                  </Button>
+                </a>
                 <a href="mailto:vishalanand072@gmail.com" className="w-full">
                   <Button
                     color="primary"

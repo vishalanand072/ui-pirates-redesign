@@ -160,7 +160,7 @@ const LandingBehanceFramor = () => {
             <img
               src={item.img}
               alt={item.heading}
-              className=" w-full h-full object-fill rounded-[40px] grayscale-[25%]"
+              className=" w-full h-full object-fill rounded-[30px] grayscale-[25%]  box-shadow"
               id="img"
             />
           </div>
