@@ -39,7 +39,7 @@ const LandingOurPricing = () => {
 
         <div className="flex w-full flex-col items-center justify-center">
           {/* Centered Sticky Tabs */}
-          <div className="sticky top-16 bg-white z-10 w-full flex justify-center">
+          <div className="sticky top-16 z-10 w-full flex justify-center px-[25rem] mx-auto">
             <Tabs
               aria-label="Dynamic tabs"
               items={tabs}
@@ -47,7 +47,7 @@ const LandingOurPricing = () => {
               onSelectionChange={(key: any) => setActiveTab(key)} // Update activeTab on selection
               classNames={{
                 cursor: "bg-black text-black",
-                tab: "px-12",
+                tab: "px-12 mx-[25rem] mx-auto",
                 tabContent: "group-data-[selected=true]:text-white",
               }}
             >

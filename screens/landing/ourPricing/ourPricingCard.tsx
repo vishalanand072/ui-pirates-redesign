@@ -17,7 +17,7 @@ const data = [
       "30-50 screens",
       "SaaS design ready",
       "Predefined scope of work (SOW)",
-      "AI chatbot integration available",
+      "Scalable code",
       "Cross-platform development",
       "5/7 Communication",
     ],
@@ -146,7 +146,7 @@ const OurPricingCard = (props: any) => {
                     <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold">
                       {item.heading}
                     </p>
-                    <p className="text-lg max-md:text-base">
+                    <p className="text-lg max-md:text-base font-[500]">
                       {item.description}
                     </p>
                     <div className="mt-6 mb-4">
@@ -270,10 +270,10 @@ const OurPricingCard = (props: any) => {
                         className="flex flex-row items-center mt-2 gap-2"
                       >
                         <img
-                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
+                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1730809748/mynaui_check-hexagon-solid_t7vhzg.svg"
                           alt=""
                         />
-                        <p className=" text-lg">{listItem}</p>
+                        <p className=" text-lg max-md:text-base">{listItem}</p>
                       </div>
                     ))}
                     {item.tab && (
@@ -334,7 +334,7 @@ const OurPricingCard = (props: any) => {
                       <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-12">
                         {item.heading}
                       </p>
-                      <p className="text-lg max-md:text-base">
+                      <p className="text-lg max-md:text-base font-[500]">
                         {item.description}
                       </p>
                       <div className="mt-6 mb-4">
@@ -372,10 +372,12 @@ const OurPricingCard = (props: any) => {
                         return (
                           <div className="flex flex-row items-start mt-2 gap-2">
                             <img
-                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729841108/Vectorw_mjuq5w.svg"
+                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730809748/mynaui_check-hexagon-solid_t7vhzg.svg"
                               alt=""
                             />
-                            <p className=" text-lg">{items}</p>
+                            <p className=" text-lg max-md:text-base ">
+                              {items}
+                            </p>
                           </div>
                         );
                       })}

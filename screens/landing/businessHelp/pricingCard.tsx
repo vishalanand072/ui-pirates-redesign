@@ -127,7 +127,7 @@
 // export default PricingCard;
 
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { Card, CardBody, Chip } from "@nextui-org/react";
+import { Card, CardBody, Chip, image } from "@nextui-org/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -139,12 +139,30 @@ const data = [
     description:
       "Transform your ideas into interactive, user-friendly apps. We create intuitive, engaging saas web and mobile apps with modern UI that drive user engagement and simplfies complex data visualisations",
     chip: [
-      "1-2 months delivery",
-      "$8,000-$12,000",
-      "Documentation",
-      "Scalable Architecture",
-      "Style Guidelines",
-      "Design Tokens",
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
+        title: "1-2 months delivery",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/AppWindow_m5lr3w.svg",
+        title: "SaaS Design",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Code_qedbxu.svg",
+        title: "UI Development",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Resize_inl801.svg",
+        title: "Scalable Architecture",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Sparkle_qf0yru.svg",
+        title: "Clean & Modern UI",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/CodeBlock_wotty4.svg",
+        title: "Development Ready",
+      },
     ],
   },
   {
@@ -152,12 +170,30 @@ const data = [
     description:
       "Scalable design systems and reusable components to ensure consistency across projects and streamline development.",
     chip: [
-      "2-3 months delivery",
-      "Development Friendly",
-      "Documentation",
-      "Customizable UI Kits",
-      "Reusable Components",
-      "Design Tokens",
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
+        title: "2-3 months delivery",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Code_qedbxu.svg",
+        title: "Development Friendly",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801222/File_rvsuin.svg",
+        title: "Documentation",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801222/Sliders_t641lz.svg",
+        title: "Customizable UI Kits",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801222/Swatches_ic2xmg.svg",
+        title: "Design Tokens",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801222/ArrowsCounterClockwise_a1sflh.svg",
+        title: "Reusable Components",
+      },
     ],
   },
   {
@@ -165,13 +201,34 @@ const data = [
     description:
       "Impactful online presence with high-converting landing pages and portfolio websites that showcase your work professionally and drive customer action.",
     chip: [
-      "2-4 weeks delivery",
-      "Mobile-friendly Design",
-      "UI Development",
-      "Shopify",
-      "Wordpress",
-      "Webflow",
-      "Landing Page Design",
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
+        title: "2-4 weeks delivery",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/DeviceMobile_rfsexm.svg",
+        title: "Mobile-friendly Design",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Code_qedbxu.svg",
+        title: "UI Development",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ShoppingCart_pirfab.svg",
+        title: "Shopify",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Sparkle_qf0yru.svg",
+        title: "Webflow",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ic_baseline-wordpress_gpl06j.svg",
+        title: "Wordpress",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/VectorD_nnz4jc.svg",
+        title: "Landing Page Designs",
+      },
     ],
   },
   // Add more data as needed...
@@ -181,15 +238,21 @@ const data1 = [
   {
     heading: "UX Audits & Consultation",
     description: "Identify usability issues and get expert guidance.",
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1730808993/image_39_e9ciky.svg",
   },
   {
     heading: "3D Animation  & Rendering",
     description: "Immersive 3D animations and rendering for standout visuals.",
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1730808994/3d-rendering-isometric-house_1_skqu47.svg",
   },
   {
     heading: "Creative Motion Graphics",
     description:
       "Impactful motion graphics to enhance storytelling and design.",
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/view-3d-cinema-clapperboard_1_bcdsv5.svg",
   },
   // Add more data as needed...
 ];
@@ -206,24 +269,20 @@ const PricingCard = () => {
         gsap.fromTo(
           card,
           {
-            y: 50, // Start from below
+            y: 100, // Start from below
             transform: "scale(0.80)",
-            opacity: 1,
-            filter: "blur(0px)", // Initial blur effect
           },
           {
             y: 0, // Move to its original position
             transform: "scale(1)",
-            opacity: 1,
-            filter: "blur(0px)", // Remove blur
-            duration: 1.5,
+            duration: 1,
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
               start: "top 99%",
               end: "bottom 0%",
               toggleActions: "play none none reverse",
-              scrub: true,
+              scrub: 1.5,
             },
           }
         );
@@ -249,7 +308,7 @@ const PricingCard = () => {
                     alt="behance Logo"
                     className="w-[40px]"
                   />
-                  <p className="text-3xl max-md:text-xl mt-4 mb-6 font-semibold">
+                  <p className="text-3xl max-md:text-xl mt-4 mb-6 font-[700]">
                     {item.heading}
                   </p>
                   <p className="text-lg max-md:text-base">{item.description}</p>
@@ -259,8 +318,11 @@ const PricingCard = () => {
                         key={chipIndex}
                         radius="sm"
                         className="m-2 text-lg text-black text-opacity-55 bg-[#51525E14]"
+                        startContent={
+                          <img src={chipItem.icon} className="mx-1 w-[16px]" />
+                        }
                       >
-                        {chipItem}
+                        {chipItem.title}
                       </Chip>
                     ))}
                   </div>
@@ -294,7 +356,7 @@ const PricingCard = () => {
                   // style={{ boxShadow: " inset 0 2px 4px rgba(0, 0, 0, 0.1)" }}
                 >
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6">
-                    <p className="text-3xl max-md:text-xl mt-0 mb-4 font-semibold pr-12">
+                    <p className="text-3xl max-md:text-xl mt-0 mb-4 font-[700] pr-12">
                       {item.heading}
                     </p>
                     <p className="text-lg max-md:text-base mb-6">
@@ -302,9 +364,9 @@ const PricingCard = () => {
                     </p>
                     <div className="flex flex-row items-center justify-center">
                       <img
-                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729658924/Div_framer-sb0m4g_vphvgk.svg"
+                        src={item.image}
                         alt="behance Logo"
-                        className="w-[80%]"
+                        className="w-[320px] h-[250px]"
                       />
                     </div>
                   </CardBody>
