@@ -152,7 +152,7 @@ function ResponsiveCarousel() {
           <div className=" mt-8 mb-12 py-12">
             <Card
               key={index}
-              className={`rounded-[40px] max-md:w-[100%] bg-[#e9e9e9] card-item max-md:rounded-[30px]`}
+              className={`rounded-[32px] max-md:w-[100%] bg-[#e9e9e9] card-item max-md:rounded-[30px]`}
             >
               <CardBody className="p-3 max-md:p-2 max-lg:p-4">
                 <div className="w-full p-5 bg-white rounded-[24px] max-md:p-4 box-shadow">

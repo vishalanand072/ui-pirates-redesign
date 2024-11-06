@@ -22,11 +22,11 @@ const LandingOurPricing = () => {
         <div>
           <div className="flex flex-row items-center justify-center mb-6">
             <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729597126/plans_bmcmmc.svg"
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877524/Div_framer-1nycyfv_w2jjbt.svg"
               alt=""
             />
           </div>
-          <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-semibold">
+          <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-[700]">
             Our Pricing
           </p>
           <div className="flex flex-row items-center justify-center mb-8 mt-5 px-32 max-lg:px-32 max-md:px-8 max-xl:px-32">
@@ -39,7 +39,7 @@ const LandingOurPricing = () => {
 
         <div className="flex w-full flex-col items-center justify-center">
           {/* Centered Sticky Tabs */}
-          <div className="sticky top-16 z-10 w-full flex justify-center px-[25rem] mx-auto">
+          <div className="sticky top-16 max-md:top-[3.5rem] z-10 w-full flex justify-center md:px-[25rem] mx-auto">
             <Tabs
               aria-label="Dynamic tabs"
               items={tabs}

@@ -6,11 +6,11 @@ const LandingBusinessHelp = () => {
         <div>
           <div className="flex flex-row items-center justify-center mb-6">
             <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729596828/Div_framer-3TZmM_hqrbpd.svg"
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877720/services_ku51c3.svg"
               alt=""
             />
           </div>
-          <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-semibold">
+          <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-[700]">
             How We Help Your Business
           </p>
           <div className="flex flex-row items-center justify-center mb-12 mt-3 px-40 max-lg:px-32 max-md:px-8">

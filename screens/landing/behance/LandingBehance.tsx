@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -40,9 +40,16 @@ const data = [
 ];
 
 const LandingBehanceFramor = () => {
+  const [visibleData, setVisibleData] = useState(data.slice(0, 6)); // Default to 6 items for desktop
+
+  const updateVisibleData = () => {
+    const isMobile = window.innerWidth <= 768;
+    setVisibleData(isMobile ? data.slice(0, 4) : data.slice(0, 6));
+  };
+
   const runAnimation = () => {
     const images = gsap.utils.toArray("#img") as HTMLElement[];
-    const isMobile = window.innerWidth <= 768; // Detect mobile view
+    const isMobile = window.innerWidth <= 768;
 
     const animateRow = (
       startIndex: number,
@@ -58,17 +65,15 @@ const LandingBehanceFramor = () => {
         rotate: isMobile ? 0 : (i) => rotateDeg[i % 2],
         scrollTrigger: {
           trigger: images[startIndex],
-          start: "top 99%",
-          end: "bottom 0%",
+          start: isMobile ? "top 99%" : "top 99%",
+          end: isMobile ? "bottom 30%" : "bottom 0%",
           scrub: 1.5,
           onUpdate: (self) => {
             if (self.progress >= triggerProgress) {
-              // Trigger the next row animation at the specified progress
               ScrollTrigger.getById(`row-${startIndex + 2}`)?.enable();
             }
           },
           id: `row-${startIndex}`,
-          // disabled: startIndex !== 0, // Disable all rows except the first initially
         },
       });
     };
@@ -89,7 +94,7 @@ const LandingBehanceFramor = () => {
       !isMobile ? ["90%", "90%"] : ["-20%", "-20%"],
       [-45, 45],
       0.2
-    ); // Start next row at 20% progress
+    );
     animateRow(
       2,
       4,
@@ -97,7 +102,7 @@ const LandingBehanceFramor = () => {
       !isMobile ? ["40%", "40%"] : ["-20%", "-20%"],
       [-45, 45],
       0.3
-    ); // Start next row at 30% progress
+    );
     animateRow(
       4,
       6,
@@ -105,14 +110,16 @@ const LandingBehanceFramor = () => {
       !isMobile ? ["-60%", "-60%"] : ["-20%", "-20%"],
       [-45, 45],
       1
-    ); // Start last row at 100% progress
+    );
   };
 
   useEffect(() => {
+    updateVisibleData();
     runAnimation();
 
     const handleResize = () => {
       ScrollTrigger.refresh();
+      updateVisibleData();
       runAnimation();
     };
 
@@ -133,34 +140,36 @@ const LandingBehanceFramor = () => {
         <img
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729514725/behance_k2zcrn.svg"
           alt="behance Logo"
-          className="max-md:w-[60%]"
+          className="max-md:w-[50%]"
         />
-        <p className="text-center text-lg px-24 max-md:px-4 max-lg:px-12 mb-12 mt-6 w-1/2 max-md:text-lg">
+        <p className="text-center text-lg px-24 max-md:px-0 max-lg:px-12 mb-12 mt-6 w-1/2 max-md:text-lg">
           Explore our diverse portfolio of projects that highlight our
           creativity and craftsmanship.
         </p>
-        <Button
-          color="primary"
-          className=" bg-black button text-lg dark:bg-white dark:text-black"
-          style={{
-            paddingRight: "70px",
-            paddingLeft: "70px",
-            paddingTop: "30px",
-            paddingBottom: "30px",
-          }}
-        >
-          View Behance
-        </Button>
+        <a href="https://www.behance.net/vishalanand-UI-UX" target="_blank">
+          <Button
+            color="primary"
+            className="bg-black button text-lg dark:bg-white dark:text-black px-[70px] py-[30px]"
+            // style={{
+            //   paddingRight: "70px",
+            //   paddingLeft: "70px",
+            //   paddingTop: "30px",
+            //   paddingBottom: "30px",
+            // }}
+          >
+            View Behance
+          </Button>
+        </a>
       </div>
 
       {/* Image Grid with Overlap */}
       <div className="relative grid grid-cols-2 gap-12 max-md:gap-4 overflow-x-hidden overflow-y-auto py-40 max-md:py-32 max-lg:py-40 max-md:grid-cols-1 hide-scrollbar px-32 max-md:px-4">
-        {data.map((item, index) => (
+        {visibleData.map((item, index) => (
           <div key={index} className="relative w-full h-full">
             <img
               src={item.img}
               alt={item.heading}
-              className=" w-full h-full object-fill rounded-[30px] grayscale-[25%]  box-shadow"
+              className="w-full h-full object-fill rounded-[30px] grayscale-[25%] box-shadow"
               id="img"
             />
           </div>

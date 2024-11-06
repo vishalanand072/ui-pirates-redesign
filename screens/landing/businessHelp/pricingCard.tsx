@@ -248,7 +248,7 @@ const data1 = [
       "https://res.cloudinary.com/damm9iwho/image/upload/v1730808994/3d-rendering-isometric-house_1_skqu47.svg",
   },
   {
-    heading: "Creative Motion Graphics",
+    heading: "Animated Motion Graphics",
     description:
       "Impactful motion graphics to enhance storytelling and design.",
     image:
@@ -258,6 +258,7 @@ const data1 = [
 ];
 
 const PricingCard = () => {
+  const isMobile = window.innerWidth <= 768;
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useLayoutEffect(() => {
@@ -279,8 +280,8 @@ const PricingCard = () => {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 99%",
-              end: "bottom 0%",
+              start: isMobile ? "top 150%" : "top 99%",
+              end: isMobile ? "bottom 0%" : "bottom 0%",
               toggleActions: "play none none reverse",
               scrub: 1.5,
             },

@@ -7,11 +7,11 @@ function LandingTestimonials() {
       <div>
         <div className="flex flex-row items-center justify-center mb-6">
           <img
-            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729783305/Div_framer-3TZmM_fdpvnr.svg"
+            src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877719/testimonial_e0fzis.svg"
             alt=""
           />
         </div>
-        <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-semibold">
+        <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-[700]">
           Working with our{" "}
           <span className="relative inline-block ">
             <span className="z-10">clients</span>

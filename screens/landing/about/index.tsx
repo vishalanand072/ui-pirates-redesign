@@ -6,11 +6,11 @@ const LandingAbout = () => {
         <div>
           <div className="flex flex-row items-center justify-center mb-6">
             <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729857387/Div_framer-3TZmM_zrisqv.svg"
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877720/about_ouikyp.svg"
               alt=""
             />
           </div>
-          <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-semibold">
+          <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-[700]">
             Who We Are
           </p>
           <div className="flex flex-row items-center justify-center mb-8 mt-5 max-md:px-8">

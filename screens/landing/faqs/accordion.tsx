@@ -45,12 +45,10 @@ const data = [
 ];
 
 export default function FaqsAccordion() {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
     cardsRef.current.forEach((card, index) => {
       if (card) {
         gsap.fromTo(
@@ -59,8 +57,8 @@ export default function FaqsAccordion() {
             y: 50, // Start from below
             paddingTop: "5%",
             paddingBottom: "5%",
-            opacity: 0, // Start fully transparent
-            filter: "blur(5px)", // Initial blur effect
+            opacity: isMobile ? 1 : 0, // Start fully transparent
+            filter: isMobile ? "blur(0px)" : "blur(5px)", // Initial blur effect
           },
           {
             y: 0, // Move to its original position
@@ -72,8 +70,8 @@ export default function FaqsAccordion() {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 90%", // When the top of the card reaches 80% of the viewport height
-              end: "top 30%",
+              start: isMobile ? "top 0%" : "top 90%", // Adjust start point for mobile
+              end: isMobile ? "botton 0%" : "top 30%", // Adjust end point for mobile
               toggleActions: "restart none none reverse",
             },
           }

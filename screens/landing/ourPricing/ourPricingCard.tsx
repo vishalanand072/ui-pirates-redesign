@@ -8,8 +8,9 @@ const data = [
     heading: "Web/Mobile Apps",
     description:
       "Ideal for building complete app or Saas, including design and development.",
-    dev: "999",
-    design: "999",
+    dev: "499",
+    design: "1999",
+    designDev: "2399",
     devhr: "20",
     designhr: "15",
     list: [
@@ -28,8 +29,9 @@ const data = [
     heading: "Landing Pages & E-commerce",
     description:
       "Build high-conversion landing pages or full e-commerce platforms",
-    dev: "499",
+    dev: "299",
     design: "499",
+    designDev: "699",
     devhr: "20",
     designhr: "15",
     list: [
@@ -48,7 +50,7 @@ const data = [
     heading: "Design Systems & Component Libraries",
     description:
       "Scalable design systems with reusable components for consistent UI and easy integration.",
-    design: "1,999",
+    designDev: "1,199",
     designhr: "15",
     list: [
       "2-4 weeks delivery",
@@ -69,7 +71,7 @@ const dataPrice = [
     heading: "3D Animation + Motion Graphics",
     description:
       "Create stunning visuals and motion graphics for your digital projects with expert 3D animation and rendering.",
-    price: "99",
+    price: "49",
     pricehr: "30",
     list: [
       "4-6 weeks delivery",
@@ -88,7 +90,7 @@ const dataPrice = [
     heading: "Partnership & Consultation ",
     description:
       "Perfect for ongoing design & development needs or flexible, undefined scopes. Get continuous support for your projects.",
-    price: "1,499",
+    price: "999",
     pricehr: "20",
     list: [
       "Flexible scope of work",
@@ -160,32 +162,26 @@ const OurPricingCard = (props: any) => {
                             selectedTab == "Design + Dev" ? (
                               <p>
                                 <span className="text-2xl mr-[4px] ">$</span>
-                                {item.design}
-                                <span className="text-[#C5C5C5] text-lg font-light max-md:text-sm">
-                                  {item.tab && "Design"}
-                                </span>{" "}
-                                {item.dev && (
-                                  <>
-                                    <span className="text-[#C5C5C5] ">+</span>{" "}
-                                    <span className="text-2xl mr-[4px] ">
-                                      $
-                                    </span>
-                                    {item.dev}
-                                    <span className="text-[#C5C5C5] text-lg font-light max-md:text-sm">
-                                      Dev
-                                    </span>
-                                  </>
-                                )}
+                                {item.designDev}
+                                <span className=" text-2xl font-bold max-md:text-sm align-top">
+                                  *
+                                </span>
                               </p>
                             ) : selectedTab == "Design Only" ? (
                               <p className=" align-middle">
                                 <span className="text-2xl mr-[4px] ">$</span>
                                 {item.design}
+                                <span className=" text-2xl font-bold max-md:text-sm align-top">
+                                  *
+                                </span>
                               </p>
                             ) : (
                               <p className=" align-middle">
                                 <span className="text-2xl mr-[4px] ">$</span>
                                 {item.dev}
+                                <span className=" text-2xl font-bold max-md:text-sm align-top">
+                                  *
+                                </span>
                               </p>
                             )
                           ) : selectedTab == "Design + Dev" ? (
@@ -236,8 +232,8 @@ const OurPricingCard = (props: any) => {
                               selectedTab == "Design + Dev"
                                 ? "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/designdev_f0onqh.svg"
                                 : selectedTab == "Design Only"
-                                  ? "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/design_oly_f4hn7l.svg"
-                                  : "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/dev_grzer7.svg"
+                                ? "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/design_oly_f4hn7l.svg"
+                                : "https://res.cloudinary.com/damm9iwho/image/upload/v1730106610/dev_grzer7.svg"
                             }
                             alt="design dev icon"
                             className="w-[36px] h-[32px]"
@@ -346,6 +342,13 @@ const OurPricingCard = (props: any) => {
                         <p className="text-4xl font-semibold mt-2">
                           <span className="text-2xl mr-[4px] ">$</span>
                           {props.id == "Fixed" ? item.price : item.pricehr}
+                          {props.id == "Fixed" ? (
+                            <span className=" text-2xl font-bold max-md:text-sm align-top">
+                              *
+                            </span>
+                          ) : (
+                            ""
+                          )}
                         </p>
                       </div>
                       <a

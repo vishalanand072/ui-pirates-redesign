@@ -7,11 +7,11 @@ const LandingFaqs = () => {
         <div className="lg:pr-32 col-span-2 max-md:pr-0 max-md:col-span-1">
           <div className="flex flex-row items-start mb-6 max-md:items-center max-md:justify-center">
             <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729861628/Div_framer-3TZmM_kfhwe_oihrjx.svg"
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877718/faq_o4aasc.svg"
               alt=""
             />
           </div>
-          <p className=" text-5xl max-lg:text-3xl max-md:text-2xl font-semibold mt-3 mb-6 max-md:text-center max-md:px-8">
+          <p className=" text-5xl max-lg:text-3xl max-md:text-2xl font-[700] mt-3 mb-6 max-md:text-center max-md:px-8">
             Have questions?! We've got you!
           </p>
           <div>
@@ -64,7 +64,7 @@ const LandingFaqs = () => {
             </Card>
           </div>
         </div>
-        <div className="max-md:mt-6 col-span-2 max-lg:col-span-2 max-md:col-span-1">
+        <div className="max-md:mt-4 col-span-2 max-lg:col-span-2 max-md:col-span-1">
           <FaqsAccordion />
         </div>
       </div>
