@@ -62,7 +62,12 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        ></link>
+      </head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",

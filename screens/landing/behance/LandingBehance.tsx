@@ -140,16 +140,16 @@ const LandingBehanceFramor = () => {
         <img
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729514725/behance_k2zcrn.svg"
           alt="behance Logo"
-          className="max-md:w-[50%]"
+          className="max-md:w-[50%] md:w-[250px]"
         />
-        <p className="text-center text-lg px-24 max-md:px-0 max-lg:px-12 mb-12 mt-6 w-1/2 max-md:text-lg">
+        <p className="text-center text-lg px-32 font-[500] max-md:px-0 max-lg:px-12 mb-12 mt-6 w-1/2 max-md:text-lg">
           Explore our diverse portfolio of projects that highlight our
           creativity and craftsmanship.
         </p>
         <a href="https://www.behance.net/vishalanand-UI-UX" target="_blank">
           <Button
             color="primary"
-            className="bg-black button text-lg dark:bg-white dark:text-black px-[70px] py-[30px]"
+            className="bg-black button text-lg dark:bg-white dark:text-black px-[70px] py-[30px] cursor-pointer"
             // style={{
             //   paddingRight: "70px",
             //   paddingLeft: "70px",

@@ -21,7 +21,7 @@ export const Navbar = () => {
       <NextUINavbar
         maxWidth="xl"
         position="sticky"
-        className="bg-none mx-[25rem] blur-none py-0 w-auto px-0 max-lg:mx-20 max-md:mx-0 max-xl:mx-40  max-2xl:mx-[20rem]
+        className="bg-none mx-[25rem] blur-none py-0 w-auto px-0 max-lg:mx-20 max-md:mx-0 max-xl:mx-40  max-2xl:mx-[18rem]
       
       border-2 container  flex flex-row items-center rounded-2xl sticky top-0 mt-3 max-md:mt-0 max-md:rounded-none max-md:border-0
      

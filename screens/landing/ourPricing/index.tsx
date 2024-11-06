@@ -26,11 +26,9 @@ const LandingOurPricing = () => {
               alt=""
             />
           </div>
-          <p className="text-center text-5xl max-lg:text-4xl max-md:text-2xl font-[700]">
-            Our Pricing
-          </p>
+          <p className="heading-center">Our Pricing</p>
           <div className="flex flex-row items-center justify-center mb-8 mt-5 px-32 max-lg:px-32 max-md:px-8 max-xl:px-32">
-            <p className="md:w-1/2 text-center content-center">
+            <p className="md:w-1/2 text-center content-center font-[500]">
               Choose between fixed pricing or hourly rates to suit your project
               scope.
             </p>
@@ -39,7 +37,7 @@ const LandingOurPricing = () => {
 
         <div className="flex w-full flex-col items-center justify-center">
           {/* Centered Sticky Tabs */}
-          <div className="sticky top-16 max-md:top-[3.5rem] z-10 w-full flex justify-center md:px-[25rem] mx-auto">
+          <div className="sticky top-[4.5rem] max-md:top-[3.7rem] z-10 w-full flex justify-center md:px-[25rem] mx-auto">
             <Tabs
               aria-label="Dynamic tabs"
               items={tabs}
@@ -48,7 +46,8 @@ const LandingOurPricing = () => {
               classNames={{
                 cursor: "bg-black text-black",
                 tab: "px-12 mx-[25rem] mx-auto",
-                tabContent: "group-data-[selected=true]:text-white",
+                tabContent:
+                  "group-data-[selected=true]:text-white text-black font-[700]",
               }}
             >
               {(item) => <Tab key={item.id} title={item.label} />}

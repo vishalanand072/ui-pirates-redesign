@@ -145,12 +145,10 @@ const OurPricingCard = (props: any) => {
                       alt="service logo"
                       className="w-[40px]"
                     />
-                    <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold">
+                    <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[38.4px]">
                       {item.heading}
                     </p>
-                    <p className="text-lg max-md:text-base font-[500]">
-                      {item.description}
-                    </p>
+                    <p className="font-[500]">{item.description}</p>
                     <div className="mt-6 mb-4">
                       <p className="text-[#C5C5C5] text-lg">
                         {props.id === "Fixed" ? "Starting from" : "Hourly Rate"}
@@ -263,13 +261,13 @@ const OurPricingCard = (props: any) => {
                     {item.list.map((listItem, listIndex) => (
                       <div
                         key={listIndex}
-                        className="flex flex-row items-center mt-2 gap-2"
+                        className="flex flex-row items-center mt-3 gap-2"
                       >
                         <img
                           src="https://res.cloudinary.com/damm9iwho/image/upload/v1730809748/mynaui_check-hexagon-solid_t7vhzg.svg"
                           alt=""
                         />
-                        <p className=" text-lg max-md:text-base">{listItem}</p>
+                        <p className="">{listItem}</p>
                       </div>
                     ))}
                     {item.tab && (
@@ -280,7 +278,8 @@ const OurPricingCard = (props: any) => {
                           classNames={{
                             cursor: "w-full bg-black text-black",
                             tab: "px-6 max-lg:px-2",
-                            tabContent: "group-data-[selected=true]:text-white",
+                            tabContent:
+                              "group-data-[selected=true]:text-white text-black font-[700] max-md:font-[600]",
                           }}
                           onSelectionChange={(key) => handleTabChange(key)}
                         >
@@ -330,9 +329,7 @@ const OurPricingCard = (props: any) => {
                       <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-12">
                         {item.heading}
                       </p>
-                      <p className="text-lg max-md:text-base font-[500]">
-                        {item.description}
-                      </p>
+                      <p className="font-[500]">{item.description}</p>
                       <div className="mt-6 mb-4">
                         <p className="text-[#C5C5C5] text-lg">
                           {props.id == "Fixed"
@@ -373,14 +370,12 @@ const OurPricingCard = (props: any) => {
                     <div className="">
                       {item.list.map((items, indexs) => {
                         return (
-                          <div className="flex flex-row items-start mt-2 gap-2">
+                          <div className="flex flex-row items-start mt-3 gap-2">
                             <img
                               src="https://res.cloudinary.com/damm9iwho/image/upload/v1730809748/mynaui_check-hexagon-solid_t7vhzg.svg"
                               alt=""
                             />
-                            <p className=" text-lg max-md:text-base ">
-                              {items}
-                            </p>
+                            <p className="">{items}</p>
                           </div>
                         );
                       })}

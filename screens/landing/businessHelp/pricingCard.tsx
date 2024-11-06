@@ -250,7 +250,7 @@ const data1 = [
   {
     heading: "Animated Motion Graphics",
     description:
-      "Impactful motion graphics to enhance storytelling and design.",
+      "Impactful animated motion graphics and Videos to enhance storytelling and design.",
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/view-3d-cinema-clapperboard_1_bcdsv5.svg",
   },
@@ -309,21 +309,23 @@ const PricingCard = () => {
                     alt="behance Logo"
                     className="w-[40px]"
                   />
-                  <p className="text-3xl max-md:text-xl mt-4 mb-6 font-[700]">
+                  <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[41.6px]">
                     {item.heading}
                   </p>
-                  <p className="text-lg max-md:text-base">{item.description}</p>
-                  <div className="mt-8 grid-rows-3 w-full gap-4">
+                  <p className="text-lg max-md:text-base font-[500]">
+                    {item.description}
+                  </p>
+                  <div className="mt-6 grid-rows-3 w-full gap-4">
                     {item.chip.map((chipItem, chipIndex) => (
                       <Chip
                         key={chipIndex}
                         radius="sm"
-                        className="m-2 text-lg text-black text-opacity-55 bg-[#51525E14]"
+                        className="m-2 text-[14px] text-[#00000094] bg-[#51525E14]"
                         startContent={
                           <img src={chipItem.icon} className="mx-1 w-[16px]" />
                         }
                       >
-                        {chipItem.title}
+                        <p className="font-[600]">{chipItem.title}</p>
                       </Chip>
                     ))}
                   </div>
@@ -357,10 +359,10 @@ const PricingCard = () => {
                   // style={{ boxShadow: " inset 0 2px 4px rgba(0, 0, 0, 0.1)" }}
                 >
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6">
-                    <p className="text-3xl max-md:text-xl mt-0 mb-4 font-[700] pr-12">
+                    <p className="text-3xl max-md:text-xl mt-0 mb-4 font-[700] pr-12 tracking-[-0.5px] leading-[41.6px]">
                       {item.heading}
                     </p>
-                    <p className="text-lg max-md:text-base mb-6">
+                    <p className="text-lg max-md:text-base mb-6 font-[500] leading-[25.2px]">
                       {item.description}
                     </p>
                     <div className="flex flex-row items-center justify-center">

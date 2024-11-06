@@ -137,7 +137,7 @@ const AboutCardAnimation = () => {
             }}
           >
             <div>
-              <p className="uppercase text-8xl max-md:text-7xl mb-4 lg:pt-4 overflow-hidden">
+              <p className="uppercase text-8xl max-md:text-7xl mb-4 lg:pt-4 overflow-hidden font-[600] max-md:font-[500]">
                 {item.heading.split("").map((letter, i) => (
                   <span
                     key={i}
