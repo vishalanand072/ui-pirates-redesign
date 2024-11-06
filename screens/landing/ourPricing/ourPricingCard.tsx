@@ -1,6 +1,7 @@
 import { Button, Card, CardBody, Chip } from "@nextui-org/react";
 import { Tabs, Tab } from "@nextui-org/react";
 import { useState } from "react";
+import ListMap from "./list";
 
 const data = [
   {
@@ -14,13 +15,61 @@ const data = [
     devhr: "20",
     designhr: "15",
     list: [
-      "4-6 week delivery",
-      "30-50 screens",
+      "8-12 week delivery",
       "SaaS design ready",
       "Predefined scope of work (SOW)",
-      "Scalable code",
-      "Cross-platform development",
-      "5/7 Communication",
+      "End-to-end design and development",
+      "Functional prototypes for testing",
+      "Cross-platform testing",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDev: [
+      "6-8 week delivery",
+      "SaaS design ready",
+      "Predefined scope of work (SOW)",
+      "Fully responsive code",
+      "Custom frontend development",
+      "Backend integration (API-ready)",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDesign: [
+      "4-6 week delivery",
+      "SaaS design ready",
+      "Predefined scope of work (SOW)",
+      "Interactive prototypes",
+      "3 rounds of revisions included",
+      "Design files (Figma) provided",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listhr: [
+      "8-12 week delivery",
+      "SaaS design ready",
+      "Predefined scope of work (SOW)",
+      "End-to-end design and development",
+      "Functional prototypes for testing",
+      "Cross-platform testing",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDevhr: [
+      "6-8 week delivery",
+      "SaaS design ready",
+      "Predefined scope of work (SOW)",
+      "Fully responsive code",
+      "Custom frontend development",
+      "Backend integration (API-ready)",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDesignhr: [
+      "4-6 week delivery",
+      "SaaS design ready",
+      "Predefined scope of work (SOW)",
+      "Interactive prototypes",
+      "3 rounds of revisions included",
+      "Design files (Figma) provided",
+      "5/7 communication via Teams, Meet, or Zoom",
     ],
     tab: true,
   },
@@ -35,13 +84,61 @@ const data = [
     devhr: "20",
     designhr: "15",
     list: [
-      "10-14 days turnaround time",
+      "4-6 week delivery",
       "1-5 Pages",
-      "High-conversion rate focus",
+      "End-to-end design & development",
+      "E-commerce integrations",
+      "SEO-optimized structure",
+      "Analytics & tracking integration",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDev: [
+      "3-4 week delivery",
+      "1-5 Pages",
+      "CMS integration (if needed)",
+      "SSL & basic security setup",
+      "Payment gateway integration (if needed)",
+      "Responsive coding (desktop & mobile)",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDesign: [
+      "2-3 week delivery",
+      "1-5 Pages",
+      "Up to 3 rounds of revisions",
+      "Custom, conversion-focused design",
       "E-commerce functionality",
-      "Responsive Design",
-      "Predefined scope of work (SOW)",
-      "5/7 Communication",
+      "Mobile-responsive layouts",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listhr: [
+      "4-6 week delivery",
+      "1-5 Pages",
+      "End-to-end design & development",
+      "E-commerce integrations",
+      "SEO-optimized structure",
+      "Analytics & tracking integration",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDevhr: [
+      "3-4 week delivery",
+      "1-5 Pages",
+      "CMS integration (if needed)",
+      "SSL & basic security setup",
+      "Payment gateway integration (if needed)",
+      "Responsive coding (desktop & mobile)",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listDesignhr: [
+      "2-3 week delivery",
+      "1-5 Pages",
+      "Up to 3 rounds of revisions",
+      "Custom, conversion-focused design",
+      "E-commerce functionality",
+      "Mobile-responsive layouts",
+      "5/7 communication via Teams, Meet, or Zoom",
     ],
     tab: true,
   },
@@ -53,13 +150,23 @@ const data = [
     designDev: "1,199",
     designhr: "15",
     list: [
-      "2-4 weeks delivery",
-      "Scalable design systems",
-      "Development-ready components",
-      "UI consistency",
-      "5/7 Communication",
-      "Reusable components",
-      "Custom design library",
+      "1-2 month delivery",
+      "Consistent UI components",
+      "Scalable design assets",
+      "Brand guidelines integration",
+      "Documented usage guidelines",
+      "Cross-platform consistency",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
+    ],
+    listhr: [
+      "1-2 month delivery",
+      "Consistent UI components",
+      "Scalable design assets",
+      "Brand guidelines integration",
+      "Documented usage guidelines",
+      "Cross-platform consistency",
+      "5/7 communication via Teams, Meet, or Zoom",
     ],
     tab: false,
   },
@@ -74,13 +181,15 @@ const dataPrice = [
     price: "49",
     pricehr: "30",
     list: [
-      "4-6 weeks delivery",
+      "1-4 weeks delivery",
       "Custom motion graphics",
       "High-end 3D rendering",
-      "Cross-platform visuals",
-      "5/7 Communication",
       "Interactive animations",
       "Development-ready assets",
+      "3 rounds of revisions",
+      "Compatible with web & social",
+      "50/30/20 payment schedule",
+      "5/7 communication via Teams, Meet, or Zoom",
     ],
     limited: false,
   },
@@ -97,9 +206,11 @@ const dataPrice = [
       "End-to-end project management",
       "Unlimited Design request & revisions",
       "Design & dev consultation",
-      "5/7 Communication",
+      "Heuristic analysis",
+      "Recommendations for improvement",
+      "Visual/UX critique",
+      "50/30/20 payment schedule",
       "1-3 days updates + 1 sync call/week",
-      "UI Development",
     ],
     limited: true,
   },
@@ -258,7 +369,37 @@ const OurPricingCard = (props: any) => {
                   </div>
 
                   <div>
-                    {item.list.map((listItem, listIndex) => (
+                    {item.tab && (
+                      <div>
+                        {props.id == "Fixed" ? (
+                          selectedTab == "Design + Dev" ? (
+                            <ListMap list={item.list} />
+                          ) : selectedTab == "Design Only" ? (
+                            <ListMap list={item.listDesign} />
+                          ) : (
+                            <ListMap list={item.listDev} />
+                          )
+                        ) : selectedTab == "Design + Dev" ? (
+                          <ListMap list={item.listhr} />
+                        ) : selectedTab == "Design Only" ? (
+                          <ListMap list={item.listDesignhr} />
+                        ) : (
+                          <ListMap list={item.listDevhr} />
+                        )}
+                      </div>
+                    )}
+
+                    {!item.tab && (
+                      <div>
+                        {props.id == "Fixed" ? (
+                          <ListMap list={item.list} />
+                        ) : (
+                          <ListMap list={item.listhr} />
+                        )}
+                      </div>
+                    )}
+
+                    {/* {item.list.map((listItem, listIndex) => (
                       <div
                         key={listIndex}
                         className="flex flex-row items-center mt-3 gap-2"
@@ -269,7 +410,8 @@ const OurPricingCard = (props: any) => {
                         />
                         <p className="">{listItem}</p>
                       </div>
-                    ))}
+                    ))} */}
+
                     {item.tab && (
                       <div className="flex w-full flex-col items-start justify-end mt-8 max-sm:mt-6">
                         <Tabs
