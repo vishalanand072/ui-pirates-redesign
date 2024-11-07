@@ -11,6 +11,7 @@ import LandingFooter from "./footer";
 import LandingTestimonials from "./testimonials";
 import LandingBehanceDan from "./behance/text";
 import LandingBehanceFramor from "./behance/LandingBehance";
+import LandingWork from "./works";
 const Landing = () => {
   return (
     <>
@@ -20,6 +21,8 @@ const Landing = () => {
         <div className=" overflow-x-hidden py-12">
           <LandingAppScreen />
         </div>
+        <LandingWork />
+
         <div className="">
           {/* <LandingBehanceDan /> */}
           <LandingBehanceFramor />
