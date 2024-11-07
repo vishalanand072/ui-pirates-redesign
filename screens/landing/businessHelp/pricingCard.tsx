@@ -1,133 +1,5 @@
-// import { Card, CardBody, chip, Chip } from "@nextui-org/react";
-// const data = [
-//   {
-//     heading: "Heading 1",
-//     chip: [
-//       "1-2 months delivery",
-//       "$8,000-$12,000",
-//       "Documentation",
-//       "Scalable Architecture",
-//       "Style Guidelines",
-//       "Design Tokens",
-//     ],
-//   },
-//   {
-//     heading: "Heading 1",
-//     chip: [
-//       "1-2 months delivery",
-//       "$8,000-$12,000",
-//       "Documentation",
-//       "Scalable Architecture",
-//       "Style Guidelines",
-//       "Design Tokens",
-//     ],
-//   },
-//   {
-//     heading: "Heading 1",
-//     chip: [
-//       "1-2 months delivery",
-//       "$8,000-$12,000",
-//       "Documentation",
-//       "Scalable Architecture",
-//       "Style Guidelines",
-//       "Design Tokens",
-//     ],
-//   },
-// ];
-// const PricingCard = () => {
-//   return (
-//     <>
-//       <div className="">
-//         {data.map((item, index) => {
-//           return (
-//             <Card className="rounded-[48px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
-//               <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
-//                 <Card className="rounded-[40px]  border-2">
-//                   <CardBody className="p-8 max-md:p-4 max-lg:p-6">
-//                     <img
-//                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
-//                       alt="behance Logo"
-//                       className="w-[40px]"
-//                     />
-//                     <p className="text-3xl max-md:text-xl mt-4 mb-6 font-semibold">
-//                       Web/Mobile Apps
-//                     </p>
-//                     <p className="text-lg max-md:text-base">
-//                       Transform your ideas into market-ready digital products.
-//                       We create intuitive, engaging applications with modern UI
-//                       that drive user engagement and business growth.
-//                     </p>
-//                     <div className="mt-8 grid-rows-3 w-full gap-4">
-//                       {item.chip.map((item, index) => {
-//                         return (
-//                           <>
-//                             <Chip
-//                               radius="sm"
-//                               className="m-2 text-lg text-black text-opacity-55 bg-[#51525E14]"
-//                             >
-//                               {item}
-//                             </Chip>
-//                           </>
-//                         );
-//                       })}
-//                     </div>
-//                   </CardBody>
-//                 </Card>
-//                 <Card className=" rounded-[40px] p-0 h-[400px] max-md:h-[300px]">
-//                   <CardBody style={{ padding: 0 }}>
-//                     <img
-//                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521816/card_zzxglp.svg"
-//                       alt="behance Logo"
-//                       className="object-cover h-[400px] man-md:h-[300px] max-h-full"
-//                     />
-//                   </CardBody>
-//                 </Card>
-//               </CardBody>
-//             </Card>
-//           );
-//         })}
-
-//         <div>
-//           <Card className="rounded-[48px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
-//             <CardBody className="grid grid-cols-3 gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
-//               {data.map((item, index) => {
-//                 return (
-//                   <Card
-//                     className="rounded-[40px] border-2"
-//                     // style={{ boxShadow: " inset 0 2px 4px rgba(0, 0, 0, 0.1)" }}
-//                   >
-//                     <CardBody className="p-8 max-md:p-4 max-lg:p-6">
-//                       <p className="text-3xl max-md:text-xl mt-0 mb-4 font-semibold">
-//                         Web/Mobile Apps
-//                       </p>
-//                       <p className="text-lg max-md:text-base mb-6">
-//                         Transform your ideas into market-ready digital products.
-//                         We create intuitive, engaging applications with modern
-//                         UI that drive user engagement and business growth.
-//                       </p>
-//                       <div className="flex flex-row items-center justify-center">
-//                         <img
-//                           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729658924/Div_framer-sb0m4g_vphvgk.svg"
-//                           alt="behance Logo"
-//                           className="w-[80%]"
-//                         />
-//                       </div>
-//                     </CardBody>
-//                   </Card>
-//                 );
-//               })}
-//             </CardBody>
-//           </Card>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default PricingCard;
-
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { Card, CardBody, Chip, image } from "@nextui-org/react";
+import { Card, CardBody, Chip } from "@nextui-org/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -164,6 +36,10 @@ const data = [
         title: "Development Ready",
       },
     ],
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1729841109/widget-svgrepo-com_1_xflrym.svg",
+    video:
+      "https://res.cloudinary.com/damm9iwho/video/upload/v1730895574/psd_y5ouhe.mp4",
   },
   {
     heading: "Design Systems & Component Libraries",
@@ -195,6 +71,10 @@ const data = [
         title: "Reusable Components",
       },
     ],
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1729841104/figma-component-svgrepo-com_1_mtgewy.svg",
+    video:
+      "https://res.cloudinary.com/damm9iwho/video/upload/v1730895563/show_gtb051.mp4",
   },
   {
     heading: "Landing Pages & E-commerce",
@@ -230,6 +110,10 @@ const data = [
         title: "Landing Page Designs",
       },
     ],
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1729841107/Vectore_ididim.svg",
+    video:
+      "https://res.cloudinary.com/damm9iwho/video/upload/v1730895565/3D_qasvie.mp4",
   },
   // Add more data as needed...
 ];
@@ -240,12 +124,14 @@ const data1 = [
     description: "Identify usability issues and get expert guidance.",
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1730808993/image_39_e9ciky.svg",
+    isImage: true,
   },
   {
     heading: "3D Animation  & Rendering",
     description: "Immersive 3D animations and rendering for standout visuals.",
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1730808994/3d-rendering-isometric-house_1_skqu47.svg",
+    isImage: true,
   },
   {
     heading: "Animated Motion Graphics",
@@ -253,16 +139,20 @@ const data1 = [
       "Impactful animated motion graphics and Videos to enhance storytelling and design.",
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/view-3d-cinema-clapperboard_1_bcdsv5.svg",
+    isImage: false,
   },
   // Add more data as needed...
 ];
 
-const PricingCard = () => {
-  const isMobile = window.innerWidth <= 768;
+const VideoWithCards = () => {
   const cardsRef = useRef<HTMLDivElement[]>([]);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useLayoutEffect(() => {
-    // Clear any existing animations
+    // GSAP ScrollTrigger animation for cards
+    const isMobile = window.innerWidth <= 768;
+
+    // Clear any existing ScrollTriggers
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
     cardsRef.current.forEach((card, index) => {
@@ -274,7 +164,7 @@ const PricingCard = () => {
             transform: "scale(0.80)",
           },
           {
-            y: 0, // Move to its original position
+            y: 0, // Move to original position
             transform: "scale(1)",
             duration: 1,
             ease: "power2.out",
@@ -291,6 +181,46 @@ const PricingCard = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Find the index of the observed element in videoRefs
+          const index = videoRefs.current.findIndex(
+            (video) => video === entry.target
+          );
+
+          if (index !== -1) {
+            // Check if the index is valid
+            const videoElement = videoRefs.current[index];
+            if (videoElement) {
+              // Ensure the video element is valid
+              if (entry.isIntersecting) {
+                console.log(`Video ${index + 1} started playing.`);
+                videoElement.play();
+                videoElement.playbackRate = 0.25; // Adjust speed when in view
+              } else {
+                console.log(`Video ${index + 1} paused.`);
+                videoElement.pause();
+                videoElement.playbackRate = 1; // Reset speed when out of view
+              }
+            }
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when at least 10% of the video is in view
+    );
+
+    // Observing all video elements
+    videoRefs.current.forEach((video) => {
+      if (video) observer.observe(video); // Ensure video is not null before observing
+    });
+
+    return () => {
+      observer.disconnect(); // Cleanup observer on unmount
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       {data.map((item, index) => (
@@ -300,14 +230,14 @@ const PricingCard = () => {
           }}
           key={index}
         >
-          <Card className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4 ">
+          <Card className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4 group">
             <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
               <Card className="rounded-[40px] box-shadow">
                 <CardBody className="p-8 max-md:p-4 max-lg:p-6">
                   <img
-                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521815/fileicon_thzcul.svg"
+                    src={item.image}
                     alt="behance Logo"
-                    className="w-[40px]"
+                    className="w-[40px] grayscale group-hover:grayscale-0"
                   />
                   <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[41.6px]">
                     {item.heading}
@@ -333,25 +263,30 @@ const PricingCard = () => {
               </Card>
               <Card className="rounded-[40px] p-0 h-[500px] max-md:h-[300px]">
                 <CardBody style={{ padding: 0 }}>
-                  <img
-                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729521816/card_zzxglp.svg"
-                    alt="behance Logo"
+                  <video
+                    ref={(elvideo) => {
+                      if (elvideo) videoRefs.current[index] = elvideo;
+                    }}
+                    width="100%"
+                    // autoPlay
+                    loop
+                    muted
                     className="object-cover h-[500px] min-md:h-[400px] max-h-full"
-                  />
+                    src={item.video}
+                  ></video>
                 </CardBody>
               </Card>
             </CardBody>
           </Card>
         </div>
       ))}
-
       <div
         ref={(el) => {
           if (el) cardsRef.current[3] = el;
         }}
       >
         <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:mt-4">
-          <CardBody className="grid grid-cols-3 gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
+          <CardBody className="grid grid-cols-3 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
             {data1.map((item, index) => {
               return (
                 <Card
@@ -366,11 +301,22 @@ const PricingCard = () => {
                       {item.description}
                     </p>
                     <div className="flex flex-row items-center justify-center">
-                      <img
-                        src={item.image}
-                        alt="behance Logo"
-                        className="w-[320px] h-[250px]"
-                      />
+                      {item.isImage && (
+                        <img
+                          src={item.image}
+                          alt="behance Logo"
+                          className="w-[320px] h-[250px]"
+                        />
+                      )}
+                      {!item.isImage && (
+                        <iframe
+                          src="https://my.spline.design/componentkeyboardcopy-418b298aa595a45922ac0f0895edd81d/"
+                          // frameBorder="0"
+                          width="100%"
+                          height="100%"
+                          className="h-[250px] w-full"
+                        ></iframe>
+                      )}
                     </div>
                   </CardBody>
                 </Card>
@@ -383,4 +329,4 @@ const PricingCard = () => {
   );
 };
 
-export default PricingCard;
+export default VideoWithCards;

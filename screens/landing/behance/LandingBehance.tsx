@@ -135,7 +135,7 @@ const LandingBehanceFramor = () => {
       {/* Centered Info */}
       <div
         id="info"
-        className="absolute inset-0 flex flex-col items-center justify-center text-center"
+        className="absolute inset-1 flex flex-col items-center justify-center text-center"
       >
         <img
           src="https://res.cloudinary.com/damm9iwho/image/upload/v1729514725/behance_k2zcrn.svg"

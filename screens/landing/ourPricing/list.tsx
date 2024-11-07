@@ -1,5 +1,5 @@
 const ListMap = (props: any) => {
-  console.log(props.list);
+  // console.log(props.list);
 
   return (
     <>

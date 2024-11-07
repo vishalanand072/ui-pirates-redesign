@@ -11,8 +11,8 @@ const data = [
   {
     heading: "Xperiti",
     subtitle: "Web app, UX Design, UI Developemt",
-    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1730025188/frytx_mo0frx.svg",
-    url: "https://www.frytx.com/",
+    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1730025336/xperiti_ptjxaa.svg",
+    url: "https://www.xperiti.com/",
   },
   {
     heading: "ArthAlpha",
@@ -123,7 +123,7 @@ const RecentWorkCard = () => {
                   <Button
                     // color="primary"
                     variant="bordered"
-                    className="rounded-full py-6 px-12 mt-12 font-[700]"
+                    className="rounded-2xl py-6 px-12 mt-12 font-[700] text-[16px]"
                   >
                     View Project
                   </Button>
@@ -136,7 +136,7 @@ const RecentWorkCard = () => {
               <img
                 src={item.img}
                 alt="img"
-                className=" md:-mt-12 max-w-full max-md:mt-12 " // Ensure the image does not overflow
+                className=" rounded-3xl md:-mt-12 max-md:mt-12 " // Ensure the image does not overflow
                 style={{
                   transform:
                     index % 2 === 0 ? "rotate(-20deg)" : "rotate(20deg)", // Add initial rotation

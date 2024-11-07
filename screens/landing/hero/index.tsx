@@ -36,12 +36,13 @@ const LandingHero = () => {
             </div>
           </div>
 
-          <div className="text-7xl px-56 text-center font-semibold max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
+          <div className="text-7xl px-56 text-center font-[700] max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
             Modern, scalable design for{" "}
+            {/* {" "}
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">
               Saas & Tech
-            </span>{" "}
-            companies
+            </span>{" "} */}
+            Saas & Tech companies
           </div>
           <p className="lg:w-1/2 text-center text-lg mt-4 px-40 max-md:px-4 max-lg:12 font-sans leading-[25.2px]">
             We build products that work for users and drive business growth

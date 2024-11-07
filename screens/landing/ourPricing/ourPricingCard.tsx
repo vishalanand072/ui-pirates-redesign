@@ -241,7 +241,7 @@ const OurPricingCard = (props: any) => {
 
             const handleTabChange = (id: any) => {
               setSelectedTab(id);
-              console.log(`Tab for card ${index} selected:`, id);
+              // console.log(`Tab for card ${index} selected:`, id);
             };
 
             return (

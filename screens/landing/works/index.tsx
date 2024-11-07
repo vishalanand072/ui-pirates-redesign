@@ -22,7 +22,7 @@ const LandingWork = () => {
         <div>
           <div className="flex flex-row items-center justify-center mb-6">
             <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877524/Div_framer-1nycyfv_w2jjbt.svg"
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730973289/work_iljiv2.svg"
               alt=""
             />
           </div>
