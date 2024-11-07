@@ -7,7 +7,7 @@ function LandingTestimonials() {
       <div>
         <div className="flex flex-row items-center justify-center mb-6">
           <img
-            src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877719/testimonial_e0fzis.svg"
+            src="https://res.cloudinary.com/damm9iwho/image/upload/v1730981155/testi_et98yb.svg"
             alt=""
           />
         </div>

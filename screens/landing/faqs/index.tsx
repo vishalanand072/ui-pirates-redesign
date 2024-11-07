@@ -8,7 +8,7 @@ const LandingFaqs = () => {
       <div className="col-span-2 max-md:col-span-1 lg:pr-32 max-md:pr-0 md:sticky md:top-4 md:h-screen">
         <div className="flex flex-row items-start mb-6 max-md:items-center max-md:justify-center">
           <img
-            src="https://res.cloudinary.com/damm9iwho/image/upload/v1730877718/faq_o4aasc.svg"
+            src="https://res.cloudinary.com/damm9iwho/image/upload/v1730981154/faq_pagz0a.svg"
             alt="FAQ Icon"
           />
         </div>
