@@ -198,7 +198,7 @@ const VideoWithCards = () => {
               if (entry.isIntersecting) {
                 console.log(`Video ${index + 1} started playing.`);
                 videoElement.play();
-                videoElement.playbackRate = 0.25; // Adjust speed when in view
+                videoElement.playbackRate = 0.5; // Adjust speed when in view
               } else {
                 console.log(`Video ${index + 1} paused.`);
                 videoElement.pause();

@@ -247,14 +247,14 @@ const OurPricingCard = (props: any) => {
             return (
               <Card
                 key={index}
-                className="rounded-[40px] max-md:rounded-[30px] box-shadow"
+                className="rounded-[40px] max-md:rounded-[30px] box-shadow group"
               >
-                <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12 max-md:grid-cols-1 max-md:gap-4">
+                <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12  max-md:grid-cols-1 max-md:gap-4">
                   <div className="w-full">
                     <img
                       src={item.icon}
                       alt="service logo"
-                      className="w-[40px]"
+                      className="w-[40px] grayscale group-hover:grayscale-0"
                     />
                     <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[38.4px]">
                       {item.heading}
@@ -350,22 +350,24 @@ const OurPricingCard = (props: any) => {
                         )}
                       </div>
                     </div>
-                    <a
-                      href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
-                      target="blank"
-                    >
-                      <Button
-                        className="bg-black text-white button dark:bg-white dark:text-black w-full"
-                        startContent={
-                          <img
-                            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                            alt="Dribble Logo"
-                          />
-                        }
+                    <div className="md:hidden max-md:block">
+                      <a
+                        href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                        target="blank"
                       >
-                        Book a 15-min call
-                      </Button>
-                    </a>
+                        <Button
+                          className="bg-black text-white button dark:bg-white dark:text-black w-full"
+                          startContent={
+                            <img
+                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                              alt="Dribble Logo"
+                            />
+                          }
+                        >
+                          Book a 15-min call
+                        </Button>
+                      </a>
+                    </div>
                   </div>
 
                   <div>
@@ -411,9 +413,55 @@ const OurPricingCard = (props: any) => {
                         <p className="">{listItem}</p>
                       </div>
                     ))} */}
+                    <div className="md:hidden max-md:block">
+                      {item.tab && (
+                        <div className="flex w-full flex-col items-start justify-end mt-8 max-sm:mt-6">
+                          <Tabs
+                            aria-label="Dynamic tabs"
+                            items={tabs}
+                            classNames={{
+                              cursor: "w-full bg-black text-black",
+                              tab: "px-6 max-lg:px-2",
+                              tabContent:
+                                "group-data-[selected=true]:text-white text-black font-[700] max-md:font-[600]",
+                            }}
+                            onSelectionChange={(key) => handleTabChange(key)}
+                          >
+                            {tabs.map((tabItem) => (
+                              <Tab
+                                key={tabItem.id}
+                                title={tabItem.label}
+                                className="max-md:text-xs"
+                              />
+                            ))}
+                          </Tabs>
+                        </div>
+                      )}
+                    </div>
+                  </div>
 
+                  <div className="md:block max-md:hidden  -mt-6">
+                    <a
+                      href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                      target="blank"
+                    >
+                      <Button
+                        className="bg-black text-white button dark:bg-white dark:text-black w-full"
+                        startContent={
+                          <img
+                            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                            alt="Dribble Logo"
+                          />
+                        }
+                      >
+                        Book a 15-min call
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className="md:block max-md:hidden -mt-6">
                     {item.tab && (
-                      <div className="flex w-full flex-col items-start justify-end mt-8 max-sm:mt-6">
+                      <div className="flex w-full flex-col items-start justify-end mt-3 max-sm:mt-0">
                         <Tabs
                           aria-label="Dynamic tabs"
                           items={tabs}
@@ -443,14 +491,14 @@ const OurPricingCard = (props: any) => {
           <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
             {dataPrice.map((item, index) => {
               return (
-                <Card className="rounded-[40px] box-shadow">
+                <Card className="rounded-[40px] box-shadow group">
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-1 gap-4 max-md:grid-cols-1">
                     <div className="w-full">
                       <div className="flex flex-row items-center justify-between">
                         <img
                           src={item.icon}
                           alt="behance Logo"
-                          className="w-[45px]"
+                          className="w-[40px]  grayscale group-hover:grayscale-0"
                         />
                         {item.limited && (
                           <Chip

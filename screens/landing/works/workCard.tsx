@@ -96,7 +96,7 @@ const RecentWorkCard = () => {
             className={
               index % 2 === 0
                 ? "flex flex-row-reverse justify-between mb-16 max-md:mb-4 max-w-full max-md:flex-col" // Ensure the div doesn't exceed the container's width
-                : "flex flex-row justify-between mb-16 max-md:mb-4 max-w-full max-md:flex-col py-32 max-md:py-8"
+                : "flex flex-row justify-between mb-16 max-md:mb-4 max-w-full max-md:flex-col py-32 max-md:py-8 max-lg:py-16 max-xl:py-28"
             }
             // ref={(el) => (cardRefs.current[index] = el!)}
 
@@ -118,7 +118,15 @@ const RecentWorkCard = () => {
                 <p className="text-3xl max-md:text-xl mb-4 font-[700]">
                   {item.heading}
                 </p>
-                <p className="text-lg font-[500]">{item.subtitle}</p>
+                <p
+                  className={
+                    index % 2 === 0
+                      ? "text-lg font-[500] pl-[5rem] max-md:pl-0 max-lg:pl-[2.5rem]"
+                      : "text-lg font-[500] pr-[5rem] max-md:pr-0 max-lg:pr-[2.5rem]"
+                  }
+                >
+                  {item.subtitle}
+                </p>
                 <a href={item.url} target="_blank">
                   <Button
                     // color="primary"

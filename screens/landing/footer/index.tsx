@@ -35,7 +35,7 @@ const images = [
 const LandingFooter = () => {
   return (
     <>
-      <div className="relative overflow-hidden h-screen mt-12">
+      <div className="relative overflow-hidden h-screen mt-52 max-md:mt-32">
         <div
           style={{
             display: "flex",

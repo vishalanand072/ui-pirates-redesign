@@ -27,8 +27,8 @@ const LandingWork = () => {
             />
           </div>
           <p className="heading-center">Recent Works</p>
-          <div className="flex flex-row items-center justify-center mb-8 mt-5 px-32 max-lg:px-32 max-md:px-8 max-xl:px-32">
-            <p className="md:w-1/2 text-center content-center font-[500]">
+          <div className="flex flex-row items-center justify-center mb-8 mt-3 px-40 max-lg:px-32 max-md:px-8 max-xl:px-32 ">
+            <p className="md:w-3/4 text-center content-center font-[500] ">
               In the world of creativity, clients consistently appreciate our
               work and value the results we deliver.
             </p>

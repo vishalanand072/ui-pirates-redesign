@@ -114,7 +114,7 @@ export default function FaqsAccordion() {
   return (
     <>
       <div
-        className="mb-12"
+        className=""
         ref={(el) => {
           if (el) cardsRef.current[0] = el;
         }}
@@ -122,7 +122,7 @@ export default function FaqsAccordion() {
         {" "}
         <Accordion
           variant="splitted"
-          className="mb-4"
+          className="mb-0"
           // key={index} // Move key here for proper rendering
         >
           {data.map((item, index) => {
@@ -133,12 +133,12 @@ export default function FaqsAccordion() {
                 title={item.heading}
                 indicator={({ isOpen }) =>
                   isOpen ? (
-                    <p className="text-3xl text-black rotate-45">+</p>
+                    <p className="text-3xl text-black rotate-45 ">+</p>
                   ) : (
-                    <p className="text-3xl text-black">+</p>
+                    <p className="text-3xl text-black ">+</p>
                   )
                 }
-                className="shadow-none border-1 rounded-2xl mt-4"
+                className="shadow-none border-1 rounded-2xl mt-4 items-center"
               >
                 {item.description}
               </AccordionItem>

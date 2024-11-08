@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Example Site",
     images: [
       {
-        url: "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg",
+        url: "https://res.cloudinary.com/damm9iwho/image/upload/v1731043042/favicon_xby7s2.svg",
         width: 800,
         height: 600,
         alt: "Default Image",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg", // Path for the favicon.ico file
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1731043042/favicon_xby7s2.svg", // Path for the favicon.ico file
     apple:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg", // For Apple devices, if available
     shortcut:
