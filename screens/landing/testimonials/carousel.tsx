@@ -2,66 +2,123 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import { Card, CardBody } from "@nextui-org/react";
 
-const data = [
+const clients = [
   {
-    heading: "Web/Mobile Apps",
-    description:
-      "Ideal for building complete app or Saas, including design and development.",
-    price: "1,000",
-    list: [
-      "4-6 week delivery",
-      "30-50 screens",
-      "SaaS design ready",
-      "Predefined scope of work (SOW)",
-      "AI chatbot integration available",
-      "Cross-platform development",
-      "5/7 Communication",
-    ],
+    name: "Eden Hazani",
+    occupation: "VP Research and Development",
+    location: "New York, USA",
+    review:
+      "Wonderful to work with, very experienced with UI/UX design. Was very open to work in the flow we requested that required actual Angular coding from his team as well, and stood up to the challenge of working with a remote team in different timezones. Successfully overhauled the design of our entire platform in less than 3 months both as visual designs on Figma and mock Angular code on github.",
+    satisfactionScore: 10,
+    company: "Xperiti",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731064807/xperiti_we7cq0.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513137/image_1_hxpv8e.svg",
   },
   {
-    heading: "Landing Pages & E-commerce",
-    description:
-      "Build high-conversion landing pages or full e-commerce platforms",
-    price: "499",
-    list: [
-      "10-14 days turnaround time",
-      "1-5 Pages",
-      "High-conversion rate focus",
-      "E-commerce functionality",
-      "Responsive Design",
-      "Predefined scope of work (SOW)",
-      "5/7 Communication",
-    ],
+    name: "Luis",
+    occupation: "",
+    location: "",
+    review:
+      "The team has been incredible in developing our SaaS web app. They have a clear understanding of our needs and have created a platform that is intuitive, scalable, and perfectly aligned with our vision. We’re excited for what the future holds with this partnership.",
+    satisfactionScore: 10,
+    company: "Amuzn",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513137/image_29_fxjqk6.svg",
   },
   {
-    heading: "Design Systems & Component Libraries",
-    description:
-      "Scalable design systems with reusable components for consistent UI and easy integration.",
-    price: "1,999",
-    list: [
-      "2-4 weeks delivery",
-      "Scalable design systems",
-      "Development-ready components",
-      "UI consistency",
-      "5/7 Communication",
-      "Reusable components",
-      "Custom design library",
-    ],
+    name: "Aman Sharma",
+    occupation: "",
+    location: "",
+    review:
+      "The team delivered an exceptional e-commerce website for us. Their attention to detail and seamless integration of Shopify exceeded our expectations. It’s been a great experience working with them, and the platform has significantly enhanced our online presence and customer engagement.",
+    satisfactionScore: 10,
+    company: "Godrics",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513138/image_5_s1yrux.svg",
   },
   {
-    heading: "Design Systems & Component Libraries",
-    description:
-      "Scalable design systems with reusable components for consistent UI and easy integration.",
-    price: "1,999",
-    list: [
-      "2-4 weeks delivery",
-      "Scalable design systems",
-      "Development-ready components",
-      "UI consistency",
-      "5/7 Communication",
-      "Reusable components",
-      "Custom design library",
-    ],
+    name: "Pankaj Soni",
+    occupation: "",
+    location: "Jharkhand, India",
+    review:
+      "Working with this team was a game-changer for Mission Blue. The new website and brand visuals have captured our mission beautifully, bringing clarity and energy to our digital presence. The online campaign they crafted amplified our winter distribution outreach in ways we hadn’t imagined. Thrilled to continue this partnership!",
+    satisfactionScore: 10,
+    company: "Mission Blue Foundation",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513138/image_31_sdh5l7.svg",
+  },
+  {
+    name: "Priyanka",
+    occupation: "Co-Founder",
+    location: "Maharashtra, India",
+    review:
+      "Absolutely thrilled with the website! The design captures our brand’s elegance perfectly, and the Shopify integration makes managing our e-commerce so smooth. The whole process was seamless, and the team really understood our vision.",
+    satisfactionScore: 10,
+    company: "Rings & I",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731064806/rings_tkwc5y.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729682150/Rings_I_eyrgog.svg",
+  },
+  {
+    name: "Rohit Kumar Jha",
+    occupation: "Co-Founder",
+    location: "Bangalore, India",
+    review:
+      "Working with this team has been a game-changer for us. They took our vision for a cutting-edge AI trading tool and translated it seamlessly into a dynamic, professional platform. The result has elevated our brand and made our offerings far more engaging and user-friendly.",
+    satisfactionScore: 10,
+    company: "ArthAlpha, Brahmastra",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731064807/arth_xpceb3.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1730790130/728_x_90_copy_6x_uft7ai.svg",
+  },
+  {
+    name: "Nidhi Lal",
+    occupation: "CEO and Co-Founder",
+    location: "New Delhi, India",
+    review:
+      "Collaborating with this team has been a game-changer for Niya. They developed impactful corporate messaging, visuals, and graphics that authentically reflect our mission to support mental well-being in workplaces. Their creativity and dedication helped us communicate our values in a way that truly resonates.",
+    satisfactionScore: 10,
+    company: "Niya",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731064807/niya_l38ljv.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1730790130/image_38_udzxkk.svg",
+  },
+  {
+    name: "Akash Pandey",
+    occupation: "Chairman",
+    location: "Jharkhand, India",
+    review:
+      "Working with the team was a transformative experience. They didn’t just build our website; they took care of our entire brand presence—from design to the finer details of our identity. They understood the spirit of Yuva Sadan and translated it beautifully across every part of our platform. Their attention to detail and commitment to creating something meaningful for us truly set them apart. Highly recommend!",
+    satisfactionScore: 10,
+    company: "Yuva Sadan",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731064808/yuva_ftd7mq.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729682151/image_30_oiwlqz.svg",
+  },
+  {
+    name: "Vivek Ranjan Singh",
+    occupation: "Founder",
+    location: "Jharkhand, India",
+    review:
+      "The team brought Parivarik TV to life with an OTT platform that truly captures our mission to celebrate regional art and bring families together. Their dedication to every detail—from design to functionality—was impressive. It’s clear they cared about making our vision a reality, creating a platform that feels both innovative and authentic to our roots. Truly grateful for their work!",
+    satisfactionScore: 10,
+    company: "Parivarik TV",
+    projects: [],
+    profileImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731064808/pari_cecp8e.svg",
+    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513140/image_34_rb6475.svg",
   },
 ];
 
@@ -95,7 +152,7 @@ function ResponsiveCarousel() {
             margin: "0px",
             color: "red",
             background: "#EDEDED",
-            width: "150px",
+            width: "300px",
             paddingTop: "12px",
             borderRadius: "20px",
           }}
@@ -148,7 +205,7 @@ function ResponsiveCarousel() {
   return (
     <div className="pt-2 pb-12">
       <Slider {...settings}>
-        {data.map((item, index) => (
+        {clients.map((item, index) => (
           <div className=" mt-8 mb-12 py-12">
             <Card
               key={index}
@@ -156,47 +213,54 @@ function ResponsiveCarousel() {
             >
               <CardBody className="p-3 max-md:p-2 max-lg:p-4">
                 <div className="w-full p-5 bg-white rounded-[24px] max-md:p-4 box-shadow">
-                  <div className="flex flex-row justify-between gap-4 max-md:gap-2">
-                    <div className="flex flex-row gap-3">
+                  <div className="flex flex-row items-center justify-between gap-4 max-md:gap-2">
+                    <div className="flex flex-row gap-3 items-center">
                       <img
-                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
+                        src={
+                          item.profileImage
+                            ? item.profileImage
+                            : "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg"
+                        }
                         alt="behance Logo"
                         className="w-[40px]"
                       />
                       <div className="">
-                        <p className="text-2xl max-md:text-lg font-semibold">
-                          Eden Hazani
+                        <p className="text-xl max-md:text-lg font-semibold">
+                          {item.name}
                         </p>
-                        <p className="text-[#A2A2A2] max-md:text-sm">
-                          Xperiti | VP Research and Development
+                        <p className="text-[#A2A2A2] text-sm -mt-1">
+                          {item.occupation ? item.occupation : "occupation"}
+                        </p>
+                        <p className="text-[#A2A2A2] text-sm -mt-1">
+                          {item.location ? item.location : "location"}
                         </p>
                       </div>
                     </div>
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729837616/in_hnnctn.svg"
-                      alt="behance Logo"
-                      className="w-[30px] max-md:w-[20px] max-md:hidden"
-                    />
+                    <div className=" max-md:hidden block">
+                      <img
+                        src={item.logo}
+                        alt="behance Logo"
+                        className="max-w-[80px] max-md:max-w-[80px] "
+                      />
+                    </div>
                   </div>
 
-                  <p className="mt-4 line-clamp-4 max-md:text-sm">
-                    Wonderful to work with, very experienced with UI/UX design.
-                    Was very open to work in the flow we requested that required
-                    actual Angular coding from his team as well, and stood up to
-                    the challenge of working with a remot...
+                  <p className="mt-4 text-sm font-[500]">
+                    {item.review ? item.review : ""}
                   </p>
                   <div className="grid grid-cols-2 gap-3 mt-6 max-md:grid-cols-1">
                     <div className=" bg-[#EDEDED] p-3 rounded-xl">
-                      <p className="text-2xl font-semibold mb-1 max-md:text-lg max-lg:text-xl">
-                        10/10
+                      <p className="text-base font-semibold mb-1  max-md:text-base">
+                        {item.satisfactionScore ? item.satisfactionScore : "0"}
+                        /10
                       </p>
                       <p className="text-[#C5C5C5] text-sm">
                         Sactisfaction Score
                       </p>
                     </div>
                     <div className=" bg-[#EDEDED] p-3 rounded-xl">
-                      <p className="text-2xl font-semibold mb-1  max-md:text-lg max-lg:text-xl">
-                        Xperiti
+                      <p className="text-base font-semibold mb-1  max-md:text-base">
+                        {item.company ? item.company : ""}
                       </p>
                       <p className="text-[#C5C5C5] text-sm">
                         Projects Worked on

@@ -40,6 +40,7 @@ const data = [
       "https://res.cloudinary.com/damm9iwho/image/upload/v1729841109/widget-svgrepo-com_1_xflrym.svg",
     video:
       "https://res.cloudinary.com/damm9iwho/video/upload/v1730895574/psd_y5ouhe.mp4",
+    isImage: false,
   },
   {
     heading: "Design Systems & Component Libraries",
@@ -73,8 +74,11 @@ const data = [
     ],
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1729841104/figma-component-svgrepo-com_1_mtgewy.svg",
+    sideImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731054694/desin_aetz3i.svg",
     video:
       "https://res.cloudinary.com/damm9iwho/video/upload/v1730895563/show_gtb051.mp4",
+    isImage: true,
   },
   {
     heading: "Landing Pages & E-commerce",
@@ -113,7 +117,8 @@ const data = [
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1729841107/Vectore_ididim.svg",
     video:
-      "https://res.cloudinary.com/damm9iwho/video/upload/v1730895565/3D_qasvie.mp4",
+      "https://res.cloudinary.com/damm9iwho/video/upload/v1730895563/show_gtb051.mp4",
+    isImage: false,
   },
   // Add more data as needed...
 ];
@@ -131,7 +136,20 @@ const data1 = [
     description: "Immersive 3D animations and rendering for standout visuals.",
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1730808994/3d-rendering-isometric-house_1_skqu47.svg",
-    isImage: true,
+    video: (
+      <video
+        // ref={(elvideo) => {
+        //   if (elvideo) videoRefs.current[index] = elvideo;
+        // }}
+        width="100%"
+        autoPlay
+        loop
+        muted
+        className="object-cover h-[250px] w-full"
+        src="https://res.cloudinary.com/damm9iwho/video/upload/v1730895565/3D_qasvie.mp4"
+      ></video>
+    ),
+    isImage: false,
   },
   {
     heading: "Animated Motion Graphics",
@@ -139,6 +157,15 @@ const data1 = [
       "Impactful animated motion graphics and Videos to enhance storytelling and design.",
     image:
       "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/view-3d-cinema-clapperboard_1_bcdsv5.svg",
+    video: (
+      <iframe
+        src="https://my.spline.design/componentkeyboardcopy-418b298aa595a45922ac0f0895edd81d/"
+        // frameBorder="0"
+        width="100%"
+        height="100%"
+        className="h-[250px] w-full"
+      ></iframe>
+    ),
     isImage: false,
   },
   // Add more data as needed...
@@ -263,17 +290,26 @@ const VideoWithCards = () => {
               </Card>
               <Card className="rounded-[40px] p-0 h-[500px] max-md:h-[300px]">
                 <CardBody style={{ padding: 0 }}>
-                  <video
-                    ref={(elvideo) => {
-                      if (elvideo) videoRefs.current[index] = elvideo;
-                    }}
-                    width="100%"
-                    // autoPlay
-                    loop
-                    muted
-                    className="object-cover h-[500px] min-md:h-[400px] max-h-full"
-                    src={item.video}
-                  ></video>
+                  {item.isImage && (
+                    <img
+                      src={item.sideImage}
+                      alt="behance Logo"
+                      className="object-cover h-[500px] min-md:h-[400px] max-h-full"
+                    />
+                  )}
+                  {!item.isImage && (
+                    <video
+                      ref={(elvideo) => {
+                        if (elvideo) videoRefs.current[index] = elvideo;
+                      }}
+                      width="100%"
+                      // autoPlay
+                      loop
+                      muted
+                      className="object-cover h-[500px] min-md:h-[400px] max-h-full"
+                      src={item.video}
+                    ></video>
+                  )}
                 </CardBody>
               </Card>
             </CardBody>
@@ -308,15 +344,16 @@ const VideoWithCards = () => {
                           className="w-[320px] h-[250px]"
                         />
                       )}
-                      {!item.isImage && (
-                        <iframe
-                          src="https://my.spline.design/componentkeyboardcopy-418b298aa595a45922ac0f0895edd81d/"
-                          // frameBorder="0"
-                          width="100%"
-                          height="100%"
-                          className="h-[250px] w-full"
-                        ></iframe>
-                      )}
+                      {!item.isImage &&
+                        // <iframe
+                        //   src="https://my.spline.design/componentkeyboardcopy-418b298aa595a45922ac0f0895edd81d/"
+                        //   // frameBorder="0"
+                        //   width="100%"
+                        //   height="100%"
+                        //   className="h-[250px] w-full"
+                        // ></iframe>
+
+                        item.video}
                     </div>
                   </CardBody>
                 </Card>
