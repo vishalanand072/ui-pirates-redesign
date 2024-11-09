@@ -21,21 +21,30 @@ const Landing = () => {
         <div className=" overflow-x-hidden py-12">
           <LandingAppScreen />
         </div>
-        <LandingWork />
+        <div id="Work">
+          <LandingWork />
+        </div>
 
         <div className="">
           {/* <LandingBehanceDan /> */}
           <LandingBehanceFramor />
           {/* <LandingBehance /> */}
         </div>
-        <LandingBusinessHelp />
+        <div id="Services">
+          <LandingBusinessHelp />
+        </div>
         <LandingAbout />
         <div className=" overflow-hidden">
           <LandingTestimonials />
         </div>
-        <LandingOurPricing />
+        <div id="Pricing">
+          <LandingOurPricing />
+        </div>
+
         <LandingFaqs />
-        <LandingFooter />
+        <div id="contactUs">
+          <LandingFooter />
+        </div>
       </div>
     </>
   );

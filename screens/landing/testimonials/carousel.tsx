@@ -16,23 +16,23 @@ const clients = [
       "https://res.cloudinary.com/damm9iwho/image/upload/v1731064807/xperiti_we7cq0.svg",
     logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513137/image_1_hxpv8e.svg",
   },
-  {
-    name: "Luis",
-    occupation: "",
-    location: "",
-    review:
-      "The team has been incredible in developing our SaaS web app. They have a clear understanding of our needs and have created a platform that is intuitive, scalable, and perfectly aligned with our vision. We’re excited for what the future holds with this partnership.",
-    satisfactionScore: 10,
-    company: "Amuzn",
-    projects: [],
-    profileImage:
-      "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg",
-    logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513137/image_29_fxjqk6.svg",
-  },
+  // {
+  //   name: "Luis",
+  //   occupation: "",
+  //   location: "",
+  //   review:
+  //     "The team has been incredible in developing our SaaS web app. They have a clear understanding of our needs and have created a platform that is intuitive, scalable, and perfectly aligned with our vision. We’re excited for what the future holds with this partnership.",
+  //   satisfactionScore: 10,
+  //   company: "Amuzn",
+  //   projects: [],
+  //   profileImage:
+  //     "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg",
+  //   logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513137/image_29_fxjqk6.svg",
+  // },
   {
     name: "Aman Sharma",
-    occupation: "",
-    location: "",
+    occupation: "Founder",
+    location: "New Delhi India",
     review:
       "The team delivered an exceptional e-commerce website for us. Their attention to detail and seamless integration of Shopify exceeded our expectations. It’s been a great experience working with them, and the platform has significantly enhanced our online presence and customer engagement.",
     satisfactionScore: 10,
@@ -44,7 +44,7 @@ const clients = [
   },
   {
     name: "Pankaj Soni",
-    occupation: "",
+    occupation: "President",
     location: "Jharkhand, India",
     review:
       "Working with this team was a game-changer for Mission Blue. The new website and brand visuals have captured our mission beautifully, bringing clarity and energy to our digital presence. The online campaign they crafted amplified our winter distribution outreach in ways we hadn’t imagined. Thrilled to continue this partnership!",
@@ -52,7 +52,7 @@ const clients = [
     company: "Mission Blue Foundation",
     projects: [],
     profileImage:
-      "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg",
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731162245/pankaj-soni-qm3tjj21p3eewy070apjjpyzrymt41qib2tdndac22_w8ajyw.jpg",
     logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729513138/image_31_sdh5l7.svg",
   },
   {
@@ -65,7 +65,7 @@ const clients = [
     company: "Rings & I",
     projects: [],
     profileImage:
-      "https://res.cloudinary.com/damm9iwho/image/upload/v1731064806/rings_tkwc5y.svg",
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1731162302/priyanka_humj3w.jpg",
     logo: "https://res.cloudinary.com/damm9iwho/image/upload/v1729682150/Rings_I_eyrgog.svg",
   },
   {
@@ -86,7 +86,7 @@ const clients = [
     occupation: "CEO and Co-Founder",
     location: "New Delhi, India",
     review:
-      "Collaborating with this team has been a game-changer for Niya. They developed impactful corporate messaging, visuals, and graphics that authentically reflect our mission to support mental well-being in workplaces. Their creativity and dedication helped us communicate our values in a way that truly resonates.",
+      "Collaborating with this team has been a game-changer for Niya. They Created impactful corporate Video, that authentically reflect our mission to support mental well-being in workplaces. Their creativity and dedication helped us communicate our values in a way that truly resonates.",
     satisfactionScore: 10,
     company: "Niya",
     projects: [],
@@ -170,7 +170,7 @@ function ResponsiveCarousel() {
           height: "14px",
           borderRadius: "50%",
           backgroundColor: i === activeIndex ? "#545454" : "#E2E2E2", // Active and inactive colors
-          transition: "background-color 0.3s ease",
+          transition: "background-color ease",
         }}
       ></div>
     ),
@@ -206,7 +206,7 @@ function ResponsiveCarousel() {
     <div className="pt-2 pb-12">
       <Slider {...settings}>
         {clients.map((item, index) => (
-          <div className=" mt-8 mb-12 py-12">
+          <div className=" mt-8 mb-12 py-12 transform transition-transform duration-300 ">
             <Card
               key={index}
               className={`rounded-[32px] max-md:w-[100%] bg-[#e9e9e9] card-item max-md:rounded-[30px]`}
@@ -221,8 +221,9 @@ function ResponsiveCarousel() {
                             ? item.profileImage
                             : "https://res.cloudinary.com/damm9iwho/image/upload/v1731065510/Ellipse_1388_od4ab3.svg"
                         }
+                        // sizes="40px"
                         alt="behance Logo"
-                        className="w-[40px]"
+                        className="w-[40px] h-[40px] min-w-[40px] min-h-[40px] rounded-full"
                       />
                       <div className="">
                         <p className="text-xl max-md:text-lg font-semibold">

@@ -73,16 +73,21 @@ export const Navbar = () => {
           justify="end"
         >
           <NavbarItem className="hidden md:flex">
-            <Button
-              isExternal
-              as={Link}
-              className="text-sm font-[500] text-white bg-black pt-0 dark:bg-white dark:text-black -mr-4"
-              // startContent={<HeartFilledIcon className="text-danger" />}
-              variant="solid"
-              style={{ paddingTop: 0 }}
+            <a
+              href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+              target="blank"
             >
-              Have an Idea?
-            </Button>
+              <Button
+                isExternal
+                as={Link}
+                className="text-sm font-[500] text-white bg-black pt-0 dark:bg-white dark:text-black -mr-4"
+                // startContent={<HeartFilledIcon className="text-danger" />}
+                variant="solid"
+                style={{ paddingTop: 0 }}
+              >
+                Have an Idea?
+              </Button>
+            </a>
           </NavbarItem>
         </NavbarContent>
 

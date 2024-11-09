@@ -197,8 +197,8 @@ const VideoWithCards = () => {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: isMobile ? "top 150%" : "top 99%",
-              end: isMobile ? "bottom 0%" : "bottom 0%",
+              start: isMobile ? "top 150%" : "top 110%",
+              end: isMobile ? "bottom center" : "bottom center",
               toggleActions: "play none none reverse",
               scrub: 1.5,
             },
@@ -264,7 +264,7 @@ const VideoWithCards = () => {
                   <img
                     src={item.image}
                     alt="behance Logo"
-                    className="w-[40px] grayscale group-hover:grayscale-0"
+                    className="w-[40px] grayscale "
                   />
                   <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[41.6px]">
                     {item.heading}

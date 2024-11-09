@@ -196,7 +196,7 @@ const dataPrice = [
   {
     icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729841102/Group_jgfe_zhcljv.svg",
 
-    heading: "Partnership & Consultation ",
+    heading: "Partnership and Consultation ",
     description:
       "Perfect for ongoing design & development needs or flexible, undefined scopes. Get continuous support for your projects.",
     price: "999",
@@ -254,7 +254,7 @@ const OurPricingCard = (props: any) => {
                     <img
                       src={item.icon}
                       alt="service logo"
-                      className="w-[40px] grayscale group-hover:grayscale-0"
+                      className="w-[40px] grayscale"
                     />
                     <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[38.4px]">
                       {item.heading}
@@ -498,7 +498,7 @@ const OurPricingCard = (props: any) => {
                         <img
                           src={item.icon}
                           alt="behance Logo"
-                          className="w-[40px]  grayscale group-hover:grayscale-0"
+                          className="w-[40px]  grayscale "
                         />
                         {item.limited && (
                           <Chip
@@ -516,7 +516,7 @@ const OurPricingCard = (props: any) => {
                         )}
                       </div>
 
-                      <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-12">
+                      <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-20">
                         {item.heading}
                       </p>
                       <p className="font-[500]">{item.description}</p>

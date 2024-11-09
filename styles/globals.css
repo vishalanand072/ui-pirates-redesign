@@ -8,6 +8,8 @@
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
+
+  scroll-behavior: smooth;
 }
 
 .button {
@@ -370,6 +372,7 @@ body {
   filter: none;
   transform: scale(1.2);
   rotate: 0deg;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .slick-slide {

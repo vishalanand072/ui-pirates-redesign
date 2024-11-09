@@ -10,20 +10,19 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
   {
     heading: "Xperiti",
-    subtitle: "Web app, UX Design, UI Developemt",
-    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1730025336/xperiti_ptjxaa.svg",
+    subtitle: "SaaS app, UX Design, UI Developemt",
+    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1731155233/xperiti_psd_file_1_cvfkqh.svg",
     url: "https://www.xperiti.com/",
   },
   {
     heading: "ArthAlpha",
-    subtitle:
-      "Brahmastra SaaS App, Portfolio Website, UX Design, UI Developemt",
+    subtitle: "Quant Trading App, Portfolio Website, UX Design, UI Developemt",
     img: "https://res.cloudinary.com/damm9iwho/image/upload/v1730025189/brahma_zbxs7g.svg",
     url: "https://arthalpha.in/",
   },
   {
     heading: "Rings & I",
-    subtitle: "Shopify Website, UX Design, UI Developemt, Asset Creation",
+    subtitle: "Shopify Store, UX Design , Shopify Theme, Asset Creation",
     img: "https://res.cloudinary.com/damm9iwho/image/upload/v1730025333/rings_gnmm1x.svg",
     url: "https://ringsandi.com/",
   },
@@ -115,18 +114,26 @@ const RecentWorkCard = () => {
               id="contentDiv"
             >
               <div>
-                <p className="text-3xl max-md:text-xl mb-4 font-[700]">
+                <p className="text-[5rem] max-md:text-4xl mb-4 font-[500] max-xl:text-[3.5rem]">
                   {item.heading}
                 </p>
-                <p
+                <div
                   className={
                     index % 2 === 0
-                      ? "text-lg font-[500] pl-[5rem] max-md:pl-0 max-lg:pl-[2.5rem]"
-                      : "text-lg font-[500] pr-[5rem] max-md:pr-0 max-lg:pr-[2.5rem]"
+                      ? " flex flex-row items-end  justify-end"
+                      : ""
                   }
                 >
-                  {item.subtitle}
-                </p>
+                  <p
+                    className={
+                      index % 2 === 0
+                        ? "text-lg font-[500] max-w-[300px]"
+                        : "text-lg font-[500] max-w-[400px]"
+                    }
+                  >
+                    {item.subtitle}
+                  </p>
+                </div>
                 <a href={item.url} target="_blank">
                   <Button
                     // color="primary"

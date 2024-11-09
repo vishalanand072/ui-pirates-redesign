@@ -1,43 +1,41 @@
-// components/CircularImage.tsx
 import { useEffect, useRef } from "react";
 
 interface CircularImageProps {
-  images: string[]; // Define images as an array of strings
+  images: string[];
 }
 
 const CircularImage: React.FC<CircularImageProps> = ({ images }) => {
-  const containerRef = useRef<HTMLDivElement | null>(null); // Set type for containerRef
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const imagesElements = containerRef.current?.children as
-      | HTMLCollectionOf<HTMLImageElement>
-      | undefined;
-    const radius = 600; // Radius of the circle
-    const center = 600; // Center position (half of container size)
+    const radius = 550; // Radius in pixels for the circular path
+    const rotationSpeed = 0.005; // Rotation speed for the animation
+    let angleOffset = 0;
 
-    const setPositions = (angleOffset = 0) => {
-      if (imagesElements) {
-        Array.from(imagesElements).forEach((image, index) => {
-          const angle = (index / images.length) * (2 * Math.PI) + angleOffset; // Update angle
-          const x = center + radius * Math.cos(angle) - image.width / 2;
-          const y = center + radius * Math.sin(angle) - image.height / 2;
+    const animate = () => {
+      const elements = containerRef.current
+        ?.children as HTMLCollectionOf<HTMLImageElement>;
+
+      if (elements) {
+        Array.from(elements).forEach((image, index) => {
+          const angle = (index / images.length) * (2 * Math.PI) + angleOffset;
+          const x = radius * Math.cos(angle);
+          const y = radius * Math.sin(angle);
           image.style.transform = `translate(${x}px, ${y}px)`;
         });
       }
-    };
-
-    let angleOffset = 0;
-
-    const animate: any = () => {
-      angleOffset += 0.0019; // Adjust speed of rotation
-      setPositions(angleOffset);
+      angleOffset += rotationSpeed;
       requestAnimationFrame(animate);
     };
 
-    animate(); // Start the animation
-    setPositions(); // Set initial positions
+    animate();
 
-    return () => cancelAnimationFrame(animate); // Cleanup on unmount
+    return () => {
+      if (animationFrameRef.current !== null) {
+        cancelAnimationFrame(animationFrameRef.current); // Correctly cancel the animation
+      }
+    };
   }, [images]);
 
   return (
@@ -45,30 +43,25 @@ const CircularImage: React.FC<CircularImageProps> = ({ images }) => {
       ref={containerRef}
       style={{
         position: "relative",
-        width: "100vw",
-        height: "100vh",
-        overflow: "hidden",
+        width: "100%",
+        height: "100%",
         display: "flex",
-        flexDirection: "row",
-        justifyContent: "start",
-        // margin: "0 auto",
+        justifyContent: "center",
+        alignItems: "end",
       }}
-      className="content-center justify-center max-md:hidden flex flex-col items-center ml-[10%]"
+      className="-mt-[0rem] max-xl:mt-20 max-2xl:mt-24"
     >
       {images.map((src, index) => (
         <img
           key={index}
           src={src}
-          alt={`Image ${index + 1}`}
+          alt={`Icon ${index + 1}`}
           style={{
             position: "absolute",
-            top: "100px",
-            width: "60px",
-            height: "60px",
+            width: "150px",
+            height: "150px",
             borderRadius: "50%",
-            transition: "transform 0.5s ease",
           }}
-          className="max-lg:hidden"
         />
       ))}
     </div>

@@ -135,6 +135,7 @@ const LandingBehanceFramor = () => {
       {/* Centered Info */}
       <div
         id="info"
+        style={{ zIndex: 1 }}
         className="absolute inset-1 flex flex-col items-center justify-center text-center"
       >
         <img
@@ -165,7 +166,11 @@ const LandingBehanceFramor = () => {
       {/* Image Grid with Overlap */}
       <div className="relative grid grid-cols-2 gap-12 max-md:gap-4 overflow-x-hidden overflow-y-auto py-40 max-md:py-32 max-lg:py-40 max-md:grid-cols-1 hide-scrollbar px-32 max-md:px-4">
         {visibleData.map((item, index) => (
-          <div key={index} className="relative w-full h-full">
+          <div
+            key={index}
+            className="relative w-full h-full"
+            style={{ pointerEvents: "none", zIndex: 1 }}
+          >
             <img
               src={item.img}
               alt={item.heading}

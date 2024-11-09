@@ -6,37 +6,37 @@ export const siteConfig = {
   navItems: [
     {
       label: "Work",
-      href: "#",
+      href: "#Work",
     },
     {
-      label: "About",
-      href: "#",
+      label: "Services",
+      href: "#Services",
     },
     {
-      label: "Careers",
-      href: "#",
+      label: "Pricing",
+      href: "#Pricing",
     },
     {
       label: "Contact Us",
-      href: "#",
+      href: "#contactUs",
     },
   ],
   navMenuItems: [
     {
       label: "Work",
-      href: "#",
+      href: "#Work",
     },
     {
-      label: "About",
-      href: "#",
+      label: "Services",
+      href: "#Services",
     },
     {
-      label: "Careers",
-      href: "#",
+      label: "Pricing",
+      href: "#Pricing",
     },
     {
       label: "Contact Us",
-      href: "#",
+      href: "#contactUs",
     },
   ],
   links: {
