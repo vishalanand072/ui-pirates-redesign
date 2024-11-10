@@ -2,11 +2,13 @@
 import Loader from "@/components/loader";
 import Landing from "@/screens/landing";
 import { useEffect, useState } from "react";
+import LocomotiveScroll from "locomotive-scroll";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll();
     const handlePageLoad = () => {
       setTimeout(() => {
         setLoading(false);
