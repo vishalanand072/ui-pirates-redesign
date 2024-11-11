@@ -256,7 +256,7 @@ const OurPricingCard = (props: any) => {
                       alt="service logo"
                       className="w-[40px] grayscale"
                     />
-                    <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[38.4px]">
+                    <p className="text-3xl max-md:text-2xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[38.4px]">
                       {item.heading}
                     </p>
                     <p className="font-[500]">{item.description}</p>
@@ -352,7 +352,7 @@ const OurPricingCard = (props: any) => {
                     </div>
                     <div className="md:hidden max-md:block">
                       <a
-                        href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                        href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
                         target="blank"
                       >
                         <Button
@@ -442,7 +442,7 @@ const OurPricingCard = (props: any) => {
 
                   <div className="md:block max-md:hidden  -mt-6">
                     <a
-                      href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                      href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
                       target="blank"
                     >
                       <Button
@@ -516,7 +516,7 @@ const OurPricingCard = (props: any) => {
                         )}
                       </div>
 
-                      <p className="text-3xl max-md:text-xl mt-4 mb-4 font-semibold pr-20">
+                      <p className="text-3xl max-md:text-2xl mt-4 mb-4 font-semibold pr-20">
                         {item.heading}
                       </p>
                       <p className="font-[500]">{item.description}</p>
@@ -539,7 +539,7 @@ const OurPricingCard = (props: any) => {
                         </p>
                       </div>
                       <a
-                        href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                        href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
                         target="blank"
                       >
                         <Button

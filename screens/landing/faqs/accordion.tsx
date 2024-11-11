@@ -217,7 +217,11 @@ export default function FaqsAccordion() {
               <AccordionItem
                 key={item.heading}
                 aria-label={item.heading}
-                title={<p className="font-semibold pr-12">{item.heading}</p>}
+                title={
+                  <p className="font-semibold pr-12 max-md:pr-6">
+                    {item.heading}
+                  </p>
+                }
                 indicator={({ isOpen }) =>
                   isOpen ? (
                     <p className="text-4xl text-black rotate-45 ">+</p>
@@ -228,7 +232,7 @@ export default function FaqsAccordion() {
                     />
                   )
                 }
-                className="shadow-none border-1 rounded-2xl mt-4 items-center"
+                className="shadow-none border-1 rounded-2xl mt-4 max-md:mt-2 items-center"
               >
                 <div>
                   <p className="mb-5">{item.title1}</p>

@@ -34,7 +34,7 @@ const LandingHero = () => {
             </div>
           </div>
 
-          <div className="text-7xl px-56 text-center font-[700] max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
+          <div className="text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
             Modern, scalable design for{" "}
             {/* {" "}
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">
@@ -46,22 +46,22 @@ const LandingHero = () => {
             We build products that work for users and drive business growth
           </p>
 
-          <div className="mt-12 flex flex-row items-center max-md:flex-col">
+          <div className="mt-12 flex flex-row items-center max-md:flex-col max-md:px-2">
             <a
-              href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+              href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
               target="blank"
             >
-              <div className="bg-black text-white button group transform  transition-all duration-[600ms] ease-in-out px-6 py-2 buttonHero hover:pl-12 hover:bg-black flex flow-row items-center gap-3">
-                <div className="flex flex-row gap-2 items-center mr-11">
+              <div className="bg-black text-white button group transform  transition-all duration-[600ms] ease-in-out max-md:px-4 px-6 py-2 buttonHero md:hover:pl-12 hover:bg-black flex flow-row items-center gap-3">
+                <div className="flex flex-row gap-2 items-center md:mr-11">
                   <img
                     src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
                     alt="Dribble Logo"
                     id="image"
-                    className="w-auto h-[30px] absolute  transform translate-x-0 transition-all duration-[580ms] ease-in-out  group-hover:translate-x-4 order-1 group-hover:order-3"
+                    className="w-auto h-[30px] md:absolute  transform translate-x-0 transition-all duration-[580ms] ease-in-out  md:group-hover:translate-x-4 max-md:order-3  md:order-1 md:group-hover:order-3"
                   />
                   <p
                     id="plus"
-                    className="text-[#5B5B5B] text-xl font-bold absolute order-2 -mt-1"
+                    className="text-[#5B5B5B] text-xl font-bold md:absolute order-2 -mt-1"
                   >
                     +
                   </p>
@@ -69,7 +69,7 @@ const LandingHero = () => {
                     src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
                     alt="Dribble Logo"
                     id="client"
-                    className="w-auto h-[30px] absolute  transform translate-x-0 transition-all duration-500 ease-in-out  group-hover:-translate-x-[2.1rem] order-3 group-hover:order-1"
+                    className="w-auto h-[30px] md:absolute  transform translate-x-0 transition-all duration-500 ease-in-out  md:group-hover:-translate-x-[2.1rem] max-md:order-1  md:order-3 md:group-hover:order-1"
                   />
                 </div>
                 <p> Book a 15-min call</p>

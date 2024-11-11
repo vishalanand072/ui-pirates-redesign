@@ -47,7 +47,7 @@ const LandingFooter = () => {
               </div>
               <div className="mt-12 flex flex-row items-center justify-center max-md:flex-col w-full">
                 <a
-                  href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
+                  href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
                   target="blank"
                 >
                   <Button

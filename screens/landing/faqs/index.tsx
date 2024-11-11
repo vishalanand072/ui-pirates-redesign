@@ -3,7 +3,7 @@ import { Card, CardBody, Button } from "@nextui-org/react";
 
 const LandingFaqs = () => {
   return (
-    <div className="container mx-auto grid grid-cols-5 max-lg:grid-cols-5 max-md:grid-cols-1 max-md:px-4 lg:px-20 mt-32">
+    <div className="container mx-auto grid grid-cols-5 max-lg:grid-cols-5 max-md:grid-cols-1 max-md:px-4 lg:px-20 mt-32 max-md:mt-28">
       {/* Left section - Sticky */}
       <div className="col-span-2 max-md:col-span-1 lg:pr-12 max-xl:pr-8 max-md:pr-0 md:sticky md:top-4 md:h-screen">
         <div className="flex flex-row items-start mb-6 max-md:items-center max-md:justify-center">
@@ -67,7 +67,7 @@ const LandingFaqs = () => {
       </div>
 
       {/* Right section - Scrollable */}
-      <div className="col-span-3 max-lg:col-span-2 max-md:col-span-1 max-md:mt-6">
+      <div className="col-span-3 max-lg:col-span-3 max-md:col-span-1 max-md:mt-0">
         {/* <div className="overflow-y-auto h-full relative z-10"> */}
         <FaqsAccordion />
         {/* <div className="absolute inset-0 pointer-events-none">

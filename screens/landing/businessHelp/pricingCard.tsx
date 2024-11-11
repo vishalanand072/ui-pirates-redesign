@@ -174,10 +174,10 @@ const data1 = [
 const VideoWithCards = () => {
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const isMobile = window.innerWidth <= 768;
 
   useLayoutEffect(() => {
     // GSAP ScrollTrigger animation for cards
-    const isMobile = window.innerWidth <= 768;
 
     // Clear any existing ScrollTriggers
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -188,7 +188,7 @@ const VideoWithCards = () => {
           card,
           {
             y: 100, // Start from below
-            transform: "scale(0.80)",
+            transform: isMobile ? "scale(1)" : "scale(0.80)",
           },
           {
             y: 0, // Move to original position
@@ -197,8 +197,8 @@ const VideoWithCards = () => {
             ease: "power2.out",
             scrollTrigger: {
               trigger: card,
-              start: isMobile ? "top 150%" : "top 110%",
-              end: isMobile ? "bottom center" : "bottom center",
+              start: isMobile ? "" : "top 110%",
+              end: isMobile ? "" : "bottom center",
               toggleActions: "play none none reverse",
               scrub: 1.5,
             },
@@ -253,20 +253,20 @@ const VideoWithCards = () => {
       {data.map((item, index) => (
         <div
           ref={(el) => {
-            if (el) cardsRef.current[index] = el;
+            if (el && !isMobile) cardsRef.current[index] = el;
           }}
           key={index}
         >
-          <Card className="rounded-[48px] mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4 group">
+          <Card className="rounded-[48px] max-md:rounded-[38px] md:mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4 group">
             <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
-              <Card className="rounded-[40px] box-shadow">
-                <CardBody className="p-8 max-md:p-4 max-lg:p-6">
+              <Card className="rounded-[40px] max-md:rounded-[30px] box-shadow">
+                <CardBody className="p-8 max-md:p-5 max-lg:p-6">
                   <img
                     src={item.image}
                     alt="behance Logo"
                     className="w-[40px] grayscale "
                   />
-                  <p className="text-3xl max-md:text-xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[41.6px]">
+                  <p className="text-3xl max-md:text-2xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[41.6px]">
                     {item.heading}
                   </p>
                   <p className="text-lg max-md:text-base font-[500]">
@@ -277,7 +277,7 @@ const VideoWithCards = () => {
                       <Chip
                         key={chipIndex}
                         radius="sm"
-                        className="m-2 text-[14px] text-[#00000094] bg-[#51525E14]"
+                        className="md:m-2 max-md:mb-2 text-[14px] text-[#00000094] bg-[#51525E14]"
                         startContent={
                           <img src={chipItem.icon} className="mx-1 w-[16px]" />
                         }
@@ -321,7 +321,7 @@ const VideoWithCards = () => {
           if (el) cardsRef.current[3] = el;
         }}
       >
-        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:mt-4">
+        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:-mt-4">
           <CardBody className="grid grid-cols-3 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
             {data1.map((item, index) => {
               return (
@@ -329,8 +329,8 @@ const VideoWithCards = () => {
                   className="rounded-[40px] box-shadow"
                   // style={{ boxShadow: " inset 0 2px 4px rgba(0, 0, 0, 0.1)" }}
                 >
-                  <CardBody className="p-8 max-md:p-4 max-lg:p-6">
-                    <p className="text-3xl max-md:text-xl mt-0 mb-4 font-[700] pr-12 tracking-[-0.5px] leading-[41.6px]">
+                  <CardBody className="p-8 max-md:p-6 max-lg:p-6">
+                    <p className="text-3xl max-md:text-2xl mt-0 mb-4 font-[700] pr-12 tracking-[-0.5px] leading-[41.6px]">
                       {item.heading}
                     </p>
                     <p className="text-lg max-md:text-base mb-6 font-[500] leading-[25.2px]">
