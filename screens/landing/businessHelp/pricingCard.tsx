@@ -318,10 +318,10 @@ const VideoWithCards = () => {
       ))}
       <div
         ref={(el) => {
-          if (el) cardsRef.current[3] = el;
+          if (el && !isMobile) cardsRef.current[3] = el;
         }}
       >
-        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:-mt-4">
+        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:mt-4">
           <CardBody className="grid grid-cols-3 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2">
             {data1.map((item, index) => {
               return (

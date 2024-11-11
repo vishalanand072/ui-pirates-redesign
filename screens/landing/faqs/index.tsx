@@ -12,16 +12,16 @@ const LandingFaqs = () => {
             alt="FAQ Icon"
           />
         </div>
-        <p className="text-5xl max-lg:text-3xl max-2xl:text-4xl max-md:text-2xl font-[700] mt-3 mb-6 max-md:text-center max-md:px-8">
+        <p className="text-5xl max-lg:text-3xl max-2xl:text-4xl max-md:text-3xl font-[700] mt-3 mb-6 max-md:text-center max-md:px-8">
           Have questions?! We've got you!
         </p>
 
         {/* Card with contact options */}
         <Card className="py-0 shadow-none border-2 rounded-[32px]">
-          <CardBody className="overflow-visible">
+          <CardBody className="overflow-visible p-6">
             <img
               alt="Card background"
-              className="object-cover rounded-3xl w-full h-[250px] max-h-[250px] object-top"
+              className="object-cover rounded-3xl w-[100px] h-[100px] max-h-[100px] object-top border-1 border-white  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761421/vishal_b32poo.svg"
             />
             <h4 className="font-[500] text-lg my-4">

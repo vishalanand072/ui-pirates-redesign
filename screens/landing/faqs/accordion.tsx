@@ -218,7 +218,7 @@ export default function FaqsAccordion() {
                 key={item.heading}
                 aria-label={item.heading}
                 title={
-                  <p className="font-semibold pr-12 max-md:pr-6">
+                  <p className="font-semibold pr-12 max-md:pr-6 md:py-3 md:px-1">
                     {item.heading}
                   </p>
                 }
@@ -234,7 +234,7 @@ export default function FaqsAccordion() {
                 }
                 className="shadow-none border-1 rounded-2xl mt-4 max-md:mt-2 items-center"
               >
-                <div>
+                <div className="md:px-1">
                   <p className="mb-5">{item.title1}</p>
                   {item.list.map((items, indexs) => {
                     return <p className="mb-3">{items}</p>;
