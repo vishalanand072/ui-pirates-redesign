@@ -80,14 +80,17 @@ export const Navbar = () => {
               <Button
                 isExternal
                 as={Link}
-                className="text-sm font-[500] text-white bg-black pt-0 dark:bg-white dark:text-black -mr-4"
+                className=" btn-flip text-sm font-[500] text-white bg-black pt-0 dark:bg-white dark:text-black -mr-4 mt-[0.3rem]"
                 // startContent={<HeartFilledIcon className="text-danger" />}
                 variant="solid"
                 style={{ paddingTop: 0 }}
+                data-back="Let's Talk"
+                data-front="Have an Idea?"
               >
                 Have an Idea?
               </Button>
             </a>
+          
           </NavbarItem>
         </NavbarContent>
 

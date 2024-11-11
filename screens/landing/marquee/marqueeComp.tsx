@@ -47,7 +47,7 @@ import Marquee from "react-fast-marquee";
 const MarqueeComp = ({ items, reverse }: any) => {
   return (
     <>
-      <Marquee speed={25} gradient>
+      <Marquee speed={25} gradient gradientColor="#F5F5F5">
         <div className="flex flex-row gap-8">
           {items.map((el: any, index: any) => (
             <div

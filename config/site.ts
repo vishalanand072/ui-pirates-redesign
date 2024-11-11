@@ -17,8 +17,8 @@ export const siteConfig = {
       href: "#Pricing",
     },
     {
-      label: "Contact Us",
-      href: "#contactUs",
+      label: "FAQs",
+      href: "#FAQs",
     },
   ],
   navMenuItems: [
@@ -35,8 +35,8 @@ export const siteConfig = {
       href: "#Pricing",
     },
     {
-      label: "Contact Us",
-      href: "#contactUs",
+      label: "FAQs",
+      href: "#FAQs",
     },
   ],
   links: {

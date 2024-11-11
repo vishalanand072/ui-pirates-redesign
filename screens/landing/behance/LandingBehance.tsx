@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from "react";
 import gsap from "gsap";

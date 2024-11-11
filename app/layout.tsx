@@ -1,13 +1,10 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-
-import { Providers } from "./providers";
-
-import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // export const metadata: Metadata = {
 //   title: {
@@ -22,12 +19,12 @@ import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "UI Pirate",
-  description: "Default Description",
+  description: "UI Pirate",
   openGraph: {
-    title: "Default Title",
-    description: "Default Description",
-    url: "https://example.com",
-    siteName: "Example Site",
+    title: "UI Pirate",
+    description: "UI Pirate",
+    url: "https://uipirate.com",
+    siteName: "uipirate",
     images: [
       {
         url: "https://res.cloudinary.com/damm9iwho/image/upload/v1731043042/favicon_xby7s2.svg",
@@ -70,11 +67,10 @@ export default function RootLayout({
       </head>
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen  font-sans antialiased bg-[#F5F5F5]",
           fontSans.variable
         )}
       >
-        {/* <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}> */}
         <div className="relative flex flex-col">
           <div
             className="sticky top-0  "
@@ -83,19 +79,8 @@ export default function RootLayout({
             <Navbar />
           </div>
           <main className="">{children}</main>
-          {/* <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-              </Link>
-            </footer> */}
+          <SpeedInsights />
         </div>
-        {/* </Providers> */}
       </body>
     </html>
   );

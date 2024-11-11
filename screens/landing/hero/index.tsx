@@ -1,37 +1,35 @@
 import { Button } from "@nextui-org/button";
-import BookCallButton from "./buttonHover";
-import AnimatedButton from "./buttonHover";
 const LandingHero = () => {
   return (
     <>
-      <div className="flex flex-row items-center justify-center py-12 w-full max-lg:py-12 max-md:py-4 container mx-auto overflow-hidden">
+      <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-4 container mx-auto overflow-hidden">
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden pt-8">
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
             <div className="flex flex-row overflow-hidden">
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1730885769/kartik_n62nvw.svg"
                 alt="Dribble Logo"
-                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[5deg]"
+                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
                 alt="Dribble Logo"
-                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
+                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768377/hero3_shxbjv.svg"
                 alt="Dribble Logo"
-                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]  transform transition duration-500 hover:scale-110  hover:rotate-[7deg]"
+                className="w-[70px] h-[110px] max-md:w-[60px] max-md:h-[100px]  transform transition duration-500 hover:scale-125  hover:rotate-[7deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero4_hrsvsr.svg"
                 alt="Dribble Logo"
-                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
+                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
               />
               <img
-                src="https://res.cloudinary.com/damm9iwho/image/upload/v1730714974/Div_framer-9crwzt_qjulqg.svg"
+                src="https://res.cloudinary.com/damm9iwho/image/upload/v1731309710/sharmin_ad0xqu.svg"
                 alt="Dribble Logo"
-                className="w-[80px] h-[130px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-110 hover:rotate-[-5deg]"
+                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125 hover:rotate-[-5deg]"
               />
             </div>
           </div>
@@ -53,72 +51,36 @@ const LandingHero = () => {
               href="https://calendly.com/vishalanand072/ui-ux-discussion?month=2024-10"
               target="blank"
             >
-              {/* <Button
-                className="bg-black text-white button dark:bg-white dark:text-black group transform transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-x-10 -pl-32"
-                startContent={
-                  <div className="flex flex-row gap-2 items-center">
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
-                      alt="Dribble Logo"
-                      className="w-[100%] h-[30px] transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)]"
-                    />
-
-                    <p className="text-[#5B5B5B] text-xl font-bold transition-opacity duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-1">
-                      +
-                    </p>
-
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
-                      alt="Dribble Logo"
-                      className="w-[100%] h-[30px] transition-opacity duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-1"
-                    />
-                  </div>
-                }
-                endContent={
-                  <div>
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                      alt="Dribble Logo"
-                      className="w-[100%] h-[30px]"
-                    />
-                  </div>
-                }
-              >
-                Book a 15-min call
-              </Button> */}
-              <Button
-                className="bg-black text-white button dark:bg-white dark:text-black group transform transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-x-110 px-6 py-2 buttonHero"
-                startContent={
-                  <div className="flex flex-row gap-2 items-center">
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
-                      alt="Dribble Logo"
-                      className="w-auto h-[30px] transition-transform duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)]"
-                    />
-
-                    <p className="text-[#5B5B5B] text-xl font-bold hidden group-hover:inline-block transition-all duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform translate-x-5 group-hover:translate-x-0">
-                      +
-                    </p>
-
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
-                      alt="Dribble Logo"
-                      className="w-auto h-[30px] hidden group-hover:inline-block transition-all duration-[1500ms] ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform translate-x-5 group-hover:translate-x-0"
-                    />
-                  </div>
-                }
-                endContent={
-                  <div>
-                    <img
-                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
-                      alt="Dribble Logo"
-                      className="w-auto h-[30px]"
-                    />
-                  </div>
-                }
-              >
-                Book a 15-min call
-              </Button>
+              <div className="bg-black text-white button group transform  transition-all duration-[600ms] ease-in-out px-6 py-2 buttonHero hover:pl-12 hover:bg-black flex flow-row items-center gap-3">
+                <div className="flex flex-row gap-2 items-center mr-11">
+                  <img
+                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
+                    alt="Dribble Logo"
+                    id="image"
+                    className="w-auto h-[30px] absolute  transform translate-x-0 transition-all duration-[580ms] ease-in-out  group-hover:translate-x-4 order-1 group-hover:order-3"
+                  />
+                  <p
+                    id="plus"
+                    className="text-[#5B5B5B] text-xl font-bold absolute order-2 -mt-1"
+                  >
+                    +
+                  </p>
+                  <img
+                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
+                    alt="Dribble Logo"
+                    id="client"
+                    className="w-auto h-[30px] absolute  transform translate-x-0 transition-all duration-500 ease-in-out  group-hover:-translate-x-[2.1rem] order-3 group-hover:order-1"
+                  />
+                </div>
+                <p> Book a 15-min call</p>
+                <div>
+                  <img
+                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                    alt="Dribble Logo"
+                    className="w-auto h-[30px]"
+                  />
+                </div>
+              </div>
             </a>
             <div className="max-md:w-[100%]">
               <a href="https://wa.link/i35lma" target="_blank">
