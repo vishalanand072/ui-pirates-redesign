@@ -3,7 +3,7 @@ const LandingBusinessHelp = () => {
   return (
     <>
       <div className=" container mx-auto lg:px-12 max-md:px-4">
-        <div>
+        <div className="autoShow">
           <div className="flex flex-row items-center justify-center mb-6">
             <img
               src="https://res.cloudinary.com/damm9iwho/image/upload/v1730973383/services_f0hzhb.svg"

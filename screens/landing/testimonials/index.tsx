@@ -4,7 +4,7 @@ import ResponsiveCarousel from "./carousel";
 function LandingTestimonials() {
   return (
     <div className="mt-32">
-      <div>
+      <div className="autoShow">
         <div className="flex flex-row items-center justify-center mb-6">
           <img
             src="https://res.cloudinary.com/damm9iwho/image/upload/v1730981155/testi_et98yb.svg"

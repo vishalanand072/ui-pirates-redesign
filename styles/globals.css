@@ -461,3 +461,123 @@ body {
   content: attr(data-front);
   transform: translateY(0) rotateX(0);
 }
+
+.autoShow {
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+  transition: ease-in-out;
+}
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(400px) scale(0.3);
+    transition: ease-in-out;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: ease-in-out;
+  }
+}
+
+.reveal-text {
+  margin: 0;
+  text-align: center;
+  font-size: 200px;
+  overflow: hidden;
+  line-height: 1;
+}
+reveal-text span {
+  display: block;
+  animation: reveal 2.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Styling for the paragraph */
+
+.reveal-text-anim-0 {
+  /* font-size: 1.5rem; */
+  opacity: 0;
+  transform: translateY(100px);
+  animation: reveal-anim-0 0.3s ease-out forwards;
+}
+
+/* Keyframes for reveal animation */
+@keyframes reveal-anim-0 {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal-text-anim {
+  /* font-size: 1.5rem; */
+  opacity: 0;
+  transform: translateY(100px);
+  animation: reveal-anim 0.7s ease-out forwards;
+}
+
+/* Keyframes for reveal animation */
+@keyframes reveal-anim {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-text-anim-1 {
+  /* font-size: 1.5rem; */
+  opacity: 0;
+  transform: translateY(150px);
+  animation: reveal-anim-1 1.2s ease-out forwards;
+}
+
+/* Keyframes for reveal animation */
+@keyframes reveal-anim-1 {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-text-anim-2 {
+  /* font-size: 1.5rem; */
+  z-index: 9999999;
+  opacity: 0;
+  transform: translateY(200px);
+  animation-duration: 2s;
+  animation: reveal-anim-2 2.3s ease-out forwards;
+}
+
+/* Keyframes for reveal animation */
+@keyframes reveal-anim-2 {
+  from {
+    opacity: 1;
+    transform: translateY(200px);
+    padding-bottom: 150px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    padding-bottom: 0px;
+  }
+}

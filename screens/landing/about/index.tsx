@@ -3,7 +3,7 @@ const LandingAbout = () => {
   return (
     <>
       <div className=" container mx-auto lg:px-40 max-md:px-4 mt-32">
-        <div>
+        <div className="autoShow">
           <div className="flex flex-row items-center justify-center mb-6">
             <img
               src="https://res.cloudinary.com/damm9iwho/image/upload/v1730981156/Div_framer-1nycyfv_slcii0.svg"

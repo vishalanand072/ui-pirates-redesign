@@ -2,10 +2,10 @@ import { Button } from "@nextui-org/button";
 const LandingHero = () => {
   return (
     <>
-      <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-4 container mx-auto overflow-hidden">
+      <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-4 container mx-auto">
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden pt-8">
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
-            <div className="flex flex-row overflow-hidden">
+            <div className="flex flex-row overflow-hidden reveal-text-anim-0">
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1730885769/kartik_n62nvw.svg"
                 alt="Dribble Logo"
@@ -34,7 +34,7 @@ const LandingHero = () => {
             </div>
           </div>
 
-          <div className="text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
+          <div className=" reveal-text-anim text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
             Modern, scalable design for{" "}
             {/* {" "}
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">
@@ -42,11 +42,12 @@ const LandingHero = () => {
             </span>{" "} */}
             Saas & Tech companies
           </div>
-          <p className="lg:w-1/2 text-center text-lg mt-4 px-40 max-md:px-4 max-lg:12 font-sans leading-[25.2px]">
+
+          <p className=" reveal-text-anim-1 lg:w-1/2 text-center text-lg mt-4 px-40 max-md:px-4 max-lg:12 font-sans leading-[25.2px]">
             We build products that work for users and drive business growth
           </p>
 
-          <div className="mt-12 flex flex-row items-center max-md:flex-col max-md:px-2">
+          <div className="my-12 flex flex-row items-center max-md:flex-col max-md:px-2 reveal-text-anim-2">
             <a
               href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
               target="blank"
