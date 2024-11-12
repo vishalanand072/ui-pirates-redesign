@@ -26,16 +26,16 @@ const images = [
 const LandingFooter = () => {
   return (
     <>
-      <div className="relative overflow-hidden h-screen mt-52 max-md:mt-32 bg-black rounded-tr-[100px] rounded-tl-[100px] max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]">
-        <div className="relative h-screen flex items-center justify-center max-lg:hidden">
+      <div className="relative overflow-hidden h-screen max-md:h-[90vh] mt-52 max-md:mt-32 bg-black rounded-tr-[100px] rounded-tl-[100px] max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]">
+        <div className="relative h-screen  max-md:h-[90vh] flex items-center justify-center max-lg:hidden">
           <CircularImage images={images} />
         </div>
 
-        <div className="h-[100vh] max-md:h-[100vh]  text-white max-md:px-12">
+        <div className="h-[100vh] max-md:h-[90vh]  text-white max-md:px-12">
           <div className="flex flex-row items-center justify-center h-full">
             <div className="pt-32 absolute bottom-8">
               <div className="flex flex-row items-center justify-center">
-                <p className="text-center text-5xl md:w-3/4 mb-3 font-bold">
+                <p className="text-center text-5xl md:w-3/4 mb-3 font-bold max-md:mb-5">
                   Ready to bring your vision to life?
                 </p>
               </div>

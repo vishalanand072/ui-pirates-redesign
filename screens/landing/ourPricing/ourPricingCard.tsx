@@ -234,8 +234,8 @@ const OurPricingCard = (props: any) => {
 
   return (
     <div>
-      <Card className="rounded-[48px] max-md:rounded-[38px] mt-4 bg-[#e9e9e9] dark:bg-[#18181b]">
-        <CardBody className="gap-4 max-md:grid-cols-1 p-4 max-md:p-2">
+      <Card className="rounded-[48px] max-md:rounded-[38px] mt-4 max-md:pb-2 bg-[#e9e9e9] dark:bg-[#18181b]">
+        <CardBody className="gap-4 max-md:gap-2 max-md:grid-cols-1 p-4 max-md:p-2">
           {data.map((item, index) => {
             const [selectedTab, setSelectedTab] = useState("Design + Dev");
 
@@ -256,7 +256,7 @@ const OurPricingCard = (props: any) => {
                       alt="service logo"
                       className="w-[40px] grayscale"
                     />
-                    <p className="text-3xl max-md:text-2xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[38.4px]">
+                    <p className="text-3xl max-md:text-3xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[38.4px]">
                       {item.heading}
                     </p>
                     <p className="font-[500]">{item.description}</p>

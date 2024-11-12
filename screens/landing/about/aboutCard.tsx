@@ -54,7 +54,7 @@ const AboutCardAnimation = () => {
         {
           x: direction,
           rotation: isEven ? -15 : 15,
-          opacity: 0.2,
+          opacity: isMobile ? 0 : 0.2,
         },
         {
           x: 0,
@@ -62,8 +62,8 @@ const AboutCardAnimation = () => {
           opacity: 1,
           scrollTrigger: {
             trigger: cardAbout,
-            start: isMobile ? "top 120%" : "top 99%",
-            end: isMobile ? "bottom 100%" : "bottom 100%",
+            start: isMobile ? "top 160%" : "top 99%",
+            end: isMobile ? "bottom 120%" : "bottom 100%",
             scrub: 1.5,
           },
           ease: "power2.out",
@@ -113,12 +113,12 @@ const AboutCardAnimation = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 pb-20 max-md:pb-20 max-md:pt-12">
-      <div className="grid grid-cols-2 gap-6 lg:mt-60 max-lg:grid-cols-1">
+    <div className="container mx-auto px-4 pb-20 max-md:pb-12 max-md:pt-12">
+      <div className="grid grid-cols-2 gap-6 max-md:gap-4  lg:mt-60 max-lg:grid-cols-1">
         {data.map((item, index) => (
           <div
             key={index}
-            className={`bg-[#E1EAEA] rounded-[40px] pt-4 pb-12 px-12 max-md:px-6 w-full h-[350px] max-md:h-[300px] ${
+            className={`bg-[#E1EAEA] rounded-[40px] max-md:rounded-[20px] pt-4 pb-12 px-12 max-md:px-6 w-full h-[350px] max-md:h-[250px] ${
               index % 2 === 0 ? "lg:-mt-32" : "lg:mt-0"
             } hover:ease-in-out`}
             style={{
@@ -152,7 +152,7 @@ const AboutCardAnimation = () => {
                   </span>
                 ))}
               </p>
-              <p className="text-3xl max-md:text-2xl font-semibold flex flex-row items-end justify-end pt-20 text-right max-md:pt-28 uppercase">
+              <p className="text-3xl max-md:text-2xl font-semibold flex flex-row items-end justify-end pt-20 text-right max-md:pt-14 uppercase">
                 {item.subtitle1}
                 <br />
                 {item.subtitle2}

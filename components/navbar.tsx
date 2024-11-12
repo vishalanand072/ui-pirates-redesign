@@ -119,12 +119,24 @@ export const Navbar = () => {
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarContent className="sm:hidden basis-1" justify="end">
-          {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link>
-          <ThemeSwitch /> */}
-          <NavbarMenuToggle />
+        <NavbarContent className="md:hidden basis-1" justify="end">
+          <a
+            href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
+            target="blank"
+          >
+            <Button
+              isExternal
+              as={Link}
+              className=" btn-flip text-sm font-[500] text-white bg-black pt-0 dark:bg-white dark:text-black -mr-4 mt-[0.3rem]"
+              // startContent={<HeartFilledIcon className="text-danger" />}
+              variant="solid"
+              style={{ paddingTop: 0 }}
+              data-back="Let's Talk"
+              data-front="Have an Idea?"
+            >
+              Have an Idea?
+            </Button>
+          </a>
         </NavbarContent>
 
         <NavbarMenu>

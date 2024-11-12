@@ -18,7 +18,7 @@ const Landing = () => {
       <div>
         <LandingHero />
         <LandingMarquee />
-        <div className=" overflow-x-hidden py-12">
+        <div className=" overflow-x-hidden py-12 max-md:py-4">
           <LandingAppScreen />
         </div>
         <div id="Work" className="">

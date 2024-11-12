@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/button";
 const LandingHero = () => {
   return (
     <>
-      <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-4 container mx-auto">
+      <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-10 container mx-auto">
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden pt-8">
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
             <div className="flex flex-row overflow-hidden reveal-text-anim-0">
@@ -34,7 +34,7 @@ const LandingHero = () => {
             </div>
           </div>
 
-          <div className=" reveal-text-anim text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-4xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
+          <div className=" reveal-text-anim text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-5xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
             Modern, scalable design for{" "}
             {/* {" "}
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">

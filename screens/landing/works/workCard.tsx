@@ -94,8 +94,8 @@ const RecentWorkCard = () => {
             key={index}
             className={
               index % 2 === 0
-                ? "flex flex-row-reverse justify-between mb-16 max-md:mb-4 max-w-full max-md:flex-col" // Ensure the div doesn't exceed the container's width
-                : "flex flex-row justify-between mb-16 max-md:mb-4 max-w-full max-md:flex-col py-32 max-md:py-8 max-lg:py-16 max-xl:py-28"
+                ? "flex flex-row-reverse justify-between mb-16 max-md:mb-4 max-w-full max-md:flex-col-reverse" // Ensure the div doesn't exceed the container's width
+                : "flex flex-row justify-between mb-16 max-md:mb-4 max-w-full max-md:flex-col-reverse py-32 max-md:py-8 max-lg:py-16 max-xl:py-28"
             }
             // ref={(el) => (cardRefs.current[index] = el!)}
 
@@ -114,7 +114,7 @@ const RecentWorkCard = () => {
               id="contentDiv"
             >
               <div>
-                <p className="text-[5rem] max-md:text-4xl mb-4 font-[500] max-xl:text-[3.5rem]">
+                <p className="text-[5rem] max-md:text-4xl mb-4 font-[500] max-xl:text-[3.5rem] max-md:mt-12">
                   {item.heading}
                 </p>
                 <div
