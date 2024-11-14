@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // export const metadata: Metadata = {
 //   title: {
@@ -19,7 +19,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: "UI Pirate",
-  description: "UI Pirate",
+  description: "UI Pirate Description",
   openGraph: {
     title: "UI Pirate",
     description: "UI Pirate",

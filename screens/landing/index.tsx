@@ -25,20 +25,21 @@ const Landing = () => {
           <LandingWork />
         </div>
 
-        <div className="">
-          {/* <LandingBehanceDan /> */}
-          <LandingBehanceFramor />
-          {/* <LandingBehance /> */}
-        </div>
+        <LandingAbout />
+
         <div id="Services">
           <LandingBusinessHelp />
         </div>
-        <LandingAbout />
         <div className=" overflow-hidden">
           <LandingTestimonials />
         </div>
         <div id="Pricing">
           <LandingOurPricing />
+        </div>
+        <div className="">
+          {/* <LandingBehanceDan /> */}
+          <LandingBehanceFramor />
+          {/* <LandingBehance /> */}
         </div>
 
         <div id="FAQs">
