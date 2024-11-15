@@ -202,9 +202,9 @@ export default function FaqsAccordion() {
     <>
       <div
         className=""
-        ref={(el) => {
-          if (el) cardsRef.current[0] = el;
-        }}
+        // ref={(el) => {
+        //   if (el) cardsRef.current[0] = el;
+        // }}
       >
         {" "}
         <Accordion
@@ -218,7 +218,7 @@ export default function FaqsAccordion() {
                 key={item.heading}
                 aria-label={item.heading}
                 title={
-                  <p className="font-semibold pr-12 max-md:pr-6 md:py-3 md:px-1">
+                  <p className="font-semibold pr-12 max-md:pr-6 md:py-2 md:px-1">
                     {item.heading}
                   </p>
                 }
@@ -236,7 +236,7 @@ export default function FaqsAccordion() {
                     />
                   )
                 }
-                className="shadow-none border-1 rounded-2xl mt-4 max-md:mt-2 items-center"
+                className="shadow-none border-1 rounded-2xl mt-3 max-md:mt-2 items-center"
               >
                 <div className="md:px-1">
                   <p className="mb-5">{item.title1}</p>

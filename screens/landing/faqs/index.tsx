@@ -3,7 +3,7 @@ import { Card, CardBody, Button } from "@nextui-org/react";
 
 const LandingFaqs = () => {
   return (
-    <div className="container mx-auto grid grid-cols-5 max-lg:grid-cols-5 max-md:grid-cols-1 max-md:px-4 lg:px-20 mt-32 max-md:mt-28">
+    <div className="container mx-auto grid grid-cols-5 max-lg:grid-cols-5 max-md:grid-cols-1 max-md:px-4 lg:px-20 pt-32 pb-52 max-md:pb-32 max-md:mt-28 bg-white rounded-[100px]">
       {/* Left section - Sticky */}
       <div className="col-span-2 max-md:col-span-1 lg:pr-12 max-xl:pr-8 max-md:pr-0 md:sticky md:top-4 md:h-screen">
         <div className="flex flex-row items-start mb-6 max-md:items-center max-md:justify-center">
@@ -21,7 +21,7 @@ const LandingFaqs = () => {
           <CardBody className="overflow-visible p-6">
             <img
               alt="Card background"
-              className="object-cover rounded-3xl w-[100px] h-[100px] max-h-[100px] object-top border-1 border-white  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
+              className="object-cover rounded-3xl w-[80px] h-[80px] max-h-[80px] object-top border-1 border-white  transform transition duration-500 hover:scale-110  hover:rotate-[-5deg]"
               src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761421/vishal_b32poo.svg"
             />
             <h4 className="font-[500] text-lg my-4">

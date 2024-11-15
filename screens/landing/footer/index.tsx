@@ -26,7 +26,7 @@ const images = [
 const LandingFooter = () => {
   return (
     <>
-      <div className="relative overflow-hidden h-screen max-md:h-[90vh]   max-lg:h-[90vh] mt-52 max-md:mt-32 bg-black rounded-tr-[100px] rounded-tl-[100px] max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]">
+      <div className="relative overflow-hidden h-screen max-md:h-[90vh]   max-lg:h-[90vh]  bg-black rounded-tr-[100px] rounded-tl-[100px] max-md:rounded-tr-[50px] max-md:rounded-tl-[50px]">
         <div className="relative h-screen  max-md:h-[90vh]   max-lg:h-[90vh] flex items-center justify-center max-lg:hidden">
           <CircularImage images={images} />
         </div>

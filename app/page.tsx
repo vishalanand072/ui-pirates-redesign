@@ -1,6 +1,8 @@
 "use client";
+import dynamic from "next/dynamic";
 import Loader from "@/components/loader";
-import Landing from "@/screens/landing";
+// import Landing from "@/screens/landing";
+const Landing = dynamic(() => import("@/screens/landing"), { ssr: false });
 import { useEffect, useState } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 
