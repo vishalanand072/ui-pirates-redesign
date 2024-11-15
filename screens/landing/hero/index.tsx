@@ -9,27 +9,27 @@ const LandingHero = () => {
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1730885769/kartik_n62nvw.svg"
                 alt="Dribble Logo"
-                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[5deg]"
+                className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
                 alt="Dribble Logo"
-                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
+                className=" reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768377/hero3_shxbjv.svg"
                 alt="Dribble Logo"
-                className="w-[70px] h-[110px] max-md:w-[60px] max-md:h-[100px]  transform transition duration-500 hover:scale-125  hover:rotate-[7deg]"
+                className=" reveal-text-anim-0 w-[70px] h-[110px] max-md:w-[60px] max-md:h-[100px]  transform transition duration-500 hover:scale-125  hover:rotate-[7deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero4_hrsvsr.svg"
                 alt="Dribble Logo"
-                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
+                className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1731309710/sharmin_ad0xqu.svg"
                 alt="Dribble Logo"
-                className="w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125 hover:rotate-[-5deg]"
+                className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125 hover:rotate-[-5deg]"
               />
             </div>
           </div>
@@ -47,7 +47,7 @@ const LandingHero = () => {
             We build products that work for users and drive business growth
           </p>
 
-          <div className="my-12 flex flex-row items-center max-md:flex-col max-md:px-2 reveal-text-anim-2">
+          <div className="my-12 flex flex-col items-center max-md:flex-col max-md:px-2 reveal-text-anim-2">
             <a
               href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
               target="blank"
@@ -83,12 +83,12 @@ const LandingHero = () => {
                 </div>
               </div>
             </a>
-            <div className="max-md:w-[100%]">
+            <div className="w-[100%]">
               <a href="https://wa.link/i35lma" target="_blank">
                 <Button
                   color="primary"
                   variant="bordered"
-                  className="md:ml-4 max-md:mt-4 border-gray-300 text-black button dark:text-white font-bold w-full"
+                  className="mt-4 border-gray-300 text-black button dark:text-white font-bold w-full"
                   startContent={
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"

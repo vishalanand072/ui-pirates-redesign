@@ -470,12 +470,12 @@ body {
 @keyframes autoShowAnimation {
   from {
     opacity: 0;
-    transform: translateY(400px) scale(0.3);
+    transform: translateY(300px) scale(0.3);
     transition: ease-in-out;
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(-10px) scale(1);
     transition: ease-in-out;
   }
 }
@@ -505,16 +505,35 @@ reveal-text span {
 
 .reveal-text-anim-0 {
   /* font-size: 1.5rem; */
-  opacity: 0;
-  transform: translateY(100px);
+  opacity: 1;
+  transform: translateY(50px);
   animation: reveal-anim-0 0.3s ease-out forwards;
 }
 
 /* Keyframes for reveal animation */
 @keyframes reveal-anim-0 {
   from {
-    opacity: 0;
-    transform: translateY(100px);
+    opacity: 1;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-text-anim-0-left {
+  /* font-size: 1.5rem; */
+  opacity: 1;
+  transform: translateY(50px);
+  animation: reveal-anim-0-left 0.6s ease-out forwards;
+}
+
+/* Keyframes for reveal animation */
+@keyframes reveal-anim-0-left {
+  from {
+    opacity: 1;
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -523,15 +542,15 @@ reveal-text span {
 }
 .reveal-text-anim {
   /* font-size: 1.5rem; */
-  opacity: 0;
+  opacity: 1;
   transform: translateY(100px);
-  animation: reveal-anim 0.7s ease-out forwards;
+  animation: reveal-anim 0.2s ease-out forwards;
 }
 
 /* Keyframes for reveal animation */
 @keyframes reveal-anim {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(100px);
   }
   to {
@@ -542,15 +561,15 @@ reveal-text span {
 
 .reveal-text-anim-1 {
   /* font-size: 1.5rem; */
-  opacity: 0;
+  opacity: 1;
   transform: translateY(150px);
-  animation: reveal-anim-1 1.2s ease-out forwards;
+  animation: reveal-anim-1 0.25s ease-out forwards;
 }
 
 /* Keyframes for reveal animation */
 @keyframes reveal-anim-1 {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(150px);
   }
   to {
@@ -562,10 +581,10 @@ reveal-text span {
 .reveal-text-anim-2 {
   /* font-size: 1.5rem; */
   z-index: 9999999;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(200px);
-  animation-duration: 2s;
-  animation: reveal-anim-2 2.3s ease-out forwards;
+  /* animation-duration: 2s; */
+  animation: reveal-anim-2 1.6s ease-out forwards;
 }
 
 /* Keyframes for reveal animation */
@@ -573,11 +592,154 @@ reveal-text span {
   from {
     opacity: 1;
     transform: translateY(200px);
-    padding-bottom: 150px;
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    padding-bottom: 0px;
   }
+}
+
+/* button text chnage animation */
+
+/* button animation */
+
+.button-container-1 {
+  /* margin-top: 50px; */
+  color: #0000;
+  background-color: white;
+  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  font-weight: 500;
+
+  position: relative;
+  width: 200px;
+  height: 50px;
+  /* padding-left: 12px;
+  padding-right: 12px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* margin-top: 6vh; */
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+.button-container-1 Button {
+  width: 200px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 50px;
+
+  letter-spacing: 1px;
+
+  /* background: #fff; */
+  background: black;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.button-container-1 Button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 1s steps(22) forwards;
+}
+
+.mas {
+  width: 100%;
+  /* padding-left: 16px;
+  padding-right: 16px; */
+  position: absolute;
+  color: black;
+  text-align: center;
+  height: 38px;
+
+  position: absolute;
+
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@media (max-width: 629px) {
+  Image#join {
+    display: none;
+  }
+}
+
+/* animation button reverse effect start */
+.buttonre {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /* padding: 10px 20px; */
+  /* font-size: 16px; */
+  width: 200px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+.button-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top: 15; */
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-top: -15px;
+  overflow: hidden;
+}
+
+.button-text.see-more {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.button-text.recent-work {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.buttonre:hover .see-more {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.buttonre:hover .recent-work {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.backdrop-blur-lg {
+  --tw-backdrop-blur: blur(1000px);
+  background-color: #f5f5f5;
 }

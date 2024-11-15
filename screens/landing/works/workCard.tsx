@@ -63,7 +63,7 @@ const RecentWorkCard = () => {
         card.querySelector("#contentDiv"),
         {
           opacity: 1,
-          y: 90, // Start slightly below
+          y: 120, // Start slightly below
         },
         {
           opacity: 1,
@@ -108,13 +108,13 @@ const RecentWorkCard = () => {
             <div
               className={
                 index % 2 === 0
-                  ? "flex flex-row items-center md:justify-end w-[40%] text-end max-md:text-center max-md:w-[100%] max-md:px-4"
+                  ? "flex flex-row items-center md:justify-end w-[40%] text-end max-md:text-center max-md:w-[100%] max-md:px-0 max-md:justify-center"
                   : "flex flex-row items-center justify-start w-[40%] max-md:text-center max-md:w-[100%] max-md:px-4"
               }
               id="contentDiv"
             >
               <div>
-                <p className="text-[5rem] max-md:text-4xl mb-4 font-[500] max-xl:text-[3.5rem] max-md:mt-12">
+                <p className="text-[4.5rem] max-md:text-4xl mb-4 font-[600] max-xl:text-[3.5rem] max-md:mt-12">
                   {item.heading}
                 </p>
                 <div

@@ -224,7 +224,11 @@ export default function FaqsAccordion() {
                 }
                 indicator={({ isOpen }) =>
                   isOpen ? (
-                    <p className="text-4xl text-black rotate-45 ">+</p>
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1731050216/plus_dia0bt.svg"
+                      alt=""
+                      className=" rotate-45"
+                    />
                   ) : (
                     <img
                       src="https://res.cloudinary.com/damm9iwho/image/upload/v1731050216/plus_dia0bt.svg"

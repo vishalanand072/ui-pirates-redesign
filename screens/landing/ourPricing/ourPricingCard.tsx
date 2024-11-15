@@ -392,7 +392,7 @@ const OurPricingCard = (props: any) => {
                     )}
 
                     {!item.tab && (
-                      <div>
+                      <div className="">
                         {props.id == "Fixed" ? (
                           <ListMap list={item.list} />
                         ) : (
@@ -560,12 +560,26 @@ const OurPricingCard = (props: any) => {
                     <div className="">
                       {item.list.map((items, indexs) => {
                         return (
-                          <div className="flex flex-row items-start mt-3 gap-2">
-                            <img
-                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730809748/mynaui_check-hexagon-solid_t7vhzg.svg"
-                              alt=""
-                            />
-                            <p className="">{items}</p>
+                          <div>
+                            {props.id == "Fixed" ? (
+                              <div className="flex flex-row items-start mt-3 gap-2">
+                                <img
+                                  src="https://res.cloudinary.com/damm9iwho/image/upload/v1730809748/mynaui_check-hexagon-solid_t7vhzg.svg"
+                                  alt=""
+                                />
+                                <p className="">{items}</p>
+                              </div>
+                            ) : (
+                              !(items == "50/30/20 payment schedule") && (
+                                <div className="flex flex-row items-start mt-3 gap-2">
+                                  <img
+                                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1730809748/mynaui_check-hexagon-solid_t7vhzg.svg"
+                                    alt=""
+                                  />
+                                  <p className="">{items}</p>
+                                </div>
+                              )
+                            )}
                           </div>
                         );
                       })}
