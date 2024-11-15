@@ -3,7 +3,7 @@ import { Card, CardBody, Button } from "@nextui-org/react";
 
 const LandingFaqs = () => {
   return (
-    <div className="container mx-auto grid grid-cols-5 max-lg:grid-cols-5 max-md:grid-cols-1 max-md:px-4 lg:px-20 pt-32 pb-52 max-md:pb-32 max-md:mt-28 bg-white rounded-[100px]">
+    <div className="container mx-auto grid grid-cols-5 max-lg:grid-cols-5 max-md:grid-cols-1 max-md:px-4 lg:px-20 pt-32 pb-52 max-md:pb-32 max-md:mt-28 bg-white rounded-[100px] max-md:rounded-[50px]">
       {/* Left section - Sticky */}
       <div className="col-span-2 max-md:col-span-1 lg:pr-12 max-xl:pr-8 max-md:pr-0 md:sticky md:top-4 md:h-screen">
         <div className="flex flex-row items-start mb-6 max-md:items-center max-md:justify-center">
