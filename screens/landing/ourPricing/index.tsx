@@ -49,6 +49,7 @@ const LandingOurPricing = () => {
                 tabContent:
                   "group-data-[selected=true]:text-white text-black font-[700]",
               }}
+              className="pricing-tabs"
             >
               {(item) => <Tab key={item.id} title={item.label} />}
             </Tabs>

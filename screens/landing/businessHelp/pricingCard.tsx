@@ -257,7 +257,7 @@ const VideoWithCards = () => {
           }}
           key={index}
         >
-          <Card className="rounded-[48px] max-md:rounded-[38px] md:mt-12 bg-[#e9e9e9] dark:bg-[#18181b] max-md:mt-4 group">
+          <Card className="rounded-[48px] max-md:rounded-[38px] md:mt-12 bg-[#e9e9e9]  max-md:mt-4 group shadow-none border-1 border-[#0000000f]">
             <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2 max-md:gap-2">
               <Card className="rounded-[40px] max-md:rounded-[30px] box-shadow">
                 <CardBody className="p-8 max-md:p-5 max-lg:p-6">
@@ -323,7 +323,7 @@ const VideoWithCards = () => {
           if (el && !isMobile) cardsRef.current[3] = el;
         }}
       >
-        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9] dark:bg-[#18181b] mt-12 max-md:mt-4">
+        <Card className="rounded-[48px] mb-12 bg-[#e9e9e9]  mt-12 max-md:mt-4 shadow-none border-1 border-[#0000000f]">
           <CardBody className="grid grid-cols-3 gap-4 max-md:gap-2 max-xl:grid-cols-1 p-4 max-md:p-2">
             {data1.map((item, index) => {
               return (

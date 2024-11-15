@@ -153,7 +153,7 @@ const LandingBehanceFramor = () => {
           target="_blank"
           className="autoShow"
         >
-          <Button
+          {/* <Button
             color="primary"
             className="bg-black button text-lg dark:bg-white dark:text-black px-[70px] py-[30px] cursor-pointer"
             // style={{
@@ -164,7 +164,37 @@ const LandingBehanceFramor = () => {
             // }}
           >
             View Behance
-          </Button>
+          </Button> */}
+          <button
+            color="primary"
+            className="mt-3 bg-black text-white w-full px-[40px]  py-[16px] rounded-[20px] group"
+            // style={{ width: "100%" }}
+          >
+            <div className="flex flex-col items-center justify-center max-h-[24px] overflow-hidden">
+              <span
+                className={`text-white text-lg transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 
+                                
+                                 group-hover:translate-y-[50px] translate-y-3
+                                
+                               `}
+              >
+                View
+              </span>
+
+              <span
+                className={`text-white text-lg  transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-3
+                                
+                                translate-y-[50px] group-hover:-translate-y-3
+                                
+                               
+                              
+                              
+                              `}
+              >
+                View Behance
+              </span>
+            </div>
+          </button>
         </a>
       </div>
 

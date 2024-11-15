@@ -236,7 +236,7 @@ export default function FaqsAccordion() {
                     />
                   )
                 }
-                className="shadow-none border-1 rounded-2xl mt-3 max-md:mt-2 items-center"
+                className="shadow-none border-1 rounded-[1.25rem] mt-3 max-md:mt-2 items-center hover:bg-[#f2f1f1]"
               >
                 <div className="md:px-1">
                   <p className="mb-5">{item.title1}</p>

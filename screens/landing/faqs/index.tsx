@@ -1,7 +1,13 @@
+"use client";
+import { useState } from "react";
 import FaqsAccordion from "./accordion";
 import { Card, CardBody, Button } from "@nextui-org/react";
+import Image from "next/image";
 
 const LandingFaqs = () => {
+  const [isHoveredChat, setIsHoveredChat] = useState(false);
+  const [isHoveredEmail, setIsHoveredEmail] = useState(false);
+
   return (
     <div className="container mx-auto grid grid-cols-5 max-lg:grid-cols-5 max-md:grid-cols-1 max-md:px-4 lg:px-20 pt-32 pb-52 max-md:pb-32 max-md:mt-28 bg-white rounded-[100px] max-md:rounded-[50px]">
       {/* Left section - Sticky */}
@@ -34,32 +40,75 @@ const LandingFaqs = () => {
               <Button
                 color="primary"
                 variant="bordered"
-                className="mt-3 border-gray-100 text-black font-bold w-full hover:border-gray-200 button"
-                startContent={
-                  <img
-                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
-                    alt="WhatsApp Logo"
-                  />
-                }
+                className="mt-3 border-gray-100 text-black font-bold w-full hover:border-gray-200 px-[70px] py-[25px]"
+                style={{ width: "100%" }}
+                onMouseEnter={() => setIsHoveredChat(true)}
+                onMouseLeave={() => setIsHoveredChat(false)}
               >
-                <p className="text-base font-semibold">Chat</p>
+                <div className="flex flex-col items-center justify-center max-h-[20px] overflow-hidden">
+                  <span
+                    className={`text-black transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 ${
+                      isHoveredChat ? "translate-y-[50px]" : "translate-y-2"
+                    }`}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                      alt="WhatsApp Logo"
+                    />
+                    Chat
+                  </span>
+
+                  <span
+                    className={`text-black w-full transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-3 ${
+                      isHoveredChat ? "-translate-y-2" : "translate-y-[50px]"
+                    }`}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                      alt="WhatsApp Logo"
+                    />
+                    +91 97086 36151
+                  </span>
+                </div>
               </Button>
             </a>
 
             {/* Email Button */}
+
             <a href="mailto:vishalanand072@gmail.com" className="w-full">
               <Button
                 color="primary"
                 variant="bordered"
-                className="mt-3 border-gray-100 text-black dark:text-white font-bold w-full hover:border-gray-200 button"
-                startContent={
-                  <img
-                    src="https://res.cloudinary.com/damm9iwho/image/upload/v1729767692/email_bxvlmd.svg"
-                    alt="Email Logo"
-                  />
-                }
+                className="mt-3 border-gray-100 text-black font-bold w-full hover:border-gray-200 px-[70px] py-[25px]"
+                style={{ width: "100%" }}
+                onMouseEnter={() => setIsHoveredEmail(true)}
+                onMouseLeave={() => setIsHoveredEmail(false)}
               >
-                <p className="text-base font-semibold">Email Us</p>
+                <div className="flex flex-col items-center justify-center max-h-[20px] overflow-hidden">
+                  <span
+                    className={`text-black transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 ${
+                      isHoveredEmail ? "translate-y-[50px]" : "translate-y-2"
+                    }`}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729767692/email_bxvlmd.svg"
+                      alt="Email Logo"
+                    />
+                    Email Us
+                  </span>
+
+                  <span
+                    className={`text-black w-full transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-3 ${
+                      isHoveredEmail ? "-translate-y-2" : "translate-y-[50px]"
+                    }`}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1729767692/email_bxvlmd.svg"
+                      alt="Email Logo"
+                    />
+                    vishalanand072@gmail.com
+                  </span>
+                </div>
               </Button>
             </a>
           </CardBody>

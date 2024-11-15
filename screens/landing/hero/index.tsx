@@ -1,5 +1,9 @@
+"use client";
 import { Button } from "@nextui-org/button";
+import { useState } from "react";
 const LandingHero = () => {
+  const [isHoveredChat, setIsHoveredChat] = useState(false);
+
   return (
     <>
       <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-10 container mx-auto">
@@ -83,8 +87,8 @@ const LandingHero = () => {
                 </div>
               </div>
             </a>
-            <div className="w-[100%]">
-              <a href="https://wa.link/i35lma" target="_blank">
+            <div className="w-[100%] mt-3">
+              {/* <a href="https://wa.link/i35lma" target="_blank">
                 <Button
                   color="primary"
                   variant="bordered"
@@ -98,6 +102,52 @@ const LandingHero = () => {
                   }
                 >
                   Chat
+                </Button>
+              </a> */}
+
+              <a
+                href="https://wa.link/i35lma"
+                target="_blank"
+                className="w-[200px]"
+              >
+                <Button
+                  color="primary"
+                  variant="bordered"
+                  className=" border-gray-300 text-black font-bold w-full hover:border-gray-200 rounded-[16px]   py-[25px]"
+                  style={{ width: "100%" }}
+                  onMouseEnter={() => setIsHoveredChat(true)}
+                  onMouseLeave={() => setIsHoveredChat(false)}
+                >
+                  <div className="flex flex-col items-center justify-center max-h-[32px] overflow-hidden">
+                    <span
+                      className={`text-black transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 ${
+                        isHoveredChat ? "translate-y-[50px]" : "translate-y-4"
+                      }`}
+                    >
+                      <img
+                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                        alt="WhatsApp Logo"
+                        className="w-[30px]  h-[30px] "
+                      />
+                      <p className="text-base font-semibold">Chat</p>
+                    </span>
+
+                    <span
+                      className={`text-black w-full transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-3 ${
+                        isHoveredChat ? "-translate-y-4" : "translate-y-[50px]"
+                      }`}
+                    >
+                      <img
+                        src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                        alt="WhatsApp Logo"
+                        className="w-[30px]  h-[30px]"
+                      />
+                      <p className="text-base font-semibold">
+                        {" "}
+                        +91 97086 36151
+                      </p>
+                    </span>
+                  </div>
                 </Button>
               </a>
               {/* <AnimatedButton /> */}

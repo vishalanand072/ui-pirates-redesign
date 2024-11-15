@@ -217,6 +217,8 @@ const dataPrice = [
 ];
 
 const OurPricingCard = (props: any) => {
+  const [isHoveredChat, setIsHoveredChat] = useState(false);
+
   const tabs = [
     {
       id: "Design + Dev",
@@ -234,7 +236,7 @@ const OurPricingCard = (props: any) => {
 
   return (
     <div>
-      <Card className="rounded-[48px] max-md:rounded-[38px] mt-4 max-md:pb-2 bg-[#e9e9e9] dark:bg-[#18181b]">
+      <Card className="rounded-[48px] max-md:rounded-[38px] mt-4 max-md:pb-2 bg-[#e9e9e9] shadow-none border-1 border-[#0000000f]">
         <CardBody className="gap-4 max-md:gap-2 max-md:grid-cols-1 p-4 max-md:p-2">
           {data.map((item, index) => {
             const [selectedTab, setSelectedTab] = useState("Design + Dev");
@@ -247,7 +249,7 @@ const OurPricingCard = (props: any) => {
             return (
               <Card
                 key={index}
-                className="rounded-[40px] max-md:rounded-[30px] box-shadow group"
+                className="rounded-[40px] max-md:rounded-[30px] box-shadow min-h-[470px]"
               >
                 <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-2 gap-12  max-md:grid-cols-1 max-md:gap-4">
                   <div className="w-full">
@@ -445,7 +447,7 @@ const OurPricingCard = (props: any) => {
                       href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
                       target="blank"
                     >
-                      <Button
+                      {/* <Button
                         className="bg-black text-white button dark:bg-white dark:text-black w-full"
                         startContent={
                           <img
@@ -455,11 +457,52 @@ const OurPricingCard = (props: any) => {
                         }
                       >
                         Book a 15-min call
-                      </Button>
+                      </Button> */}
+
+                      <button
+                        color="primary"
+                        className="mt-3 bg-black text-white w-full  py-[16px] rounded-[16px] group"
+                        style={{ width: "100%" }}
+                        onMouseEnter={() => setIsHoveredChat(true)}
+                        onMouseLeave={() => setIsHoveredChat(false)}
+                      >
+                        <div className="flex flex-col items-center justify-center max-h-[24px] overflow-hidden">
+                          <span
+                            className={`text-white text-sm transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 
+                                
+                                 group-hover:translate-y-[50px] translate-y-3
+                                
+                               `}
+                          >
+                            <img
+                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                              alt="Dribble Logo"
+                            />
+                            Book a 15-min call
+                          </span>
+
+                          <span
+                            className={`text-white  transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-3
+                                
+                                translate-y-[50px] group-hover:-translate-y-3
+                                
+                               
+                              
+                              
+                              `}
+                          >
+                            <img
+                              src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                              alt="Dribble Logo"
+                            />
+                            Lets talk!
+                          </span>
+                        </div>
+                      </button>
                     </a>
                   </div>
 
-                  <div className="md:block max-md:hidden -mt-6">
+                  <div className="md:block max-md:hidden -mt-4">
                     {item.tab && (
                       <div className="flex w-full flex-col items-start justify-end mt-3 max-sm:mt-0">
                         <Tabs
@@ -491,7 +534,7 @@ const OurPricingCard = (props: any) => {
           <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
             {dataPrice.map((item, index) => {
               return (
-                <Card className="rounded-[40px] box-shadow group">
+                <Card className="rounded-[40px] box-shadow  shadow-none border-1 border-[#0000000f]">
                   <CardBody className="p-8 max-md:p-4 max-lg:p-6 grid grid-cols-1 gap-4 max-md:grid-cols-1">
                     <div className="w-full">
                       <div className="flex flex-row items-center justify-between">
@@ -538,7 +581,7 @@ const OurPricingCard = (props: any) => {
                           )}
                         </p>
                       </div>
-                      <a
+                      {/* <a
                         href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
                         target="blank"
                       >
@@ -554,6 +597,52 @@ const OurPricingCard = (props: any) => {
                         >
                           Book a 15-min call
                         </Button>
+                      </a> */}
+                      <a
+                        href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
+                        target="_blank"
+                        className="w-full"
+                      >
+                        <button
+                          color="primary"
+                          className="mt-3 bg-black text-white w-full  py-[16px] rounded-[16px] group"
+                          style={{ width: "100%" }}
+                          onMouseEnter={() => setIsHoveredChat(true)}
+                          onMouseLeave={() => setIsHoveredChat(false)}
+                        >
+                          <div className="flex flex-col items-center justify-center max-h-[24px] overflow-hidden">
+                            <span
+                              className={`text-white text-sm transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 
+                                
+                                 group-hover:translate-y-[50px] translate-y-3
+                                
+                               `}
+                            >
+                              <img
+                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                                alt="Dribble Logo"
+                              />
+                              Book a 15-min call
+                            </span>
+
+                            <span
+                              className={`text-white  transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-3
+                                
+                                translate-y-[50px] group-hover:-translate-y-3
+                                
+                               
+                              
+                              
+                              `}
+                            >
+                              <img
+                                src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                                alt="Dribble Logo"
+                              />
+                              Lets talk!
+                            </span>
+                          </div>
+                        </button>
                       </a>
                     </div>
 
