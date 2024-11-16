@@ -2,7 +2,7 @@ import PricingCard from "./pricingCard";
 const LandingBusinessHelp = () => {
   return (
     <>
-      <div className=" container mx-auto lg:px-12 max-md:px-4">
+      <div className=" container mx-auto lg:px-12 max-md:px-4  pt-32 max-md:pt-24 ">
         <div className="autoShow">
           <div className="flex flex-row items-center justify-center mb-6">
             <img

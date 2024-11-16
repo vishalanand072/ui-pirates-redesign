@@ -9,11 +9,11 @@ const LandingHero = () => {
       <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-10 container mx-auto">
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden pt-8">
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
-            <div className="flex flex-row overflow-hidden reveal-text-anim-0">
+            <div className="flex flex-row overflow-hidden">
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1730885769/kartik_n62nvw.svg"
                 alt="Dribble Logo"
-                className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[5deg]"
+                className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125  hover:rotate-[5deg] cursor-pointer"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"

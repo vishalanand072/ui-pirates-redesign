@@ -18,7 +18,7 @@ const LandingWork = () => {
 
   return (
     <>
-      <div className="container mx-auto xl:px-40 2xl:px-48 max-md:px-4 mt-32 max-md:mt-24 max-xl:px-4 max-2xl:px-0">
+      <div className="container mx-auto xl:px-40 2xl:px-48 max-md:px-4 pt-32 max-md:pt-24 max-xl:px-4 max-2xl:px-0">
         <div className="autoShow">
           <div className="flex flex-row items-center justify-center mb-6">
             <img
@@ -94,7 +94,7 @@ const LandingWork = () => {
                                 
                                `}
                 >
-                  View
+                  See More
                 </span>
 
                 <span
@@ -107,7 +107,7 @@ const LandingWork = () => {
                               
                               `}
                 >
-                  View Behance
+                  Recent Works
                 </span>
               </div>
             </button>

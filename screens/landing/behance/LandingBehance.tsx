@@ -178,7 +178,7 @@ const LandingBehanceFramor = () => {
                                 
                                `}
               >
-                View
+                See More
               </span>
 
               <span

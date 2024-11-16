@@ -21,13 +21,13 @@ const Landing = () => {
         <div className=" overflow-x-hidden py-12 max-md:py-4">
           <LandingAppScreen />
         </div>
-        <div id="Work" className="">
+        <div id="Work">
           <LandingWork />
         </div>
 
         <LandingAbout />
 
-        <div id="Services" className="mt-20">
+        <div id="Services">
           <LandingBusinessHelp />
         </div>
         <div className=" overflow-hidden">

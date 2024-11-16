@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import ResponsiveCarousel from "./carousel";
 function LandingTestimonials() {
   return (
-    <div className="mt-32">
+    <div className=" pt-32 max-md:pt-24 ">
       <div className="autoShow">
         <div className="flex flex-row items-center justify-center mb-6">
           <img
