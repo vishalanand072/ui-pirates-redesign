@@ -45,7 +45,7 @@ const LandingFaqs = () => {
                 onMouseEnter={() => setIsHoveredChat(true)}
                 onMouseLeave={() => setIsHoveredChat(false)}
               >
-                <div className="flex flex-col items-center justify-center max-h-[20px] overflow-hidden">
+                <div className="flex flex-col items-center justify-center max-h-[22px] overflow-hidden">
                   <span
                     className={`text-black transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 ${
                       isHoveredChat ? "translate-y-[50px]" : "translate-y-2"

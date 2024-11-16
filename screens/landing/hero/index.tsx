@@ -13,7 +13,7 @@ const LandingHero = () => {
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1730885769/kartik_n62nvw.svg"
                 alt="Dribble Logo"
-                className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125  hover:rotate-[5deg] cursor-pointer"
+                className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125  hover:rotate-[5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
