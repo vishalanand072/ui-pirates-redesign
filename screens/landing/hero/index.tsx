@@ -6,7 +6,7 @@ const LandingHero = () => {
 
   return (
     <>
-      <div className="flex flex-row items-center justify-center py-16 w-full max-lg:py-12 max-md:py-10 container mx-auto">
+      <div className="flex flex-row items-center justify-center py-12 w-full max-lg:py-10 max-md:py-8 container mx-auto">
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden pt-4">
           <div className="flex flex-row items-center justify-center overflow-hidden w-full ">
             <div className="flex flex-row overflow-hidden">
