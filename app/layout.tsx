@@ -6,31 +6,24 @@ import { Navbar } from "@/components/navbar";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: siteConfig.name,
-//     template: `%s - ${siteConfig.name}`,
-//   },
-//   description: siteConfig.description,
-//   icons: {
-//     icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729862847/Div_framer-bfl99f_v7cltn.svg",
-//   },
-// };
-
 export const metadata: Metadata = {
-  title: "UI Pirate",
-  description: "UI Pirate Description",
+  title: "UI Pirate by Vishal Anand | AI & SaaS UI/UX Design Expert",
+  description:
+    "Enterprise UI/UX designer specializing in AI SaaS applications and digital experiences. Trusted by top brands for high-performance design systems.",
+  keywords:
+    "AI UX design, enterprise UI design, SaaS product design, AI application UX, enterprise software UX, Vishal Anand, UI Pirate",
   openGraph: {
-    title: "UI Pirate",
-    description: "UI Pirate",
+    title: "UI Pirate | AI SaaS UI/UX Expert",
+    description:
+      "Helping AI & SaaS enterprises craft seamless, high-converting UI/UX designs. 9+ years of experience in enterprise-grade product design.",
     url: "https://uipirate.com",
-    siteName: "uipirate",
+    siteName: "UI Pirate by Vishal Anand",
     images: [
       {
-        url: "https://res.cloudinary.com/damm9iwho/image/upload/v1731044026/newfavicon_ibmap0.svg",
-        width: 800,
-        height: 600,
-        alt: "Default Image",
+        url: "https://res.cloudinary.com/dkziil6io/image/upload/v1742919377/ui-pirate-website_amh6qb.png",
+        width: 1200,
+        height: 630,
+        alt: "UI Pirate - AI SaaS Design Expert",
       },
     ],
     locale: "en_US",
