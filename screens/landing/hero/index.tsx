@@ -48,7 +48,8 @@ const LandingHero = () => {
           </div>
 
           <p className=" reveal-text-anim-1 lg:w-1/2 text-center text-lg mt-4 px-40 max-md:px-4 max-lg:12 font-sans leading-[25.2px]">
-            We build products that work for users and drive business growth
+            We help AI-driven SaaS and enterprise companies create intuitive,
+            high-performance user experiences.
           </p>
 
           <div className="my-12 flex flex-col items-center max-md:flex-col max-md:px-2 reveal-text-anim-2">
