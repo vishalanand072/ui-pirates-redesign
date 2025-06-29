@@ -12,8 +12,8 @@ const data = [
     dev: "499",
     design: "1999",
     designDev: "2399",
-    devhr: "20",
-    designhr: "15",
+    devhr: "25",
+    designhr: "20",
     list: [
       "8-12 week delivery",
       "SaaS design ready",
@@ -81,8 +81,8 @@ const data = [
     dev: "299",
     design: "499",
     designDev: "699",
-    devhr: "20",
-    designhr: "15",
+    devhr: "25",
+    designhr: "20",
     list: [
       "4-6 week delivery",
       "1-5 Pages",
@@ -148,7 +148,7 @@ const data = [
     description:
       "Scalable design systems with reusable components for consistent UI and easy integration.",
     designDev: "1,199",
-    designhr: "15",
+    designhr: "20",
     list: [
       "1-2 month delivery",
       "Consistent UI components",
