@@ -179,7 +179,7 @@ const dataPrice = [
     description:
       "Create stunning visuals and motion graphics for your digital projects with expert 3D animation and rendering.",
     price: "49",
-    pricehr: "30",
+    pricehr: "35",
     list: [
       "1-4 weeks delivery",
       "Custom motion graphics",
@@ -200,7 +200,7 @@ const dataPrice = [
     description:
       "Perfect for ongoing design & development needs or flexible, undefined scopes. Get continuous support for your projects.",
     price: "999",
-    pricehr: "20",
+    pricehr: "25",
     list: [
       "Flexible scope of work",
       "End-to-end project management",
