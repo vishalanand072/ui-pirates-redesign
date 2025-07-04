@@ -68,7 +68,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className=" container mx-auto h-[67px] reveal-text-anim-1 overflow-hidden pb-6">
+    <div className=" container mx-auto h-[67px] reveal-text-anim-1 overflow-hidden pb-6 relative z-[99999999]">
       {!loading && (
         <NextUINavbar
           maxWidth="xl"
@@ -76,10 +76,10 @@ export const Navbar = () => {
           isMenuOpen={isMenuOpen}
           onMenuOpenChange={setIsMenuOpen}
           className={clsx(
-            "bg-none mx-[25rem] blur-none py-0 w-auto px-0 max-lg:mx-20 max-md:mx-2 max-xl:mx-40 max-2xl:mx-[18rem] border-2 container flex flex-row items-center rounded-2xl sticky top-0 mt-3 max-md:mt-2 h-[55px] bg-transparent",
+            "bg-none mx-[25rem] blur-none py-0 w-auto px-0 max-lg:mx-20 max-md:mx-2 max-xl:mx-40 max-2xl:mx-[18rem] border-2 container flex flex-row items-center rounded-2xl sticky top-0 mt-3 max-md:mt-2 h-[55px] bg-transparent z-[99999999]",
             { "text-white": isDarkSection, "text-black": !isDarkSection }
           )}
-          style={{}}
+          style={{ zIndex: 99999999 }}
         >
           <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
             <NavbarBrand as="li" className="gap-3 max-w-fit">

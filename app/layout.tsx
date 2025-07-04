@@ -143,7 +143,7 @@ export default function RootLayout({
         )}
       >
         <div className="relative flex flex-col">
-          <div className="sticky top-0  " style={{ zIndex: 9999 }}>
+          <div className="sticky top-0  " style={{ zIndex: 999999999 }}>
             <Navbar />
           </div>
           <main className="">{children}</main>
