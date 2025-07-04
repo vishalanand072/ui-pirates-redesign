@@ -17,18 +17,21 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { useEffect, useState } from "react";
 
-// Smooth scroll function
+// Smooth scroll function that works with Locomotive Scroll
 const smoothScrollTo = (elementId: string) => {
   const element = document.getElementById(elementId);
   if (element) {
     // Calculate the offset to account for the fixed navbar
-    const navbarHeight = 80; // Adjust this value based on your navbar height
+    const navbarHeight = 80;
     const elementPosition = element.offsetTop - navbarHeight;
 
-    window.scrollTo({
-      top: elementPosition,
-      behavior: "smooth",
-    });
+    // Use scrollIntoView with a slight delay to work better with Locomotive Scroll
+    setTimeout(() => {
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "auto", // Use 'auto' to avoid conflicts with Locomotive Scroll
+      });
+    }, 100);
   }
 };
 
