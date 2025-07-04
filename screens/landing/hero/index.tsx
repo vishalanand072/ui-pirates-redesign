@@ -12,12 +12,12 @@ const LandingHero = () => {
             <div className="flex flex-row overflow-hidden">
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1730885769/kartik_n62nvw.svg"
-                alt="Dribble Logo"
+                alt="UI/UX Design Portfolio - Client Project Showcase"
                 className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125  hover:rotate-[5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero2_xt2zum.svg"
-                alt="Dribble Logo"
+                alt="SaaS Application Design - Enterprise UI/UX"
                 className=" reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
               />
               <img
@@ -27,25 +27,25 @@ const LandingHero = () => {
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768370/hero4_hrsvsr.svg"
-                alt="Dribble Logo"
+                alt="Mobile App Design - AI-Driven User Interface"
                 className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px]   transform transition duration-500 hover:scale-125  hover:rotate-[-5deg]"
               />
               <img
                 src="https://res.cloudinary.com/damm9iwho/image/upload/v1731309710/sharmin_ad0xqu.svg"
-                alt="Dribble Logo"
+                alt="Enterprise Software Design - Modern UI/UX Portfolio"
                 className="reveal-text-anim-0-left w-[60px] h-[100px] max-md:w-[60px] max-md:h-[100px] transform transition duration-500 hover:scale-125 hover:rotate-[-5deg]"
               />
             </div>
           </div>
 
-          <div className=" reveal-text-anim text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-5xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
+          <h1 className=" reveal-text-anim text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-5xl max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
             Modern, scalable design for{" "}
             {/* {" "}
             <span className="bg-gradient-to-b to-[#64B5F6] from-[#6A4DFF] bg-clip-text text-transparent">
               Saas & Tech
             </span>{" "} */}
             Saas & Tech companies
-          </div>
+          </h1>
 
           <p className=" reveal-text-anim-1 lg:w-1/2 text-center text-lg mt-4 px-40 max-md:px-4 max-lg:12 font-sans leading-[25.2px]">
             We help AI-driven SaaS and enterprise companies create intuitive,

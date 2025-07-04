@@ -10,7 +10,7 @@ const LandingAbout = () => {
               alt=""
             />
           </div>
-          <p className="heading-center">Who We Are</p>
+          <h2 className="heading-center">Who We Are</h2>
           <div className="flex flex-row items-center justify-center mb-8 mt-3 max-md:px-8">
             <p className="md:w-1/2 text-center content-center px-8  max-lg:px-4 max-md:px-0 font[500]">
               Combining creativity and technology to deliver standout websites

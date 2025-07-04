@@ -10,7 +10,7 @@ const LandingBusinessHelp = () => {
               alt=""
             />
           </div>
-          <p className="heading-center">How We Help Your Business</p>
+          <h2 className="heading-center">How We Help Your Business</h2>
           <div className="flex flex-row items-center justify-center mb-12 mt-3 px-40 max-lg:px-32 max-md:px-8">
             <p className="md:w-1/2 text-center content-center font-[500] leading-[25.2px]">
               Strategic design and development to help companies build better
