@@ -5,16 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Ensure smooth scrolling works with Locomotive Scroll */
-body {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
