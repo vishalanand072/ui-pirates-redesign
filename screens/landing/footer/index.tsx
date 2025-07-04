@@ -4,12 +4,37 @@ import { Button } from "@nextui-org/button";
 import CircularImage from "./circularImage";
 import { useState } from "react";
 
-const footerIcon = [
-  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665622/ri_linkedin-fill_nivdt4.svg",
-  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/bxl_upwork_qojqwz.svg",
-  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/uil_behance_ky54am.svg",
-  "https://res.cloudinary.com/damm9iwho/image/upload/v1730786563/uil_behance_mf89uz.svg",
-  "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/Frame_1000006225_bafxox.svg",
+const footerSocialLinks = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/company/ui-pirate-by-vishal-anand/",
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729665622/ri_linkedin-fill_nivdt4.svg",
+  },
+  {
+    name: "Upwork",
+    url: "https://www.upwork.com/agencies/1837026757439552424/",
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729665602/bxl_upwork_qojqwz.svg",
+  },
+  {
+    name: "Behance",
+    url: "https://www.behance.net/vishalanand-UI-UX",
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/uil_behance_ky54am.svg",
+  },
+  {
+    name: "Dribbble",
+    url: "https://dribbble.com/vishalanandUIUX",
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730786563/uil_behance_mf89uz.svg",
+  },
+  {
+    name: "Clutch",
+    url: "https://clutch.co/profile/ui-pirate-vishal-anand",
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729665601/Frame_1000006225_bafxox.svg", // Using existing icon as fallback
+  },
+  {
+    name: "Google Maps",
+    url: "https://maps.app.goo.gl/tcp9QiMqsUmN7xoY8",
+    icon: "https://res.cloudinary.com/dvk9ttiym/image/upload/v1751630868/maps_icon-s_rgw06n.svg", // Using LinkedIn icon as placeholder for Maps
+  },
 ];
 
 const images = [
@@ -128,21 +153,52 @@ const LandingFooter = () => {
                   </Button>
                 </a>
               </div>
-              <div className="flex flex-row items-center justify-center mt-4">
-                <div className="flex flex-row">
-                  {footerIcon.map((item, index) => (
-                    <img
+              <div className="flex flex-col items-center justify-center mt-6">
+                <p className="text-center text-sm text-gray-300 mb-3">
+                  Follow us on
+                </p>
+                <div className="flex flex-row gap-3 flex-wrap justify-center">
+                  {footerSocialLinks.map((item, index) => (
+                    <a
                       key={index}
-                      src={item}
-                      alt="Social Logo"
-                      className="w-[70px] h-[70px] max-md:w-[40px] max-md:h-[40px]"
-                    />
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transform transition-all duration-300 hover:scale-110 hover:opacity-80 p-2 rounded-lg hover:bg-white/10"
+                      title={`Visit UI Pirate on ${item.name}`}
+                    >
+                      <img
+                        src={item.icon}
+                        alt={`${item.name} Logo`}
+                        className="w-[60px] h-[60px] max-md:w-[35px] max-md:h-[35px] filter hover:brightness-110"
+                      />
+                    </a>
                   ))}
                 </div>
+                <p className="text-center text-xs text-gray-400 mt-2">
+                  LinkedIn • Upwork • Behance • Dribbble • Clutch • Google Maps
+                </p>
               </div>
-              <p className="text-center mt-4" style={{ zIndex: 9999 }}>
-                Copyright© 2023 UI Pirates. All Rights Reserved.
+              <p
+                className="text-center mt-6 text-gray-300"
+                style={{ zIndex: 9999 }}
+              >
+                Copyright© 2025 UI Pirate by Vishal Anand. All Rights Reserved.
               </p>
+
+              {/* Structured Data for Social Links */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    name: "UI Pirate by Vishal Anand",
+                    url: "https://uipirate.com",
+                    sameAs: footerSocialLinks.map((link) => link.url),
+                  }),
+                }}
+              />
             </div>
           </div>
         </div>
