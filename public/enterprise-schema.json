@@ -19,6 +19,28 @@
       "https://dribbble.com/vishalanandUIUX"
     ]
   },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Kartik Kumar",
+      "jobTitle": "UI/UX Designer",
+      "sameAs": [
+        "https://www.linkedin.com/in/kartik-kuamr/",
+        "https://www.behance.net/kartikkumar58",
+        "https://dribbble.com/Kartikuidesigns"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Syed Musaddiq",
+      "jobTitle": "UI/UX Designer",
+      "sameAs": [
+        "https://www.linkedin.com/in/syedmusaddiq/",
+        "https://www.behance.net/syedmusaddiq_uxui",
+        "https://medium.com/@syedmusaddiq514"
+      ]
+    }
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "IN"
@@ -41,7 +63,7 @@
     },
     {
       "@type": "Country",
-      "name": "United Kingdom", 
+      "name": "United Kingdom",
       "alternateName": "UK"
     },
     {
@@ -70,7 +92,7 @@
         }
       },
       {
-        "@type": "Offer", 
+        "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
           "name": "UX Design",
@@ -80,7 +102,7 @@
       {
         "@type": "Offer",
         "itemOffered": {
-          "@type": "Service", 
+          "@type": "Service",
           "name": "UI Development",
           "description": "Frontend development and implementation of UI designs"
         }
@@ -89,7 +111,7 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Graphic Design", 
+          "name": "Graphic Design",
           "description": "Brand identity, marketing materials, and visual communication design"
         }
       },
@@ -112,7 +134,7 @@
       {
         "@type": "Offer",
         "itemOffered": {
-          "@type": "Service", 
+          "@type": "Service",
           "name": "AI/SaaS App Design",
           "description": "Specialized design for AI-powered applications and SaaS platforms"
         }
@@ -131,28 +153,52 @@
     {
       "@type": "Audience",
       "audienceType": "Enterprise clients",
-      "geographicArea": ["United States", "United Kingdom", "Singapore", "India", "Australia"]
+      "geographicArea": [
+        "United States",
+        "United Kingdom",
+        "Singapore",
+        "India",
+        "Australia"
+      ]
     },
     {
-      "@type": "Audience", 
+      "@type": "Audience",
       "audienceType": "Fortune 500 companies",
-      "geographicArea": ["United States", "United Kingdom", "Singapore", "India", "Australia"]
+      "geographicArea": [
+        "United States",
+        "United Kingdom",
+        "Singapore",
+        "India",
+        "Australia"
+      ]
     },
     {
       "@type": "Audience",
       "audienceType": "SaaS companies",
-      "geographicArea": ["United States", "United Kingdom", "Singapore", "India", "Australia"]
+      "geographicArea": [
+        "United States",
+        "United Kingdom",
+        "Singapore",
+        "India",
+        "Australia"
+      ]
     },
     {
       "@type": "Audience",
-      "audienceType": "Tech startups", 
-      "geographicArea": ["United States", "United Kingdom", "Singapore", "India", "Australia"]
+      "audienceType": "Tech startups",
+      "geographicArea": [
+        "United States",
+        "United Kingdom",
+        "Singapore",
+        "India",
+        "Australia"
+      ]
     }
   ],
   "knowsAbout": [
     "Enterprise UI Design",
     "UX Design",
-    "UI Development", 
+    "UI Development",
     "Graphic Design",
     "Motion Graphics",
     "Design Systems",
@@ -166,8 +212,19 @@
   ],
   "sameAs": [
     "https://www.linkedin.com/in/vishal-a-51bb49110",
-    "https://www.behance.net/vishalanand-UI-UX", 
-    "https://dribbble.com/vishalanandUIUX"
+    "https://www.linkedin.com/company/ui-pirate-by-vishal-anand/",
+    "https://www.behance.net/vishalanand-UI-UX",
+    "https://www.behance.net/UI-Pirate",
+    "https://dribbble.com/vishalanandUIUX",
+    "https://dribbble.com/Kartikuidesigns",
+    "https://www.upwork.com/agencies/1837026757439552424/",
+    "https://www.upwork.com/freelancers/~011edd6b2713748d24",
+    "https://upwork.com/freelancers/vishalanand",
+    "https://www.upwork.com/freelancers/~019cb19914715b42b9",
+    "https://clutch.co/profile/ui-pirate-vishal-anand",
+    "https://x.com/UI_Pirate",
+    "https://www.reddit.com/user/UI-Pirate/",
+    "https://maps.app.goo.gl/tcp9QiMqsUmN7xoY8"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",

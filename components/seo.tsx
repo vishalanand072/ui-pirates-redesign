@@ -121,8 +121,17 @@ const Seo = () => {
     url: "https://uipirate.com",
     sameAs: [
       "https://www.linkedin.com/in/vishal-a-51bb49110",
+      "https://www.linkedin.com/company/ui-pirate-by-vishal-anand/",
       "https://www.behance.net/vishalanand-UI-UX",
+      "https://www.behance.net/UI-Pirate",
       "https://dribbble.com/vishalanandUIUX",
+      "https://www.upwork.com/agencies/1837026757439552424/",
+      "https://www.upwork.com/freelancers/~011edd6b2713748d24",
+      "https://upwork.com/freelancers/vishalanand",
+      "https://clutch.co/profile/ui-pirate-vishal-anand",
+      "https://x.com/UI_Pirate",
+      "https://www.reddit.com/user/UI-Pirate/",
+      "https://maps.app.goo.gl/tcp9QiMqsUmN7xoY8",
     ],
     knowsAbout: [
       "UI Design",
