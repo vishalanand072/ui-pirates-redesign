@@ -53,6 +53,56 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
+        <meta name="msvalidate.01" content="367497DBA609A56C845E2A1D4ECC5F42" />
+
+        {/* AI Crawler Meta Tags */}
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="ai-content-declaration" content="ai-assisted" />
+        <meta name="content-type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Vishal Anand - UI Pirate" />
+        <meta
+          name="subject"
+          content="UI/UX Design Services, SaaS Design, AI Application Design"
+        />
+        <meta name="classification" content="Business, Design, Technology" />
+        <meta
+          name="keywords"
+          content="UI design, UX design, UI development, graphic design, motion graphics, design systems, AI SaaS app design, mobile app design, enterprise design, USA UK Singapore India Australia, enterprise clients, startup design, tech company design, Vishal Anand, UI Pirate"
+        />
+        <meta name="geo.region" content="US, GB, SG, IN, AU" />
+        <meta
+          name="geo.placename"
+          content="United States, United Kingdom, Singapore, India, Australia"
+        />
+        <meta
+          name="target-audience"
+          content="Enterprise clients, SaaS companies, Tech startups, Mobile app companies"
+        />
+
+        {/* AI Data Reference */}
+        <link rel="alternate" type="application/ld+json" href="/ai-data.json" />
+        <link
+          rel="alternate"
+          type="application/ld+json"
+          href="/enterprise-schema.json"
+        />
+
+        {/* Hreflang for international targeting */}
+        <link rel="alternate" hrefLang="en-us" href="https://uipirate.com/" />
+        <link rel="alternate" hrefLang="en-gb" href="https://uipirate.com/" />
+        <link rel="alternate" hrefLang="en-sg" href="https://uipirate.com/" />
+        <link rel="alternate" hrefLang="en-in" href="https://uipirate.com/" />
+        <link rel="alternate" hrefLang="en-au" href="https://uipirate.com/" />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://uipirate.com/"
+        />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
           rel="stylesheet"
@@ -65,10 +115,7 @@ export default function RootLayout({
         )}
       >
         <div className="relative flex flex-col">
-          <div
-            className="sticky top-0  "
-            style={{ zIndex: 999999999999999999 }}
-          >
+          <div className="sticky top-0  " style={{ zIndex: 9999 }}>
             <Navbar />
           </div>
           <main className="">{children}</main>
