@@ -17,9 +17,24 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { useEffect, useState } from "react";
 
+// Smooth scroll function
+const smoothScrollTo = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    // Calculate the offset to account for the fixed navbar
+    const navbarHeight = 80; // Adjust this value based on your navbar height
+    const elementPosition = element.offsetTop - navbarHeight;
+
+    window.scrollTo({
+      top: elementPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
 export const Navbar = () => {
   const [isDarkSection, setIsDarkSection] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true); // Loading state to control navbar visibility
 
   useEffect(() => {
@@ -55,6 +70,8 @@ export const Navbar = () => {
         <NextUINavbar
           maxWidth="xl"
           position="sticky"
+          isMenuOpen={isMenuOpen}
+          onMenuOpenChange={setIsMenuOpen}
           className={clsx(
             "bg-none mx-[25rem] blur-none py-0 w-auto px-0 max-lg:mx-20 max-md:mx-2 max-xl:mx-40 max-2xl:mx-[18rem] border-2 container flex flex-row items-center rounded-2xl sticky top-0 mt-3 max-md:mt-2 h-[55px] bg-transparent",
             { "text-white": isDarkSection, "text-black": !isDarkSection }
@@ -92,16 +109,15 @@ export const Navbar = () => {
                   key={item.href}
                   className="hover:bg-[#E9E9E9] px-2 rounded-[0.65rem] pb-[4px] hover:font-[700]"
                 >
-                  <NextLink
+                  <button
                     className={clsx(
                       linkStyles({ color: "foreground" }),
-                      "data-[active=true]:text-primary data-[active=true]:font-medium text-sm font-[500] "
+                      "data-[active=true]:text-primary data-[active=true]:font-medium text-sm font-[500] cursor-pointer"
                     )}
-                    color="foreground"
-                    href={item.href}
+                    onClick={() => smoothScrollTo(item.href.replace("#", ""))}
                   >
                     {item.label}
-                  </NextLink>
+                  </button>
                 </NavbarItem>
               ))}
             </ul>
@@ -150,26 +166,26 @@ export const Navbar = () => {
                 Have an Idea?
               </Button>
             </a>
+            <NavbarMenuToggle
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              className="md:hidden"
+            />
           </NavbarContent>
 
           <NavbarMenu>
             <div className="mx-4 mt-2 flex flex-col gap-2">
               {siteConfig.navMenuItems.map((item, index) => (
                 <NavbarMenuItem key={`${item}-${index}`}>
-                  <Link
-                    // color={
-                    //   index === 2
-                    //     ? "primary"
-                    //     : index === siteConfig.navMenuItems.length - 1
-                    //     ? "danger"
-                    //     : "foreground"
-                    // }
-                    color="foreground"
-                    href={item.href}
-                    size="lg"
+                  <button
+                    className="text-foreground text-lg cursor-pointer text-left w-full"
+                    onClick={() => {
+                      smoothScrollTo(item.href.replace("#", ""));
+                      // Close mobile menu after clicking
+                      setIsMenuOpen(false);
+                    }}
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </NavbarMenuItem>
               ))}
             </div>
