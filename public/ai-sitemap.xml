@@ -56,4 +56,40 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Social Media & Business Profiles -->
+  <url>
+    <loc>https://www.linkedin.com/company/ui-pirate-by-vishal-anand/</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.behance.net/vishalanand-UI-UX</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dribbble.com/vishalanandUIUX</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://clutch.co/profile/ui-pirate-vishal-anand</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.upwork.com/agencies/1837026757439552424/</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

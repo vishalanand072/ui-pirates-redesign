@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     images: [
       "https://res.cloudinary.com/dkziil6io/image/upload/v1742919377/ui-pirate-website_amh6qb.png",
     ],
+    site: "@UI_Pirate",
+    creator: "@UI_Pirate",
   },
   alternates: {
     canonical: "https://uipirate.com",
@@ -114,6 +116,19 @@ export default function RootLayout({
           rel="alternate"
           hrefLang="x-default"
           href="https://uipirate.com/"
+        />
+
+        {/* Social Media and Business Profile Links for SEO */}
+        <link
+          rel="me"
+          href="https://www.linkedin.com/company/ui-pirate-by-vishal-anand/"
+        />
+        <link rel="me" href="https://www.behance.net/vishalanand-UI-UX" />
+        <link rel="me" href="https://dribbble.com/vishalanandUIUX" />
+        <link rel="me" href="https://x.com/UI_Pirate" />
+        <link
+          rel="me"
+          href="https://clutch.co/profile/ui-pirate-vishal-anand"
         />
 
         <link
