@@ -7,15 +7,16 @@ import { Navbar } from "@/components/navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: "UI Pirate by Vishal Anand | AI & SaaS UI/UX Design Expert",
+  title:
+    "UI Pirate | Enterprise UI/UX Design & Development | USA, UK, Singapore, India, Australia",
   description:
-    "Enterprise UI/UX designer specializing in AI SaaS applications and digital experiences. Trusted by top brands for high-performance design systems.",
+    "Leading UI/UX design agency serving enterprise clients globally. Specializing in UI development, graphic design, motion graphics, design systems, AI/SaaS apps, and mobile applications. Trusted by Fortune 500 companies across USA, UK, Singapore, India, and Australia.",
   keywords:
-    "AI UX design, enterprise UI design, SaaS product design, AI application UX, enterprise software UX, Vishal Anand, UI Pirate",
+    "enterprise UI design, UI development, graphic design, motion graphics, design systems, AI SaaS app design, mobile app design, enterprise clients USA UK Singapore India Australia, Fortune 500 design, startup design agency, Vishal Anand, UI Pirate",
   openGraph: {
-    title: "UI Pirate | AI SaaS UI/UX Expert",
+    title: "UI Pirate | Global Enterprise UI/UX Design & Development Agency",
     description:
-      "Helping AI & SaaS enterprises craft seamless, high-converting UI/UX designs. 9+ years of experience in enterprise-grade product design.",
+      "Transform your business with world-class UI/UX design and development. Serving enterprise clients across USA, UK, Singapore, India & Australia. Specializing in AI/SaaS apps, mobile design, and design systems.",
     url: "https://uipirate.com",
     siteName: "UI Pirate by Vishal Anand",
     images: [
@@ -23,11 +24,23 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/dkziil6io/image/upload/v1742919377/ui-pirate-website_amh6qb.png",
         width: 1200,
         height: 630,
-        alt: "UI Pirate - AI SaaS Design Expert",
+        alt: "UI Pirate - Global Enterprise Design Agency",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UI Pirate | Enterprise Design Agency - Global Services",
+    description:
+      "World-class UI/UX design & development for enterprise clients. AI/SaaS apps, mobile design, motion graphics. Serving USA, UK, Singapore, India, Australia.",
+    images: [
+      "https://res.cloudinary.com/dkziil6io/image/upload/v1742919377/ui-pirate-website_amh6qb.png",
+    ],
+  },
+  alternates: {
+    canonical: "https://uipirate.com",
   },
   icons: {
     icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1731044026/newfavicon_ibmap0.svg", // Path for the favicon.ico file
