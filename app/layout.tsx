@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
+        <meta name="msvalidate.01" content="367497DBA609A56C845E2A1D4ECC5F42" />
         <link
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
           rel="stylesheet"
