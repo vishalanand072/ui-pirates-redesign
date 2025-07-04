@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  // Remove anchor links for Bing compatibility
   const pages = [
     { url: "/", priority: "1.0", changefreq: "weekly" },
     { url: "/about", priority: "0.8", changefreq: "monthly" },
+    { url: "/#Work", priority: "0.9", changefreq: "weekly" },
+    { url: "/#Services", priority: "0.9", changefreq: "monthly" },
+    { url: "/#Pricing", priority: "0.8", changefreq: "monthly" },
+    { url: "/#FAQs", priority: "0.7", changefreq: "monthly" },
   ];
   const baseUrl = "https://uipirate.com";
   const currentDate = new Date().toISOString().split("T")[0];
