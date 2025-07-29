@@ -222,46 +222,94 @@ const LandingHero = () => {
             to scale.
           </p>
 
-          <div className="my-12 flex flex-col items-center max-md:flex-col max-md:px-2 button-spring-animate relative">
-            {/* Star firework background */}
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="star-firework-animate text-yellow-400 text-2xl">
-                  ✨
-                </div>
-              </div>
-              <div className="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2">
-                <div
-                  className="star-firework-animate text-blue-400 text-lg"
-                  style={{ animationDelay: "0.5s" }}
-                >
-                  ⭐
-                </div>
-              </div>
-              <div className="absolute bottom-1/3 right-1/3 transform translate-x-1/2 translate-y-1/2">
-                <div
-                  className="star-firework-animate text-purple-400 text-xl"
-                  style={{ animationDelay: "1s" }}
-                >
-                  ✨
-                </div>
-              </div>
-              <div className="absolute top-2/3 right-1/4 transform translate-x-1/2 -translate-y-1/2">
-                <div
-                  className="star-firework-animate text-pink-400 text-sm"
-                  style={{ animationDelay: "1.5s" }}
-                >
-                  ⭐
-                </div>
-              </div>
-            </div>
-
+          <div
+            className="my-12 flex flex-col items-center max-md:flex-col max-md:px-2 button-spring-animate relative"
+            style={{ overflow: "visible" }}
+          >
             <a
               href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
               target="blank"
               className="relative z-10"
             >
-              <div className="bg-black text-white button group transform transition-all duration-[600ms] ease-in-out max-md:px-4 px-6 py-2 buttonHero md:hover:pl-12 hover:bg-black flex flow-row items-center gap-3 cta-button-hover">
+              <div className=" hover:border-back/50 hover:border-4 border-4 bg-black text-white rounded-[20px] h-auto group transform transition-all duration-[600ms] ease-in-out max-md:px-4 px-6 py-4 buttonHero md:hover:pl-12 hover:bg-black flex flow-row items-center gap-3 relative">
+                {/* Star Confetti Container - Behind button */}
+                <div className="star-confetti-container">
+                  <div className="star-confetti-revolve">
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                    <div className="star-confetti">
+                      <img
+                        src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753806991/tabler-icon-star-filled_oymrgq.svg"
+                        alt="star"
+                      />
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex flex-row gap-2 items-center md:mr-11">
                   <img
                     src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
@@ -282,7 +330,7 @@ const LandingHero = () => {
                     className="w-auto h-[30px] md:absolute  transform translate-x-0 transition-all duration-500 ease-in-out  md:group-hover:-translate-x-[2.1rem] max-md:order-1  md:order-3 md:group-hover:order-1"
                   />
                 </div>
-                <p> Book a 15-min call</p>
+                <p className="text-lg font-bold"> Book a 15-min call</p>
                 <div>
                   <img
                     src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
@@ -292,7 +340,7 @@ const LandingHero = () => {
                 </div>
               </div>
             </a>
-            <div className="w-[100%] mt-3">
+            <div className="w-[100%] mt-3 z-10">
               <a
                 href="https://wa.link/i35lma"
                 target="_blank"
@@ -301,7 +349,7 @@ const LandingHero = () => {
                 <Button
                   color="primary"
                   variant="bordered"
-                  className=" border-gray-300 text-black font-bold w-full hover:border-gray-200 rounded-[16px]   py-[25px]"
+                  className=" border-gray-300 text-black font-bold w-full bg-white hover:border-gray-200 rounded-[16px]   py-[25px]"
                   style={{ width: "100%" }}
                   onMouseEnter={() => setIsHoveredChat(true)}
                   onMouseLeave={() => setIsHoveredChat(false)}
