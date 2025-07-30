@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
   {
     heading: "50+",
-    subHeding: "From MVPs to complex dashboards, shipped across 15+ countries",
+    subHeding: "From MVPs to complex dashboards, shipped across 6 countries",
     subtitle1: "Projects",
     subtitle2: "Completed",
     hoverBg: "#dd3500e6",
