@@ -34,7 +34,7 @@ const clients = [
     occupation: "Founder",
     location: "New Delhi India",
     review:
-      "The team delivered an exceptional e-commerce website for us. Their attention to detail and seamless integration of Shopify exceeded our expectations. It’s been a great experience working with them, and the platform has significantly enhanced our online presence and customer engagement.",
+      "UiPirate turned our messy Shopify wishlist into a clean, working store. Custom features? Solid. Backend? Easy. They kept it simple, fast, and actually cared about making it work. Big win for us.",
     satisfactionScore: 10,
     company: "Godrics",
     projects: [],
@@ -47,7 +47,7 @@ const clients = [
     occupation: "President",
     location: "Jharkhand, India",
     review:
-      "Working with this team was a game-changer for Mission Blue. The new website and brand visuals have captured our mission beautifully, bringing clarity and energy to our digital presence. The online campaign they crafted amplified our winter distribution outreach in ways we hadn’t imagined. Thrilled to continue this partnership!",
+      "Vishal and the team didn’t just build us a site, they helped Mission Blue tell our story better. Their design work during our winter campaign really helped us reach people we couldn’t before. You can feel their heart in the details.",
     satisfactionScore: 10,
     company: "Mission Blue Foundation",
     projects: [],
@@ -60,7 +60,7 @@ const clients = [
     occupation: "Co-Founder",
     location: "Maharashtra, India",
     review:
-      "Absolutely thrilled with the website! The design captures our brand’s elegance perfectly, and the Shopify integration makes managing our e-commerce so smooth. The whole process was seamless, and the team really understood our vision.",
+      "We recently worked with Vishal on a UI/UX assignment to revamp our landing page with the goal of improving our website’s conversion rate. Vishal demonstrated exceptional flexibility, reliability, and strategic insight throughout the project.What stood out most was his ability to truly understand our brand’s identity and target persona. ",
     satisfactionScore: 10,
     company: "Rings & I",
     projects: [],
@@ -73,7 +73,7 @@ const clients = [
     occupation: "Co-Founder",
     location: "Bangalore, India",
     review:
-      "Working with this team has been a game-changer for us. They took our vision for a cutting-edge AI trading tool and translated it seamlessly into a dynamic, professional platform. The result has elevated our brand and made our offerings far more engaging and user-friendly.",
+      "I'm amazed at how the team brought our complex AI trading vision to life. Not only did they nail the website design, but their work on Brahmastra - our AI trading platform - was outstanding. Their deep understanding of both design and technical requirements helped create a sophisticated tool that makes algo-trading accessible to our users. Vishal's team never backed down from the complex data visualization challenges, and the multiple iterations really perfected the user experience.",
     satisfactionScore: 10,
     company: "ArthAlpha, Brahmastra",
     projects: [],
@@ -86,7 +86,7 @@ const clients = [
     occupation: "CEO and Co-Founder",
     location: "New Delhi, India",
     review:
-      "Collaborating with this team has been a game-changer for Niya. They Created impactful corporate Video, that authentically reflect our mission to support mental well-being in workplaces. Their creativity and dedication helped us communicate our values in a way that truly resonates.",
+      "Vishal understood the emotional side of our brand without us over-explaining it. The visuals, the tone, the flow, it just felt like Niya. That kind of sensitivity is rare in creative work.",
     satisfactionScore: 10,
     company: "Niya",
     projects: [],
@@ -99,7 +99,7 @@ const clients = [
     occupation: "Chairman",
     location: "Jharkhand, India",
     review:
-      "Working with the team was a transformative experience. They didn’t just build our website; they took care of our entire brand presence—from design to the finer details of our identity. They understood the spirit of Yuva Sadan and translated it beautifully across every part of our platform. Their attention to detail and commitment to creating something meaningful for us truly set them apart. Highly recommend!",
+      "We weren’t just another client to Vishal, he genuinely became part of Yuva Sadan’s mission. The care he showed in getting every small detail right still means a lot to us. Our new identity finally feels like us.",
     satisfactionScore: 10,
     company: "Yuva Sadan",
     projects: [],
@@ -112,7 +112,7 @@ const clients = [
     occupation: "Founder",
     location: "Jharkhand, India",
     review:
-      "The team brought Parivarik TV to life with an OTT platform that truly captures our mission to celebrate regional art and bring families together. Their dedication to every detail—from design to functionality—was impressive. It’s clear they cared about making our vision a reality, creating a platform that feels both innovative and authentic to our roots. Truly grateful for their work!",
+      "From day one, Vishal was hyped about the idea. He managed to make Parivarik TV feel modern without losing the desi soul. Our families love using it, clean UI, solid UX, and it just feels right.",
     satisfactionScore: 10,
     company: "Parivarik TV",
     projects: [],

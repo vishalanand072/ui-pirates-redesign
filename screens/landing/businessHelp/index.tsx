@@ -5,16 +5,16 @@ const LandingBusinessHelp = () => {
       <div className=" container mx-auto lg:px-12 max-md:px-4  pt-32 max-md:pt-24 ">
         <div className="autoShow">
           <div className="flex flex-row items-center justify-center mb-6">
-            <img
-              src="https://res.cloudinary.com/damm9iwho/image/upload/v1730973383/services_f0hzhb.svg"
-              alt=""
-            />
+            <span className="bg-[#8EF1F1] px-4 py-2 rounded-xl font-semibold uppercase border-cyan-400 border-2">
+              Services
+            </span>
           </div>
-          <h2 className="heading-center">How We Help Your Business</h2>
-          <div className="flex flex-row items-center justify-center mb-12 mt-3 px-40 max-lg:px-32 max-md:px-8">
+          <h2 className="heading-center">What We Design, Build, & Scale</h2>
+          <div className="flex flex-row items-center justify-center mb-12 mt-3 px-28 max-lg:px-32 max-md:px-3">
             <p className="md:w-1/2 text-center content-center font-[500] leading-[25.2px]">
-              Strategic design and development to help companies build better
-              digital products and experiences.
+              From high-performing SaaS apps to scalable design systems, we help
+              founders and product teams ship clean, conversion-driven
+              experiences — faster.
             </p>
           </div>
         </div>

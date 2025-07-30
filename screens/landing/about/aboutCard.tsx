@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
   {
     heading: "50+",
+    subHeding: "From MVPs to complex dashboards, shipped across 15+ countries",
     subtitle1: "Projects",
     subtitle2: "Completed",
     hoverBg: "#dd3500e6",
@@ -16,6 +17,8 @@ const data = [
   },
   {
     heading: "20+",
+    subHeding:
+      "Including AI tools, HR platforms, fintech apps, and B2B SaaS products",
     subtitle1: "Enterprise",
     subtitle2: "Clients",
     hoverBg: "#8EF1F1E5",
@@ -23,13 +26,16 @@ const data = [
   },
   {
     heading: "20+",
+    subHeding:
+      "SaaS, EdTech, FinTech, HealthTech, LegalTech, Creator Economy, and more",
     subtitle1: "Industries",
     subtitle2: "Served",
     hoverBg: "#b0ddcae6",
     textHover: "#000",
   },
   {
-    heading: "8+",
+    heading: "9+",
+    subHeding: "Built for scale, speed, and seamless handoff to developers",
     subtitle1: " Years of",
     subtitle2: "Experience",
     hoverBg: "#f4e342e6",
@@ -137,7 +143,7 @@ const AboutCardAnimation = () => {
             }}
           >
             <div>
-              <p className="text-8xl max-md:text-7xl mb-4 lg:pt-4 overflow-hidden font-[500] max-md:font-[500]">
+              <p className="text-8xl max-md:text-6xl mb-4 lg:pt-4 overflow-hidden font-[500] max-md:font-[500]">
                 {item.heading.split("").map((letter, i) => (
                   <span
                     key={i}
@@ -152,7 +158,10 @@ const AboutCardAnimation = () => {
                   </span>
                 ))}
               </p>
-              <p className="text-3xl max-md:text-2xl font-semibold flex flex-row items-end justify-end pt-20 text-right max-md:pt-14 uppercase">
+              <p className="text-lg max-md:text-sm font-medium flex flex-row ">
+                {item.subHeding}
+              </p>
+              <p className="text-3xl max-md:text-2xl font-semibold flex flex-row items-end justify-end pt-14 text-right max-md:pt-6 uppercase">
                 {item.subtitle1}
                 <br />
                 {item.subtitle2}

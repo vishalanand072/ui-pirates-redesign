@@ -13,13 +13,15 @@ const LandingFaqs = () => {
       {/* Left section - Sticky */}
       <div className="col-span-2 max-md:col-span-1 lg:pr-12 max-xl:pr-8 max-md:pr-0 md:sticky md:top-4 md:h-screen">
         <div className="flex flex-row items-start mb-6 max-md:items-center max-md:justify-center">
-          <img
-            src="https://res.cloudinary.com/damm9iwho/image/upload/v1730981154/faq_pagz0a.svg"
-            alt="FAQ Icon"
-          />
+          <span className="bg-[#8EF1F1] px-4 py-2 rounded-xl font-semibold uppercase border-cyan-400 border-2">
+            FAQs
+          </span>
         </div>
-        <h2 className="text-5xl max-lg:text-3xl max-2xl:text-4xl max-md:text-3xl font-[700] mt-3 mb-6 max-md:text-center max-md:px-8">
-          Have questions?! We've got you!
+        <h2 className="text-5xl max-lg:text-3xl max-2xl:text-4xl max-md:text-3xl font-[700] mt-3 mb-1 max-md:text-center max-md:px-8">
+          Have questions?
+        </h2>
+        <h2 className="text-5xl max-lg:text-3xl max-2xl:text-4xl max-md:text-3xl font-[700] mb-6 max-md:text-center max-md:px-8">
+          We've got you!
         </h2>
 
         {/* Card with contact options */}
