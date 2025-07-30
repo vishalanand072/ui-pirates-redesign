@@ -678,6 +678,114 @@ const OurPricingCard = (props: any) => {
               );
             })}
           </div>
+
+          <Card className="rounded-[40px] max-md:rounded-[30px] box-shadow">
+            <CardBody className="p-8 max-md:p-4 max-lg:p-6">
+              <div className="w-full text-center">
+                <p className="text-3xl max-md:text-2xl mt-8 mb-4 font-semibold ">
+                  Not sure which plan fits your scope?
+                </p>
+                <p className="font-[500]">We’ll guide you.</p>
+
+                <div
+                  className="my-12 flex flex-row items-center justify-center max-lg:flex-col w-full max-md:flex-col max-md:px-2 button-spring-animate relative"
+                  style={{ overflow: "visible" }}
+                >
+                  <a
+                    href="https://cal.com/vishal-anand/introduction-and-free-ui-ux-strategy-session"
+                    target="blank"
+                    className="w-[300px] max-lg:mt-3 lg:ml-3"
+                  >
+                    <div className=" hover:border-back/50 hover:border-4 border-4 bg-black text-white rounded-[20px] h-auto group transform transition-all duration-[600ms] ease-in-out max-md:px-4 px-6 py-4 buttonHero md:hover:pl-12 hover:bg-black flex flow-row items-center gap-3 relative">
+                      <div className="flex flex-row gap-2 items-center md:mr-11">
+                        <img
+                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1730289917/Frame_1984078767_sjyim4.svg"
+                          alt="Dribble Logo"
+                          id="image"
+                          className="w-auto h-[30px] md:absolute  transform translate-x-0 transition-all duration-[580ms] ease-in-out  md:group-hover:translate-x-4 max-md:order-3  md:order-1 md:group-hover:order-3"
+                        />
+                        <p
+                          id="plus"
+                          className="text-[#5B5B5B] text-xl font-bold md:absolute order-2 -mt-1"
+                        >
+                          +
+                        </p>
+                        <img
+                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729761707/vishal_profile_d2fbyt.svg"
+                          alt="Dribble Logo"
+                          id="client"
+                          className="w-auto h-[30px] md:absolute  transform translate-x-0 transition-all duration-500 ease-in-out  md:group-hover:-translate-x-[2.1rem] max-md:order-1  md:order-3 md:group-hover:order-1"
+                        />
+                      </div>
+                      <p className="text-lg max-md:text-sm font-bold">
+                        {" "}
+                        Book a 15-min call
+                      </p>
+                      <div className="max-md:hidden">
+                        <img
+                          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729594468/free_p7odqs.svg"
+                          alt="Dribble Logo"
+                          className="w-auto h-[30px]"
+                        />
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://wa.link/i35lma"
+                    target="_blank"
+                    className="w-[300px] max-lg:mt-3 lg:ml-3"
+                  >
+                    <Button
+                      color="primary"
+                      variant="bordered"
+                      className=" border-back/50 hover:border-4 border-4 text-black font-bold w-full bg-white hover:border-gray-200 rounded-[16px]   py-[30px]"
+                      style={{ width: "100%" }}
+                      onMouseEnter={() => setIsHoveredChat(true)}
+                      onMouseLeave={() => setIsHoveredChat(false)}
+                    >
+                      <div className="flex flex-col items-center justify-center max-h-[32px] overflow-hidden">
+                        <span
+                          className={`text-black transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-x-3 ${
+                            isHoveredChat
+                              ? "translate-y-[50px]"
+                              : "translate-y-4"
+                          }`}
+                        >
+                          <img
+                            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                            alt="WhatsApp Logo"
+                            className="w-[30px]  h-[30px] "
+                          />
+                          <p className="text-lg max-md:text-sm font-bold">
+                            Chat on WhatsApp
+                          </p>
+                        </span>
+
+                        <span
+                          className={`text-black w-full transition-transform duration-300 ease-in-out transform flex flex-row items-center gap-3 ${
+                            isHoveredChat
+                              ? "-translate-y-4"
+                              : "translate-y-[50px]"
+                          }`}
+                        >
+                          <img
+                            src="https://res.cloudinary.com/damm9iwho/image/upload/v1729511358/whatsapp_zssebt.svg"
+                            alt="WhatsApp Logo"
+                            className="w-[30px]  h-[30px]"
+                          />
+                          <p className="text-base font-semibold">
+                            {" "}
+                            +91 97086 36151
+                          </p>
+                        </span>
+                      </div>
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </CardBody>
+          </Card>
         </CardBody>
       </Card>
     </div>

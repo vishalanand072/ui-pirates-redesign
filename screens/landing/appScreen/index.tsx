@@ -43,7 +43,7 @@ const LandingAppScreen = () => {
           className="pt-40 max-lg:hidden"
         />
         <img
-          src="https://res.cloudinary.com/damm9iwho/image/upload/v1729768962/Frame_1984078760_r8jeqb.svg"
+          src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753847870/Ai_APp_mockup_y0mt4j.svg"
           alt="app"
           id="right"
           className="rotate-[6deg] max-md:w-[40%] "

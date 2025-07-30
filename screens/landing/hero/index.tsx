@@ -2,6 +2,7 @@
 import { Button } from "@nextui-org/button";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Tooltip } from "@nextui-org/react";
 
 const StarRating = ({
   className = "",
@@ -60,22 +61,25 @@ const LandingHero = () => {
           <div className="flex flex-row items-center justify-center w-full py-8 max-md:py-4 max-md:pb-2 overflow-visible">
             <div className="flex flex-row gap-2 overflow-visible">
               <div className="items-center flex flex-col max-w-[200px] gap-2 overflow-visible">
-                <div className="w-[32px] h-[32px] relative overflow-visible group">
-                  <img
-                    src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805631/Kaivan_Dave-modified_mcm9iw.png"
-                    alt="SaaS Application Design - Enterprise UI/UX"
-                    className="w-[32px] h-[32px] cursor-pointer transition-transform duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards]"
-                    style={{
-                      animation: "testimonialImageDrop 0.4s ease-out forwards",
-                      animationDelay: "0.3s",
-                      opacity: 0,
-                      transform: "translateY(-40px) scale(0.8)",
-                    }}
-                  />
-                  {/* Tooltip */}
-                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                    Kaivan Dave
-                  </div>
+                <div className="w-[32px] h-[32px] relative overflow-visible group hover:-translate-y-1 transition-transform duration-300">
+                  <Tooltip
+                    content="Kaivan Dave"
+                    color="foreground"
+                    showArrow={true}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805631/Kaivan_Dave-modified_mcm9iw.png"
+                      alt="SaaS Application Design - Enterprise UI/UX"
+                      className="w-[32px] h-[32px] border-white rounded-full border-2 cursor-pointer transition-all  duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards] hover:brightness-125 hover:drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+                      style={{
+                        animation:
+                          "testimonialImageDrop 0.4s ease-out forwards",
+                        animationDelay: "0.3s",
+                        opacity: 0,
+                        transform: "translateY(-40px)",
+                      }}
+                    />
+                  </Tooltip>
                 </div>
                 <div className="min-h-[32px] flex items-center overflow-hidden">
                   <p
@@ -94,23 +98,26 @@ const LandingHero = () => {
                   <StarRating delay={300} />
                 </div>
               </div>
-              <div className="items-center flex flex-col max-w-[200px] gap-2 max-md:hidden overflow-visible">
-                <div className="w-[32px] h-[32px] relative overflow-visible group">
-                  <img
-                    src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805632/eden-modified_jsf37k.png"
-                    alt="Dribble Logo"
-                    className="w-[32px] h-[32px] cursor-pointer transition-transform duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards]"
-                    style={{
-                      animation: "testimonialImageDrop 0.4s ease-out forwards",
-                      animationDelay: "0.45s",
-                      opacity: 0,
-                      transform: "translateY(-40px) scale(0.8)",
-                    }}
-                  />
-                  {/* Tooltip */}
-                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                    Eden Cheng
-                  </div>
+              <div className="items-center flex flex-col max-w-[200px] gap-2 max-md:hidden overflow-visible ">
+                <div className="w-[32px] h-[32px] relative overflow-visible group hover:-translate-y-1 transition-transform duration-300">
+                  <Tooltip
+                    content="Eden Hazani"
+                    color="foreground"
+                    showArrow={true}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805632/eden-modified_jsf37k.png"
+                      alt="Dribble Logo"
+                      className="w-[32px] h-[32px] border-white rounded-full border-2  cursor-pointer transition-transform duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards]"
+                      style={{
+                        animation:
+                          "testimonialImageDrop 0.4s ease-out forwards",
+                        animationDelay: "0.45s",
+                        opacity: 0,
+                        transform: "translateY(-40px)",
+                      }}
+                    />
+                  </Tooltip>
                 </div>
                 <div className="min-h-[32px] flex items-center overflow-hidden">
                   <p
@@ -131,22 +138,25 @@ const LandingHero = () => {
                 </div>
               </div>
               <div className="items-center flex flex-col max-w-[200px] gap-2 max-md:hidden overflow-visible">
-                <div className="w-[32px] h-[32px] relative overflow-visible group">
-                  <img
-                    src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805632/Priyanka-modified_byouxn.png"
-                    alt="Mobile App Design - AI-Driven User Interface"
-                    className="w-[32px] h-[32px] cursor-pointer transition-transform duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards]"
-                    style={{
-                      animation: "testimonialImageDrop 0.4s ease-out forwards",
-                      animationDelay: "0.6s",
-                      opacity: 0,
-                      transform: "translateY(-40px) scale(0.8)",
-                    }}
-                  />
-                  {/* Tooltip */}
-                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                    Priyanka Sharma
-                  </div>
+                <div className="w-[32px] h-[32px] relative overflow-visible group hover:-translate-y-1 transition-transform duration-300">
+                  <Tooltip
+                    content=" Priyanka Padhye"
+                    color="foreground"
+                    showArrow={true}
+                  >
+                    <img
+                      src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805632/Priyanka-modified_byouxn.png"
+                      alt="Mobile App Design - AI-Driven User Interface"
+                      className="w-[32px] h-[32px] border-white rounded-full border-2  cursor-pointer transition-all duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards] hover:brightness-125 hover:drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+                      style={{
+                        animation:
+                          "testimonialImageDrop 0.4s ease-out forwards",
+                        animationDelay: "0.6s",
+                        opacity: 0,
+                        transform: "translateY(-40px)",
+                      }}
+                    />
+                  </Tooltip>
                 </div>
                 <div className="min-h-[32px] flex items-center overflow-hidden">
                   <p
@@ -169,7 +179,7 @@ const LandingHero = () => {
             </div>
           </div>
 
-          <h1 className="reveal-text-anim text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-[44px] max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-[80px]">
+          <h1 className="reveal-text-anim text-7xl px-56 text-center font-[700] max-md:font-[600] max-lg:text-5xl max-md:text-[44px] max-md:leading-[1.08] max-md:px-6 max-lg:px-12 mt-3 max-xl:px-12 max-2xl:px-32 tracking-[-1.5px] leading-6">
             Scalable UI/UX design for SaaS & AI Products
           </h1>
 
@@ -322,7 +332,9 @@ const LandingHero = () => {
                         alt="WhatsApp Logo"
                         className="w-[30px]  h-[30px] "
                       />
-                      <p className="text-base font-semibold">Chat</p>
+                      <p className="text-base font-semibold">
+                        Chat on WhatsApp
+                      </p>
                     </span>
 
                     <span
