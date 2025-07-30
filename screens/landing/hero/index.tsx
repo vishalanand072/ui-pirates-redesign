@@ -12,7 +12,8 @@ const StarRating = ({
 }) => {
   return (
     <div
-      className={`flex flex-row gap-1 h-[14px] overflow-hidden ${className}`}
+      className={`flex flex-row gap-1 h-[14px] ${className}`}
+      style={{ overflow: "visible" }}
     >
       {[...Array(5)].map((_, index) => (
         <div key={index} className="w-[14px] h-[14px] relative">
@@ -24,7 +25,7 @@ const StarRating = ({
               animation: `starSlideUp 0.5s ease-out forwards`,
               animationDelay: `${delay / 1000 + index * 0.12}s`,
               opacity: 0,
-              transform: "translateY(25px)",
+              transform: "translateY(40px)",
             }}
           />
         </div>
@@ -43,167 +44,123 @@ const LandingHero = () => {
           className="flex flex-col items-center justify-center w-screen"
           style={{ overflow: "visible" }}
         >
-          <motion.div
+          <div
             className="p-2 px-4 rounded-xl bg-[#8EF1F1] border-cyan-400 border-2"
-            initial={{
+            style={{
+              animation: "trustBadgeUp 0.5s ease-out forwards",
+              animationDelay: "0.1s",
               opacity: 0,
-              y: 20,
-              scale: 0.95,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            transition={{
-              duration: 0.6,
-              ease: "easeOut",
+              transform: "translateY(20px) scale(0.95)",
             }}
           >
             <p className="text-center uppercase text-xs max-md:text-[10px] font-medium">
               Trusted by 40+ startups across 6 countries
             </p>
-          </motion.div>
+          </div>
           <div className="flex flex-row items-center justify-center w-full py-8 max-md:py-4 max-md:pb-2 overflow-visible">
             <div className="flex flex-row gap-2 overflow-visible">
               <div className="items-center flex flex-col max-w-[200px] gap-2 overflow-visible">
-                <div className="w-[32px] h-[32px] relative overflow-hidden">
-                  <motion.img
+                <div className="w-[32px] h-[32px] relative overflow-visible group">
+                  <img
                     src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805631/Kaivan_Dave-modified_mcm9iw.png"
                     alt="SaaS Application Design - Enterprise UI/UX"
-                    className="w-[32px] h-[32px] absolute top-0 left-0"
-                    initial={{
+                    className="w-[32px] h-[32px] cursor-pointer transition-transform duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards]"
+                    style={{
+                      animation: "testimonialImageDrop 0.4s ease-out forwards",
+                      animationDelay: "0.3s",
                       opacity: 0,
-                      y: 25,
-                      scale: 0.9,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                      scale: 1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.3,
-                      ease: "backOut",
+                      transform: "translateY(-40px) scale(0.8)",
                     }}
                   />
+                  {/* Tooltip */}
+                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                    Kaivan Dave
+                  </div>
                 </div>
                 <div className="min-h-[32px] flex items-center overflow-hidden">
-                  <motion.p
+                  <p
                     className="text-center italic text-xs font-medium"
-                    initial={{
+                    style={{
+                      animation: "testimonialTextUp 0.4s ease-out forwards",
+                      animationDelay: "0.4s",
                       opacity: 0,
-                      y: 25,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    transition={{
-                      duration: 0.4,
-                      delay: 0.4,
-                      ease: "easeOut",
+                      transform: "translateY(25px)",
                     }}
                   >
                     "...great to work with and will ensure you're happy..."
-                  </motion.p>
+                  </p>
                 </div>
                 <div className="flex flex-row gap-1 h-[14px] items-start">
                   <StarRating delay={300} />
                 </div>
               </div>
               <div className="items-center flex flex-col max-w-[200px] gap-2 max-md:hidden overflow-visible">
-                <div className="w-[32px] h-[32px] relative overflow-hidden">
-                  <motion.img
+                <div className="w-[32px] h-[32px] relative overflow-visible group">
+                  <img
                     src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805632/eden-modified_jsf37k.png"
                     alt="Dribble Logo"
-                    className="w-[32px] h-[32px] absolute top-0 left-0"
-                    initial={{
+                    className="w-[32px] h-[32px] cursor-pointer transition-transform duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards]"
+                    style={{
+                      animation: "testimonialImageDrop 0.4s ease-out forwards",
+                      animationDelay: "0.45s",
                       opacity: 0,
-                      y: 25,
-                      scale: 0.9,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                      scale: 1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.45,
-                      ease: "backOut",
+                      transform: "translateY(-40px) scale(0.8)",
                     }}
                   />
+                  {/* Tooltip */}
+                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                    Eden Cheng
+                  </div>
                 </div>
                 <div className="min-h-[32px] flex items-center overflow-hidden">
-                  <motion.p
+                  <p
                     className="text-center italic text-xs font-medium"
-                    initial={{
+                    style={{
+                      animation: "testimonialTextUp 0.4s ease-out forwards",
+                      animationDelay: "0.55s",
                       opacity: 0,
-                      y: 25,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    transition={{
-                      duration: 0.4,
-                      delay: 0.55,
-                      ease: "easeOut",
+                      transform: "translateY(25px)",
                     }}
                   >
                     "Successfully overhauled the design of our entire
                     platform..."
-                  </motion.p>
+                  </p>
                 </div>
                 <div className="flex flex-row gap-1 h-[14px] items-start">
                   <StarRating delay={350} />
                 </div>
               </div>
               <div className="items-center flex flex-col max-w-[200px] gap-2 max-md:hidden overflow-visible">
-                <div className="w-[32px] h-[32px] relative overflow-hidden">
-                  <motion.img
+                <div className="w-[32px] h-[32px] relative overflow-visible group">
+                  <img
                     src="https://res.cloudinary.com/dvk9ttiym/image/upload/v1753805632/Priyanka-modified_byouxn.png"
                     alt="Mobile App Design - AI-Driven User Interface"
-                    className="w-[32px] h-[32px] absolute top-0 left-0"
-                    initial={{
+                    className="w-[32px] h-[32px] cursor-pointer transition-transform duration-300 hover:animate-[imageLift_0.3s_ease-out_forwards]"
+                    style={{
+                      animation: "testimonialImageDrop 0.4s ease-out forwards",
+                      animationDelay: "0.6s",
                       opacity: 0,
-                      y: 25,
-                      scale: 0.9,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                      scale: 1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.6,
-                      ease: "backOut",
+                      transform: "translateY(-40px) scale(0.8)",
                     }}
                   />
+                  {/* Tooltip */}
+                  <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                    Priyanka Sharma
+                  </div>
                 </div>
                 <div className="min-h-[32px] flex items-center overflow-hidden">
-                  <motion.p
+                  <p
                     className="text-center italic text-xs font-medium"
-                    initial={{
+                    style={{
+                      animation: "testimonialTextUp 0.4s ease-out forwards",
+                      animationDelay: "0.7s",
                       opacity: 0,
-                      y: 25,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    transition={{
-                      duration: 0.4,
-                      delay: 0.7,
-                      ease: "easeOut",
+                      transform: "translateY(25px)",
                     }}
                   >
                     "...ability to truly understand our brand's identity &
                     target..."
-                  </motion.p>
+                  </p>
                 </div>
                 <div className="flex flex-row gap-1 h-[14px] items-start">
                   <StarRating delay={400} />

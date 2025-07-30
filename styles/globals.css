@@ -45,8 +45,54 @@ body {
   animation-delay: -3s;
 }
 
-/* Star slide up animation with synchronized opacity and position */
+/* Star slide up animation - emerges from below container */
 @keyframes starSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Testimonial image animation - faster drop from top */
+@keyframes testimonialImageDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* Trust badge animation - mobile-friendly */
+@keyframes trustBadgeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* Image hover lift animation */
+@keyframes imageLift {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+/* Testimonial text animation - mobile-friendly */
+@keyframes testimonialTextUp {
   0% {
     opacity: 0;
     transform: translateY(25px);
