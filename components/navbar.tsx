@@ -117,7 +117,14 @@ export const Navbar = () => {
                       linkStyles({ color: "foreground" }),
                       "data-[active=true]:text-primary data-[active=true]:font-medium text-sm font-[500] cursor-pointer"
                     )}
-                    onClick={() => smoothScrollTo(item.href.replace("#", ""))}
+                    // onClick={() => smoothScrollTo(item.href.replace("#", ""))}
+                    onClick={() => {
+                      if (item.href.startsWith("#")) {
+                        smoothScrollTo(item.href.replace("#", ""));
+                      } else {
+                        window.location.href = item.href;
+                      }
+                    }}
                   >
                     {item.label}
                   </button>

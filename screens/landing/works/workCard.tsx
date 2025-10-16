@@ -10,18 +10,30 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
   {
     heading: "Xperiti",
-    subtitle: "SaaS app, UX Design, UI Developemt",
+    heading1: "Comprehensive Rsearch Platform",
+    subtitle:
+      "Enterprise Saas App UI/UX Design on Figma & Development on Angular.js",
     img: "https://res.cloudinary.com/damm9iwho/image/upload/v1731155233/xperiti_psd_file_1_cvfkqh.svg",
     url: "https://www.xperiti.com/",
   },
   {
+    heading: "AI LegalTech Saas",
+    heading1: "APAC’s largest law firm",
+    subtitle:
+      "Designed a future-ready AI SaaS platform for lawyers and legal professionals ",
+    img: "https://res.cloudinary.com/damm9iwho/image/upload/v1760502551/ai_legaltech_h24rin.svg",
+    url: "https://www.xperiti.com/",
+  },
+  {
     heading: "ArthAlpha",
+    heading1: "AI Trading Platform",
     subtitle: "Quant Trading App, Portfolio Website, UX Design, UI Developemt",
     img: "https://res.cloudinary.com/damm9iwho/image/upload/v1730025189/brahma_zbxs7g.svg",
     url: "https://arthalpha.in/",
   },
   {
     heading: "Rings & I",
+    heading1: "Diamond Ring Studio",
     subtitle: "Shopify Store, UX Design , Shopify Theme, Asset Creation",
     img: "https://res.cloudinary.com/damm9iwho/image/upload/v1730025333/rings_gnmm1x.svg",
     url: "https://ringsandi.com/",
@@ -114,8 +126,11 @@ const RecentWorkCard = () => {
               id="contentDiv"
             >
               <div>
-                <p className="text-[4.5rem] max-md:text-4xl mb-4 font-[600] max-xl:text-[3.5rem] max-md:mt-12">
+                <p className="text-[3.5rem] max-md:text-4xl mb-4 font-[600] max-xl:text-[3.5rem] max-md:mt-12">
                   {item.heading}
+                </p>
+                <p className="text-[1.5rem] max-md:text-4xl mb-4 font-[600] max-xl:text-[1.5rem] max-md:mt-12">
+                  {item.heading1}
                 </p>
                 <div
                   className={

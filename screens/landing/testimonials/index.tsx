@@ -1,6 +1,7 @@
 "use client";
 import React, { Component } from "react";
 import ResponsiveCarousel from "./carousel";
+import TestimonialCards from "./testimonialCards";
 function LandingTestimonials() {
   return (
     <div className=" pt-32 max-md:pt-24 ">
@@ -31,7 +32,8 @@ function LandingTestimonials() {
         </div>
       </div>
       <div>
-        <ResponsiveCarousel />
+        <TestimonialCards />
+        {/* <ResponsiveCarousel /> */}
       </div>
     </div>
   );

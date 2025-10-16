@@ -170,6 +170,33 @@ const data = [
     ],
     tab: false,
   },
+  {
+    icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1729841104/figma-component-svgrepo-com_1_mtgewy.svg",
+    heading: "Graphics Design",
+    description:
+      "Scalable design systems with reusable components for consistent UI & easy integration.",
+    designDev: "1,199",
+    designhr: "15",
+    list: [
+      "2-4 weeks delivery",
+      "Scalable design systems",
+      "Development-ready components",
+      "UI consistency",
+      "Reusable components",
+      "Custom design library",
+      "5/7 Communication",
+    ],
+    listhr: [
+      "2-4 weeks delivery",
+      "Scalable design systems",
+      "Development-ready components",
+      "UI consistency",
+      "Reusable components",
+      "Custom design library",
+      "5/7 Communication",
+    ],
+    tab: false,
+  },
 ];
 
 const dataPrice = [
@@ -679,8 +706,8 @@ const OurPricingCard = (props: any) => {
             })}
           </div>
 
-          <Card className="rounded-[40px] max-md:rounded-[30px] box-shadow">
-            <CardBody className="p-8 max-md:p-4 max-lg:p-6">
+          <Card className="rounded-[40px] max-md:rounded-[30px] box-shadow ">
+            <CardBody className="p-8 max-md:p-4 max-lg:p-6 px-0">
               <div className="w-full text-center">
                 <p className="text-3xl max-md:text-2xl mt-8 mb-4 font-semibold ">
                   Not sure which plan fits your scope?

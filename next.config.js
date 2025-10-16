@@ -41,6 +41,21 @@ const nextConfig = {
       },
     ];
   },
+
+  // Webpack configuration to handle slick-carousel fonts
+  webpack: (config, { isServer }) => {
+    // Ignore missing slick-carousel font files
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+      issuer: /slick-carousel/,
+      type: "asset/resource",
+      generator: {
+        emit: false,
+      },
+    });
+
+    return config;
+  },
 };
 
 module.exports = nextConfig;

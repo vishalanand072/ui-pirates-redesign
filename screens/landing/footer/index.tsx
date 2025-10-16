@@ -55,9 +55,17 @@ const LandingFooter = () => {
 
   return (
     <>
-      <div className="relative overflow-hidden h-screen max-md:h-[90vh]   max-lg:h-[90vh]  bg-black rounded-tr-[100px] rounded-tl-[100px] max-md:rounded-tr-[50px] max-md:rounded-tl-[50px] ">
+      <div className="relative overflow-hidden h-screen max-md:h-[90vh]   max-lg:h-[90vh]  bg-black">
         <div className="relative h-screen  max-md:h-[90vh]   max-lg:h-[90vh] flex items-center justify-center max-lg:hidden">
-          <CircularImage images={images} />
+          {/* <CircularImage images={images} /> */}
+          {/* Base dark gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] via-[#0d0d0d] to-black" />
+
+          {/* ✨ Soft lighting effect from top-left */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.18)_0%,_transparent_60%)] opacity-70 mix-blend-overlay" />
+
+          {/* 💡 Secondary directional glow for smooth diagonal fade */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-20" />
         </div>
 
         <div className="h-[100vh] max-md:h-[90vh]   max-lg:h-[90vh]  text-white max-md:px-12">
@@ -202,11 +210,6 @@ const LandingFooter = () => {
             </div>
           </div>
         </div>
-
-        {/* <div
-          className="h-20 w-full bg-red-100 absolute bottom-0 blur-md"
-          style={{ zIndex: 9 }}
-        ></div> */}
       </div>
     </>
   );

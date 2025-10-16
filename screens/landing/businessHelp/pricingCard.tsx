@@ -7,9 +7,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const data = [
   {
-    heading: "Web/Mobile Apps",
+    heading: "SaaS Web & Mobile Apps",
+    subheading:
+      "Design and build responsive, scalable apps that simplify complexity and drive engagement.",
     description:
-      "Transform your ideas into interactive, user-friendly apps. We create intuitive, engaging saas web and mobile apps with modern UI that drive user engagement and simplfies complex data visualisations",
+      "We create intuitive user interfaces for SaaS, AI tools, dashboards, and mobile-first products — from MVP wireframes to dev-ready Figma files.",
+    subheading2: "Ideal for: MVPs, dashboards, analytics tools, admin panels",
     chip: [
       {
         icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
@@ -44,8 +47,11 @@ const data = [
   },
   {
     heading: "Design System & Component Library",
+    subheading: "Reusable, developer-friendly UI systems for scale.",
     description:
-      "Scalable design systems and reusable components to ensure consistency across projects and streamline development.",
+      "We build design systems with custom tokens, visual guidelines, and a fully documented component library - ready for handoff and long-term consistency.",
+    subheading2:
+      "Ideal for: Growing teams, products at scale, component refactoring",
     chip: [
       {
         icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
@@ -81,9 +87,13 @@ const data = [
     isImage: true,
   },
   {
-    heading: "Landing Pages & E-commerce",
+    heading: "Landing Pages & Corporate Websites",
+    subheading:
+      "Launch faster with beautiful, high-converting sites that scale with your brand.",
     description:
-      "Impactful online presence with high-converting landing pages and portfolio websites that showcase your work professionally and drive customer action.",
+      "We design landing pages and corporate websites that communicate your value, look stunning on every device, and turn visitors into users or leads.",
+    subheading2:
+      "Ideal for: Startups, solo founders, product launches, enterprise marketing",
     chip: [
       {
         icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
@@ -120,22 +130,170 @@ const data = [
       "https://res.cloudinary.com/damm9iwho/video/upload/v1730895563/show_gtb051.mp4",
     isImage: false,
   },
+  {
+    heading: "Graphic Design",
+    subheading:
+      "Create brand-ready visuals for social campaigns, ads, and offline print.",
+    description:
+      "From posters and brochures to brand assets, we deliver scroll-stopping graphics that match your identity and work across print and digital.",
+    subheading2:
+      "Ideal for: Social campaigns, brand collaterals, posters, brochures",
+    chip: [
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
+        title: "1–3 weeks",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/DeviceMobile_rfsexm.svg",
+        title: "Posters",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Code_qedbxu.svg",
+        title: "Brochures",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ShoppingCart_pirfab.svg",
+        title: "Print Assets",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Sparkle_qf0yru.svg",
+        title: "Brand Design",
+      },
+      // {
+      //   icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ic_baseline-wordpress_gpl06j.svg",
+      //   title: "Wordpress",
+      // },
+      // {
+      //   icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/VectorD_nnz4jc.svg",
+      //   title: "Landing Page Designs",
+      // },
+    ],
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1760506407/desinicon_nlf2di.svg",
+    video:
+      "https://res.cloudinary.com/damm9iwho/video/upload/v1730895563/show_gtb051.mp4",
+    sideImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1760505980/graphic_hircry.svg",
+    isImage: true,
+  },
+  {
+    heading: "Motion Graphics & Video Editing",
+    subheading:
+      "Motion graphics, animations, and high-quality video edits for launches, ads, and storytelling.",
+    description:
+      "We deliver motion graphics, 2D/3D animations, polished edits, sound design, captions, and color grading, built to engage across web, social, and product experiences.",
+    subheading2:
+      "Ideal for: High-impact social media content, ad campaigns, onboarding or explainer videos, YouTube & brand promos",
+    chip: [
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
+        title: "1–3 weeks",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/DeviceMobile_rfsexm.svg",
+        title: "Posters",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Code_qedbxu.svg",
+        title: "Brochures",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ShoppingCart_pirfab.svg",
+        title: "Print Assets",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Sparkle_qf0yru.svg",
+        title: "Brand Design",
+      },
+      // {
+      //   icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ic_baseline-wordpress_gpl06j.svg",
+      //   title: "Wordpress",
+      // },
+      // {
+      //   icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/VectorD_nnz4jc.svg",
+      //   title: "Landing Page Designs",
+      // },
+    ],
+    image:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1760506407/motionicon_uwwkm4.svg",
+    video:
+      "https://res.cloudinary.com/damm9iwho/video/upload/v1730895563/show_gtb051.mp4",
+    sideImage:
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1760505982/motion_h4grud.svg",
+    isImage: true,
+  },
   // Add more data as needed...
 ];
 
 const data1 = [
   {
-    heading: "UX Audits & Consultation",
-    description: "Identify usability issues and get expert guidance.",
-    image:
-      "https://res.cloudinary.com/damm9iwho/image/upload/v1730808993/image_39_e9ciky.svg",
-    isImage: true,
+    heading: "3D Animation & Rendering",
+    description: "Create immersive visuals that stand out.",
+    chip: [
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
+        title: "1–4 weeks",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/DeviceMobile_rfsexm.svg",
+        title: "3D rendering",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Code_qedbxu.svg",
+        title: "3D motion graphics",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ShoppingCart_pirfab.svg",
+        title: "Modeling & Animation",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Sparkle_qf0yru.svg",
+        title: "Development-ready exports",
+      },
+    ],
+
+    video: (
+      <video
+        // ref={(elvideo) => {
+        //   if (elvideo) videoRefs.current[index] = elvideo;
+        // }}
+        width="70%"
+        autoPlay
+        loop
+        muted
+        className="object-cover h-[250px] w-[70%]"
+        src="https://res.cloudinary.com/damm9iwho/video/upload/v1730895565/3D_qasvie.mp4"
+      ></video>
+    ),
+    isImage: false,
   },
   {
-    heading: "3D Animation  & Rendering",
-    description: "Immersive 3D animations and rendering for standout visuals.",
+    heading: "UX Audits & Consultation",
+    description: "Fix user friction before it becomes churn.",
+    chip: [
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799889/CalendarDots_bqwpcd.svg",
+        title: "Usability analysis",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/DeviceMobile_rfsexm.svg",
+        title: "Heuristic Evaluation",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Code_qedbxu.svg",
+        title: "UX  Report",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730801507/ShoppingCart_pirfab.svg",
+        title: "Wireframe suggestions",
+      },
+      {
+        icon: "https://res.cloudinary.com/damm9iwho/image/upload/v1730799888/Sparkle_qf0yru.svg",
+        title: "Design improvement plan",
+      },
+    ],
     image:
-      "https://res.cloudinary.com/damm9iwho/image/upload/v1730808994/3d-rendering-isometric-house_1_skqu47.svg",
+      "https://res.cloudinary.com/damm9iwho/image/upload/v1730808993/image_39_e9ciky.svg",
     video: (
       <video
         // ref={(elvideo) => {
@@ -149,25 +307,25 @@ const data1 = [
         src="https://res.cloudinary.com/damm9iwho/video/upload/v1730895565/3D_qasvie.mp4"
       ></video>
     ),
-    isImage: false,
+    isImage: true,
   },
-  {
-    heading: "Animated Motion Graphics",
-    description:
-      "Impactful animated motion graphics and Videos to enhance storytelling and design.",
-    image:
-      "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/view-3d-cinema-clapperboard_1_bcdsv5.svg",
-    video: (
-      <iframe
-        src="https://my.spline.design/componentkeyboardcopy-418b298aa595a45922ac0f0895edd81d/"
-        // frameBorder="0"
-        width="100%"
-        height="100%"
-        className="h-[250px] w-full"
-      ></iframe>
-    ),
-    isImage: false,
-  },
+  // {
+  //   heading: "Animated Motion Graphics",
+  //   description:
+  //     "Impactful animated motion graphics and Videos to enhance storytelling and design.",
+  //   image:
+  //     "https://res.cloudinary.com/damm9iwho/image/upload/v1730808989/view-3d-cinema-clapperboard_1_bcdsv5.svg",
+  //   video: (
+  //     <iframe
+  //       src="https://my.spline.design/componentkeyboardcopy-418b298aa595a45922ac0f0895edd81d/"
+  //       // frameBorder="0"
+  //       width="100%"
+  //       height="100%"
+  //       className="h-[250px] w-full"
+  //     ></iframe>
+  //   ),
+  //   isImage: false,
+  // },
   // Add more data as needed...
 ];
 
@@ -260,18 +418,27 @@ const VideoWithCards = () => {
           <Card className="rounded-[48px] max-md:rounded-[38px] md:mt-12 bg-[#e9e9e9]  max-md:mt-4 group shadow-none border-1 border-[#0000000f]">
             <CardBody className="grid grid-cols-2 gap-4 max-xl:grid-cols-1 p-4 max-md:p-2 max-md:gap-2">
               <Card className="rounded-[40px] max-md:rounded-[30px] box-shadow">
-                <CardBody className="p-8 max-md:p-5 max-lg:p-6">
-                  <img
-                    src={item.image}
-                    alt="behance Logo"
-                    className="w-[40px] grayscale "
-                  />
-                  <p className="text-3xl max-md:text-3xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[41.6px]">
-                    {item.heading}
-                  </p>
-                  <p className="text-lg max-md:text-base font-[500]">
-                    {item.description}
-                  </p>
+                <CardBody className="p-8 max-md:p-5 max-lg:p-6 flex flex-col justify-between">
+                  <div>
+                    <img
+                      src={item.image}
+                      alt="behance Logo"
+                      className="w-[40px] grayscale "
+                    />
+                    <p className="text-3xl max-md:text-3xl mt-4 mb-4 font-[700] tracking-[-0.5px] leading-[41.6px]">
+                      {item.heading}
+                    </p>
+                    <p className="text-lg max-md:text-base font-[500]">
+                      {item.subheading}
+                    </p>
+                    <p className="text-base max-md:text-base font-[500] text-[#777777] py-2">
+                      {item.description}
+                    </p>
+                    <p className="text-lg max-md:text-base font-[500]">
+                      {item.subheading2}
+                    </p>
+                  </div>
+
                   <div className="mt-6 grid-rows-3 w-full gap-4 max-md:gap-x-3">
                     {item.chip.map((chipItem, chipIndex) => (
                       <Chip
@@ -324,7 +491,7 @@ const VideoWithCards = () => {
         }}
       >
         <Card className="rounded-[48px] mb-12 bg-[#e9e9e9]  mt-12 max-md:mt-4 shadow-none border-1 border-[#0000000f]">
-          <CardBody className="grid grid-cols-3 gap-4 max-md:gap-2 max-xl:grid-cols-1 p-4 max-md:p-2">
+          <CardBody className="grid grid-cols-2 gap-4 max-md:gap-2 max-xl:grid-cols-1 p-4 max-md:p-2">
             {data1.map((item, index) => {
               return (
                 <Card
@@ -338,6 +505,27 @@ const VideoWithCards = () => {
                     <p className="text-lg max-md:text-base mb-6 font-[500] leading-[25.2px]">
                       {item.description}
                     </p>
+
+                    <div className="mb-6 grid-rows-3 w-full gap-4 max-md:gap-x-3">
+                      {item.chip.map((chipItem, chipIndex) => (
+                        <Chip
+                          key={chipIndex}
+                          radius="sm"
+                          className="md:m-2 mr-2 max-md:mb-2 text-[14px] text-[#00000094] bg-[#51525E14]"
+                          startContent={
+                            <img
+                              src={chipItem.icon}
+                              className="mx-1 w-[16px]"
+                            />
+                          }
+                        >
+                          <p className="font-[600] max-md:font-[500]">
+                            {chipItem.title}
+                          </p>
+                        </Chip>
+                      ))}
+                    </div>
+
                     <div className="flex flex-row items-center justify-center">
                       {item.isImage && (
                         <img
@@ -346,16 +534,7 @@ const VideoWithCards = () => {
                           className="w-[320px] h-[250px]"
                         />
                       )}
-                      {!item.isImage &&
-                        // <iframe
-                        //   src="https://my.spline.design/componentkeyboardcopy-418b298aa595a45922ac0f0895edd81d/"
-                        //   // frameBorder="0"
-                        //   width="100%"
-                        //   height="100%"
-                        //   className="h-[250px] w-full"
-                        // ></iframe>
-
-                        item.video}
+                      {!item.isImage && item.video}
                     </div>
                   </CardBody>
                 </Card>
